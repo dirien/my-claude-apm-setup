@@ -1,0 +1,16 @@
+# APM vendored dependencies and build output — reproducible via `apm install --frozen`.
+apm_modules/
+build/
+sbom/
+.claude-plugin/
+
+# Deployed target config — restored by `apm install` / `make sync`.
+.mcp.json
+.lsp.json
+.codex/
+.agents/
+.claude/*
+# …but keep the compiled Claude rules (small, human-readable, drift-gated in CI).
+!.claude/rules/
+
+.DS_Store

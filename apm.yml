@@ -1,0 +1,126 @@
+# apm.yml — Microsoft APM manifest for a Claude Code + Codex setup built on yaah.
+#
+# Reproduce the whole agent setup with:
+#   apm install --frozen         # resolve the pinned skill deps, wire MCP/LSP/hooks
+#   apm compile -t claude,codex  # (re)generate agent context from .apm/instructions/
+#
+# It does not replace yaah — the runtime pieces (hook logic, the `yaah serve` MCP server,
+# session tracking) need the `yaah` binary on $PATH. See docs/TRANSFER-GAPS.md.
+#
+#   Install APM:  curl -sSL https://aka.ms/apm-unix | sh   (or: brew install microsoft/apm/apm)
+
+name: my-claude-apm-setup
+version: 0.1.0
+description: An APM-managed Claude Code + Codex setup built on yaah — skills, agents, hooks, MCP, LSP, and generated context.
+author: Engin Diri
+license: MIT
+
+# Metadata passthrough → lands verbatim in the .claude-plugin/plugin.json that `apm pack` emits.
+homepage: https://github.com/dirien/my-claude-apm-setup
+repository: https://github.com/dirien/my-claude-apm-setup
+keywords:
+  - claude-code
+  - codex
+  - agent-package-manager
+  - yaah
+  - go
+
+# Two agents, nothing else. APM writes each one's native layout:
+#   claude -> .claude/ + .claude/rules/      codex -> .codex/ + AGENTS.md
+targets:
+  - claude
+  - codex
+
+# Pin compile behaviour so every contributor and CI run emits identical files.
+compilation:
+  strategy: distributed          # scoped instructions land next to the code they apply to
+  exclude:
+    - "apm_modules/**"           # keep vendored deps out of placement scoring
+
+dependencies:
+  # Skills resolved from git, pinned to a commit so the manifest is self-describing
+  # (apm.lock.yaml pins the same SHAs; `apm install --frozen` reproduces them).
+  apm:
+    # jeffallan/claude-skills — language & role
+    - jeffallan/claude-skills/skills/golang-pro#e8be415bc94d8d6ebddc2fb50e5d03c6e27d4319
+    - jeffallan/claude-skills/skills/cli-developer#e8be415bc94d8d6ebddc2fb50e5d03c6e27d4319
+    - jeffallan/claude-skills/skills/devops-engineer#e8be415bc94d8d6ebddc2fb50e5d03c6e27d4319
+    # rshade/agent-skills — Go tooling & repo hygiene
+    - rshade/agent-skills/skills/agent-ready-go#71fe77bb64c0dbba456ba6f892aa8bbac873eeb4
+    - rshade/agent-skills/skills/go-fix#71fe77bb64c0dbba456ba6f892aa8bbac873eeb4
+    - rshade/agent-skills/skills/lint-fix#71fe77bb64c0dbba456ba6f892aa8bbac873eeb4
+    - rshade/agent-skills/skills/commitlint#71fe77bb64c0dbba456ba6f892aa8bbac873eeb4
+    - rshade/agent-skills/skills/markdownlint#71fe77bb64c0dbba456ba6f892aa8bbac873eeb4
+    - rshade/agent-skills/skills/actionlint#71fe77bb64c0dbba456ba6f892aa8bbac873eeb4
+    - rshade/agent-skills/skills/shellcheck#71fe77bb64c0dbba456ba6f892aa8bbac873eeb4
+    # netresearch/agent-rules-skill — keep AGENTS.md / .claude/rules in sync
+    - netresearch/agent-rules-skill/skills/agent-rules#76decb504e698ca884702c2388f9792892b17e6f
+
+  # MCP servers, self-defined (registry: false) so install never hits a registry.
+  mcp:
+    - name: context7
+      registry: false
+      transport: stdio
+      command: npx
+      args: ["-y", "@context7/mcp"]
+    - name: pulumi
+      registry: false
+      transport: http
+      url: https://mcp.ai.pulumi.com/mcp
+    # yaah's own MCP server. The registration transfers; the tools it exposes
+    # (yaah_scan_secrets, yaah_lint, yaah_check_command, yaah_doctor, yaah_session_info)
+    # are Go and need the `yaah` binary at runtime. Pull yaah transitively and you must
+    # re-declare this MCP or install with --trust-transitive-mcp, or it is dropped.
+    - name: yaah
+      registry: false
+      transport: stdio
+      command: yaah
+      args: ["serve"]
+
+  # LSP servers. APM writes .lsp.json; install the binaries yourself:
+  #   go install golang.org/x/tools/gopls@latest
+  #   npm i -g typescript typescript-language-server · pip install pyright · dotnet tool install -g csharp-ls
+  lsp:
+    - name: gopls
+      command: gopls
+      args: ["serve"]
+      extensionToLanguage:
+        ".go": go
+    - name: typescript-language-server
+      command: typescript-language-server
+      args: ["--stdio"]
+      extensionToLanguage:
+        ".ts": typescript
+        ".tsx": typescriptreact
+    - name: pyright
+      command: pyright-langserver
+      args: ["--stdio"]
+      extensionToLanguage:
+        ".py": python
+    - name: csharp
+      command: csharp-ls
+      extensionToLanguage:
+        ".cs": csharp
+
+# Skills you only want while developing/reviewing this repo. `apm pack` leaves these out
+# of a consumer bundle; a local `apm install` still deploys them.
+devDependencies:
+  apm:
+    - jeffallan/claude-skills/skills/code-reviewer#e8be415bc94d8d6ebddc2fb50e5d03c6e27d4319
+    - jeffallan/claude-skills/skills/architecture-designer#e8be415bc94d8d6ebddc2fb50e5d03c6e27d4319
+    - rshade/agent-skills/skills/security-audit#71fe77bb64c0dbba456ba6f892aa8bbac873eeb4
+    - rshade/agent-skills/skills/go-nolint-audit#71fe77bb64c0dbba456ba6f892aa8bbac873eeb4
+    - rshade/agent-skills/skills/tech-debt#71fe77bb64c0dbba456ba6f892aa8bbac873eeb4
+
+# Local primitives under .apm/, discovered automatically:
+#   .apm/instructions/*.instructions.md → .claude/rules/ (claude) + AGENTS.md (codex)
+#   .apm/skills/{commit,pr,review}/     → three built-in skills
+#   .apm/agents/{executor,librarian,reviewer}.md → three subagents
+#   .apm/hooks/yaah-runtime-hooks.json  → wires 5 lifecycle events to `yaah hook <event>`
+includes: auto
+
+# Wrappers around the yaah binary. `apm run doctor`, `apm run generate -p agent=claude`.
+scripts:
+  doctor: "yaah doctor"
+  generate: "yaah generate --agent {agent}"
+  serve: "yaah serve"

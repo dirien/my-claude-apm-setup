@@ -1,0 +1,49 @@
+name: apm
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install APM
+        run: |
+          curl -sSL https://aka.ms/apm-unix | sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Reproduce pinned dependencies (npm-ci equivalent)
+        run: apm install --frozen
+
+      - name: Audit lockfile integrity
+        run: apm audit --ci
+
+      - name: Validate primitives
+        run: apm compile -t claude,codex --validate
+
+      - name: Fail if generated agent context is stale
+        run: |
+          apm compile -t claude,codex --clean --local-only
+          git diff --exit-code AGENTS.md .claude/rules/ \
+            || { echo "::error::Agent context is stale. Run 'make sync' and commit."; exit 1; }
+
+      - name: Export agent-dependency SBOM
+        run: |
+          mkdir -p sbom
+          TS="$(git log -1 --format=%cI)"
+          apm lock export -f cyclonedx --timestamp "$TS" -o sbom/agents.cdx.json
+          apm lock export -f spdx      --timestamp "$TS" -o sbom/agents.spdx.json
+
+      - name: Upload SBOM
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent-sbom
+          path: sbom/
