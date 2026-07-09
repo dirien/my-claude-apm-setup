@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-07-09T17:04:47.583690+00:00'
+generated_at: '2026-07-09T22:49:24.321211+00:00'
 apm_version: 0.22.0
 dependencies:
 - repo_url: jeffallan/claude-skills
@@ -1201,7 +1201,6 @@ dependencies:
 mcp_servers:
 - context7
 - pulumi
-- yaah
 mcp_configs:
   context7:
     name: context7
@@ -1216,13 +1215,6 @@ mcp_configs:
     transport: http
     registry: false
     url: https://mcp.ai.pulumi.com/mcp
-  yaah:
-    name: yaah
-    transport: stdio
-    args:
-    - serve
-    registry: false
-    command: yaah
 lsp_servers:
 - csharp
 - gopls
@@ -1284,8 +1276,8 @@ local_deployed_file_hashes:
   .claude/agents/executor.md: sha256:c27a8869a9fea464106b5516d2849b0ed617daac3ed25db5cdee70fe41213b6c
   .claude/agents/librarian.md: sha256:ea6bd8fe6fabe7a3644a1046bbce98c1f2d2264d4e88686c368d80dada1c5a23
   .claude/agents/reviewer.md: sha256:35d8cc26a2e7dc5f42b4c587f64e2c5f60490568822317fde063b5febf99d0ef
-  .claude/rules/pkg-go.md: sha256:0ee7ec14edc086651e50317a9e638e5c0d30350818af84673ad640eef9db516c
-  .claude/rules/repo-conventions.md: sha256:d76547869ebc23843f09360d2a3bb76f7d32a2643fd22dba558dd2a81d9bf261
+  .claude/rules/pkg-go.md: sha256:8cc0f516e7c70f99821b553eb2a407aeb9e6f9ec253c973ae178f753eedd04a4
+  .claude/rules/repo-conventions.md: sha256:42cb2d402133ce4f531dd65bc9c82c0e76812cc7043e6121f17c37513a1ffd1f
   .claude/skills/commit/SKILL.md: sha256:73a5dcd522e872570e86e2c2826c91e02e05f1962504cb61a8d996c7e65bc062
   .claude/skills/pr/SKILL.md: sha256:3df806c42af088805e9d6497cc32a6d873472211263aa81275f0b85210e2fa61
   .claude/skills/review/SKILL.md: sha256:74a028d980567388a6f44b22df81f485a2883302cf70c26182d515b1d144585f

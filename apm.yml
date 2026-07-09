@@ -1,17 +1,16 @@
-# apm.yml — Microsoft APM manifest for a Claude Code + Codex setup built on yaah.
+# apm.yml — Microsoft APM manifest for a self-contained Claude Code + Codex setup.
 #
 # Reproduce the whole agent setup with:
 #   apm install --frozen         # resolve the pinned skill deps, wire MCP/LSP/hooks
 #   apm compile -t claude,codex  # (re)generate agent context from .apm/instructions/
 #
-# It does not replace yaah — the runtime pieces (hook logic, the `yaah serve` MCP server,
-# session tracking) need the `yaah` binary on $PATH. See docs/TRANSFER-GAPS.md.
+# Everything here runs on APM + standard tooling — no external harness binary required.
 #
 #   Install APM:  curl -sSL https://aka.ms/apm-unix | sh   (or: brew install microsoft/apm/apm)
 
 name: my-claude-apm-setup
-version: 0.1.0
-description: An APM-managed Claude Code + Codex setup built on yaah — skills, agents, hooks, MCP, LSP, and generated context.
+version: 0.2.0
+description: A self-contained APM-managed Claude Code + Codex setup — pinned skills, agents, guardrail hooks, MCP, LSP, and single-source generated context.
 author: Engin Diri
 license: MIT
 
@@ -22,7 +21,7 @@ keywords:
   - claude-code
   - codex
   - agent-package-manager
-  - yaah
+  - developer-setup
   - go
 
 # Two agents, nothing else. APM writes each one's native layout:
@@ -63,24 +62,17 @@ dependencies:
 
   # MCP servers, self-defined (registry: false) so install never hits a registry.
   mcp:
+    # Up-to-date library/API docs on demand.
     - name: context7
       registry: false
       transport: stdio
       command: npx
       args: ["-y", "@context7/mcp"]
+    # Pulumi's hosted MCP (OAuth on first use) — registry, code validation, Neo.
     - name: pulumi
       registry: false
       transport: http
       url: https://mcp.ai.pulumi.com/mcp
-    # yaah's own MCP server. The registration transfers; the tools it exposes
-    # (yaah_scan_secrets, yaah_lint, yaah_check_command, yaah_doctor, yaah_session_info)
-    # are Go and need the `yaah` binary at runtime. Pull yaah transitively and you must
-    # re-declare this MCP or install with --trust-transitive-mcp, or it is dropped.
-    - name: yaah
-      registry: false
-      transport: stdio
-      command: yaah
-      args: ["serve"]
 
   # LSP servers. APM writes .lsp.json; install the binaries yourself:
   #   go install golang.org/x/tools/gopls@latest
@@ -117,11 +109,10 @@ dependencies:
 #   .apm/instructions/*.instructions.md → .claude/rules/ (claude) + AGENTS.md (codex)
 #   .apm/skills/{commit,pr,review}/     → three built-in skills
 #   .apm/agents/{executor,librarian,reviewer}.md → three subagents
-#   .apm/hooks/yaah-runtime-hooks.json  → wires 5 lifecycle events to `yaah hook <event>`
+#   .apm/hooks/guardrails.json          → PreToolUse command guard + PostToolUse format/secret-scan
+#       (self-contained shell scripts under scripts/ — no external binary needed)
 includes: auto
 
-# Wrappers around the yaah binary. `apm run doctor`, `apm run generate -p agent=claude`.
+# Convenience wrapper. `apm run sync` regenerates the agent context from .apm/instructions.
 scripts:
-  doctor: "yaah doctor"
-  generate: "yaah generate --agent {agent}"
-  serve: "yaah serve"
+  sync: "apm compile -t claude,codex --clean"

@@ -4,22 +4,23 @@ My Claude Code and Codex setup, kept in one [Microsoft APM](https://microsoft.gi
 
 Agent config has a way of scattering: settings in JSON, skills as loose markdown, hooks wired by hand, MCP servers pasted into more JSON, and a `CLAUDE.md` plus an `AGENTS.md` that slowly say different things. This repo puts all of it behind `apm.yml` and a `.apm/` folder. Run `apm install` and both agents come up the same way, on any machine.
 
-It is built around [yaah](https://github.com/dirien/yet-another-agent-harness) (my Go agent harness): the hooks and the MCP server call the `yaah` binary at runtime. APM handles the parts that can be declared; yaah handles the parts that have to run. `docs/TRANSFER-GAPS.md` draws that line precisely.
+It is self-contained. The guardrails are plain shell scripts under `scripts/`, so there is no external harness or daemon to install — just APM, your language servers, and the tools you already use.
 
 ## What's in here
 
 - 16 skills pulled from git and pinned to a commit (Go, CLI, DevOps, linting, repo hygiene, code review, security).
 - Three local skills (`commit`, `pr`, `review`) and three subagents (`executor`, `librarian`, `reviewer`) under `.apm/`.
-- Three MCP servers: Context7 for docs, Pulumi's hosted server, and yaah's own (`yaah serve`).
+- Two MCP servers: Context7 for library docs and Pulumi's hosted server.
 - Four LSP servers (gopls, typescript, pyright, csharp) written to `.lsp.json`.
-- Five lifecycle hooks that hand off to `yaah hook <event>` (lint, command guard, secret scan, comment check, session log).
+- Two guardrail hooks, as shell scripts in `scripts/`: a `PreToolUse` guard that blocks destructive Bash commands, and a `PostToolUse` hook that scans edited files for secrets and formats them.
 - One instruction source under `.apm/instructions/` that generates the agent context for both editors.
 
 ## Requirements
 
 - [APM](https://microsoft.github.io/apm/) 0.22 or newer: `curl -sSL https://aka.ms/apm-unix | sh` or `brew install microsoft/apm/apm`
-- [yaah](https://github.com/dirien/yet-another-agent-harness) on `$PATH` for the hooks and MCP server to work: `brew install dirien/tap/yaah`
+- `sh`, `python3`, and `grep` for the guardrail hooks (already on any dev box)
 - The LSP binaries you want (`gopls`, `typescript-language-server`, `pyright`, `csharp-ls`) — APM writes the config but does not install them
+- Optional formatters the post-edit hook uses when present: `gofmt`, `prettier`, `ruff`
 
 ## Quickstart
 
@@ -44,7 +45,16 @@ There is one source of truth for project rules: the files under `.apm/instructio
 
 When `.claude/rules/` already exists, `apm compile` skips `CLAUDE.md` on purpose so Claude does not read the same rules twice. Pass `--force-instructions` if you want a classic single-file `CLAUDE.md` instead. A rule scoped with `applyTo: "pkg/**/*.go"` is placed next to the code it governs, so an agent working in a subtree loads only what applies there.
 
-Edit an instruction file, run `make sync`, commit. CI fails if you forget (see below).
+Edit an instruction file, run `make sync`, commit.
+
+## Guardrail hooks
+
+Two small POSIX shell scripts, wired to Claude Code and Codex through `.apm/hooks/guardrails.json`:
+
+- `scripts/guard.sh` runs before every Bash call and blocks destructive commands (`rm -rf /`, `git push --force`, `git reset --hard`, `mkfs`, `dd if=`, and similar).
+- `scripts/post-edit.sh` runs after every edit: it blocks a write that adds an obvious credential (AWS key, private key, `ghp_…`, `sk-…`, Slack token) and formats the file with `gofmt`, `prettier`, or `ruff` when the tool is installed.
+
+Both read the hook JSON on stdin and exit 2 to block. Edit the patterns to taste.
 
 ## Make targets
 
@@ -57,16 +67,15 @@ make sbom        # CycloneDX + SPDX SBOM of the agent dependencies, offline and 
 make bundle      # offline release zip so others skip cloning the skill repos
 ```
 
-The GitHub Actions workflow in `.github/workflows/apm.yml` runs the install, audit, validate, drift, and SBOM steps on every push.
+The GitHub Actions workflow in `.github/workflows/apm.yml` runs the install, audit, validate, and SBOM steps on every push.
 
 ## What's mine and what's borrowed
 
-The three skills, three agents, five hooks, and the instruction files under `.apm/` are mine and live in this repo. The 16 skills under `dependencies` come from `jeffallan/claude-skills`, `rshade/agent-skills`, and `netresearch/agent-rules-skill`; `apm.lock.yaml` pins each to a commit and `apm install --frozen` reproduces them.
+The three skills, three agents, two guardrail hooks, and the instruction files under `.apm/` are mine and live in this repo. The 16 skills under `dependencies` come from `jeffallan/claude-skills`, `rshade/agent-skills`, and `netresearch/agent-rules-skill`; `apm.lock.yaml` pins each to a commit and `apm install --frozen` reproduces them.
 
 ## Reading
 
 - `docs/APM-ADOPTION.md` — which APM features this setup uses, which it skips, and why (each checked against `apm` 0.22).
-- `docs/TRANSFER-GAPS.md` — what a package manager can't express about yaah, so it stays in the binary.
 
 ## License
 
