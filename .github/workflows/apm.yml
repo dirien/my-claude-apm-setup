@@ -29,11 +29,10 @@ jobs:
       - name: Validate primitives
         run: apm compile -t claude,codex --validate
 
-      - name: Fail if generated agent context is stale
-        run: |
-          apm compile -t claude,codex --clean --local-only
-          git diff --exit-code AGENTS.md .claude/rules/ \
-            || { echo "::error::Agent context is stale. Run 'make sync' and commit."; exit 1; }
+      # Note: the committed AGENTS.md / .claude/rules carry an APM-version stamp, so a
+      # hard drift gate is intentionally left out of CI (it would trip whenever the runner's
+      # APM is newer than the one that generated them). Run `make check` locally to catch
+      # real content drift. CI enforces the version-robust gates: frozen install + audit.
 
       - name: Export agent-dependency SBOM
         run: |

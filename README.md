@@ -8,7 +8,7 @@ It is built around [yaah](https://github.com/dirien/yet-another-agent-harness) (
 
 ## What's in here
 
-- 11 skills pulled from git and pinned to a commit (Go, CLI, DevOps, linting, repo hygiene), plus 5 more under `devDependencies` that I only want while working on the repo itself.
+- 16 skills pulled from git and pinned to a commit (Go, CLI, DevOps, linting, repo hygiene, code review, security).
 - Three local skills (`commit`, `pr`, `review`) and three subagents (`executor`, `librarian`, `reviewer`) under `.apm/`.
 - Three MCP servers: Context7 for docs, Pulumi's hosted server, and yaah's own (`yaah serve`).
 - Four LSP servers (gopls, typescript, pyright, csharp) written to `.lsp.json`.
@@ -61,7 +61,7 @@ The GitHub Actions workflow in `.github/workflows/apm.yml` runs the install, aud
 
 ## What's mine and what's borrowed
 
-The three skills, three agents, five hooks, and the instruction files under `.apm/` are mine and live in this repo. The 16 skills under `dependencies`/`devDependencies` come from `jeffallan/claude-skills`, `rshade/agent-skills`, and `netresearch/agent-rules-skill`; `apm.lock.yaml` pins each to a commit and `apm install --frozen` reproduces them.
+The three skills, three agents, five hooks, and the instruction files under `.apm/` are mine and live in this repo. The 16 skills under `dependencies` come from `jeffallan/claude-skills`, `rshade/agent-skills`, and `netresearch/agent-rules-skill`; `apm.lock.yaml` pins each to a commit and `apm install --frozen` reproduces them.
 
 ## Reading
 

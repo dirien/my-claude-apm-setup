@@ -53,6 +53,11 @@ dependencies:
     - rshade/agent-skills/skills/markdownlint#71fe77bb64c0dbba456ba6f892aa8bbac873eeb4
     - rshade/agent-skills/skills/actionlint#71fe77bb64c0dbba456ba6f892aa8bbac873eeb4
     - rshade/agent-skills/skills/shellcheck#71fe77bb64c0dbba456ba6f892aa8bbac873eeb4
+    - rshade/agent-skills/skills/go-nolint-audit#71fe77bb64c0dbba456ba6f892aa8bbac873eeb4
+    - rshade/agent-skills/skills/tech-debt#71fe77bb64c0dbba456ba6f892aa8bbac873eeb4
+    - rshade/agent-skills/skills/security-audit#71fe77bb64c0dbba456ba6f892aa8bbac873eeb4
+    - jeffallan/claude-skills/skills/code-reviewer#e8be415bc94d8d6ebddc2fb50e5d03c6e27d4319
+    - jeffallan/claude-skills/skills/architecture-designer#e8be415bc94d8d6ebddc2fb50e5d03c6e27d4319
     # netresearch/agent-rules-skill — keep AGENTS.md / .claude/rules in sync
     - netresearch/agent-rules-skill/skills/agent-rules#76decb504e698ca884702c2388f9792892b17e6f
 
@@ -102,15 +107,11 @@ dependencies:
       extensionToLanguage:
         ".cs": csharp
 
-# Skills you only want while developing/reviewing this repo. `apm pack` leaves these out
-# of a consumer bundle; a local `apm install` still deploys them.
-devDependencies:
-  apm:
-    - jeffallan/claude-skills/skills/code-reviewer#e8be415bc94d8d6ebddc2fb50e5d03c6e27d4319
-    - jeffallan/claude-skills/skills/architecture-designer#e8be415bc94d8d6ebddc2fb50e5d03c6e27d4319
-    - rshade/agent-skills/skills/security-audit#71fe77bb64c0dbba456ba6f892aa8bbac873eeb4
-    - rshade/agent-skills/skills/go-nolint-audit#71fe77bb64c0dbba456ba6f892aa8bbac873eeb4
-    - rshade/agent-skills/skills/tech-debt#71fe77bb64c0dbba456ba6f892aa8bbac873eeb4
+# Note on devDependencies: APM supports a `devDependencies:` block (dev-only skills,
+# excluded from `apm pack`). I kept all 16 skills as regular dependencies instead, because
+# `apm audit --ci` flags dev entries as "orphaned" in a production (`apm install --frozen`)
+# install — the CI gate deploys only runtime deps, so the locked dev entries look undeployed.
+# See docs/APM-ADOPTION.md.
 
 # Local primitives under .apm/, discovered automatically:
 #   .apm/instructions/*.instructions.md → .claude/rules/ (claude) + AGENTS.md (codex)

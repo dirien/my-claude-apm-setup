@@ -89,10 +89,13 @@ pass `--target claude` (deprecated/ignored) or `--format apm` (packs the whole m
   reproducibility; pin `#<sha>` in `apm.yml` only if you want the manifest self-describing and
   the drift warning gone. These 3 repos publish no tags, so `#<sha>` (already in the lockfile)
   is the only immutable option; bump via `apm update`.
-- **`devDependencies:`** — move develop-yaah skills (code-reviewer, security-audit, tech-debt,
-  go-nolint-audit, actionlint, shellcheck, markdownlint, commitlint, architecture-designer) out
-  of runtime; `apm pack` excludes them. `apm lock -v` records `is_dev: true`. Payoff is at pack
-  time, so it's future-proofing.
+- **`devDependencies:`** — move develop-only skills (code-reviewer, security-audit, tech-debt,
+  go-nolint-audit, architecture-designer) out of runtime; `apm pack` excludes them and
+  `apm lock -v` records `is_dev: true`. **Caveat (learned the hard way in CI):** a production
+  install (`apm install --frozen`) does not deploy dev deps, so `apm audit --ci` then reports
+  them as `no-orphaned-packages` failures ("N orphaned package(s) in lockfile"). This repo keeps
+  all 16 skills as regular `dependencies` so `apm audit --ci` stays green; adopt `devDependencies`
+  only if you drop `apm audit --ci` from CI or install with dev deps included.
 - **Maintenance loop** — `apm outdated` → `apm update --dry-run` → `apm update -y` in CONTRIBUTING.
 - **Transitive-MCP note (docs)** — a downstream repo that pulls yaah *transitively* silently
   drops the self-defined `yaah` MCP unless it re-declares it or installs with

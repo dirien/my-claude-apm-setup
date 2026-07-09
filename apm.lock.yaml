@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-07-09T16:56:15.327604+00:00'
+generated_at: '2026-07-09T17:04:47.583690+00:00'
 apm_version: 0.22.0
 dependencies:
 - repo_url: jeffallan/claude-skills
@@ -40,7 +40,6 @@ dependencies:
     .claude/skills/architecture-designer/references/nfr-checklist.md: sha256:37b9b0f083bd224acccb04eec86edc09a494c693a4ad0ec32ea24f472c122d70
     .claude/skills/architecture-designer/references/system-design.md: sha256:b33ff621c6461eb321d18fc9923c4bba689776e1cd0f0c00945584c2698319a1
   content_hash: sha256:091bbb087421942995efb22bfc09e3f6c38cd762498e4c11ea728f0df89ee91b
-  is_dev: true
 - repo_url: jeffallan/claude-skills
   name: claude-skills
   host: github.com
@@ -121,7 +120,6 @@ dependencies:
     .claude/skills/code-reviewer/references/review-checklist.md: sha256:c0e348f3896a274c407da7bf52570377dd9b7d0d3284d8f582559d890c3dfbcc
     .claude/skills/code-reviewer/references/spec-compliance-review.md: sha256:a5fcb93e7058b4c089b871ae954d8ab5cf45702e91c54242b06cf7af455f57df
   content_hash: sha256:85a9b05725e3796318a5a2ec49f3a25beddb88a2a8875c97c4c999d1defbbc8a
-  is_dev: true
 - repo_url: jeffallan/claude-skills
   name: claude-skills
   host: github.com
@@ -1042,7 +1040,6 @@ dependencies:
     .claude/skills/go-nolint-audit/evals/fixture/main.go: sha256:98895389df46f081bc034e1545a89d3c977de718f0eff3bbbba460bf82192c41
     .claude/skills/go-nolint-audit/references/go-nolint-patterns.md: sha256:2bd30a2b140c1d84a4afa17de2aebde1af39c894777c5220aebbe6bfa76a7474
   content_hash: sha256:490813b189f934295e90b8099a7c847efb3d5c53f0b0a6802073d6bf85a82f8e
-  is_dev: true
 - repo_url: rshade/agent-skills
   name: agent-skills
   host: github.com
@@ -1141,7 +1138,6 @@ dependencies:
     .claude/skills/security-audit/references/secrets-and-supply-chain.md: sha256:27de67ec21838d35df84c4bcf68edea6f83ce26247f2aee71363bd6aa0422772
     .claude/skills/security-audit/references/threat-model.md: sha256:5acc11f84a86edb9f480473672f8da2ed073bab0bcec4afeb0b5e8c3ee55785f
   content_hash: sha256:faf7b28368cfc3925d486c691762311ae62b28beda3bcaa98514e4ee1084a18e
-  is_dev: true
 - repo_url: rshade/agent-skills
   name: agent-skills
   host: github.com
@@ -1202,7 +1198,6 @@ dependencies:
     .claude/skills/tech-debt/references/analysis-patterns.md: sha256:dd521de570d3a51396951551e185df2a70d0cd5a6520db1a8a17e89f1aabf707
     .claude/skills/tech-debt/references/scoring-guide.md: sha256:442fbf0aa0382e0d94a2153ab46b3e0f018953827ea66a05589250fa0a3139bb
   content_hash: sha256:144865b7aba7bb26870020bb2126ad250a158b1a9b8fe81547d9fb9b8525e75f
-  is_dev: true
 mcp_servers:
 - context7
 - pulumi
