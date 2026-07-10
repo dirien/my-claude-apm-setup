@@ -4,7 +4,7 @@
 #   apm install --frozen         # resolve the pinned skill deps, wire MCP/LSP/hooks
 #   apm compile -t claude,codex  # (re)generate agent context from .apm/instructions/
 #
-# Everything here runs on APM + standard tooling — no external harness binary required.
+# Everything here runs on APM + standard tooling — no extra binary required.
 #
 #   Install APM:  curl -sSL https://aka.ms/apm-unix | sh   (or: brew install microsoft/apm/apm)
 

@@ -4,7 +4,7 @@ My Claude Code and Codex setup, kept in one [Microsoft APM](https://microsoft.gi
 
 Agent config has a way of scattering: settings in JSON, skills as loose markdown, hooks wired by hand, MCP servers pasted into more JSON, and a `CLAUDE.md` plus an `AGENTS.md` that slowly say different things. This repo puts all of it behind `apm.yml` and a `.apm/` folder. Run `apm install` and both agents come up the same way, on any machine.
 
-It is self-contained. The guardrails are plain shell scripts under `scripts/`, so there is no external harness or daemon to install — just APM, your language servers, and the tools you already use.
+It is self-contained. The guardrails are plain shell scripts under `scripts/`, so there is no extra tool or daemon to install — just APM, your language servers, and the tools you already use.
 
 ## What's in here
 
