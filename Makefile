@@ -1,5 +1,6 @@
-# APM automation for this Claude Code + Codex setup. Every recipe runs in CI
-# (.github/workflows/apm.yml) and was verified on apm 0.22.0. Targets: claude, codex.
+# APM automation for this Claude Code + Codex setup. Verified on apm 0.22.0. Targets: claude, codex.
+# CI (.github/workflows/apm.yml) runs the frozen install + audit + validate + SBOM gates;
+# `check` (the drift gate), `install`, `sync`, and `bundle` are for local use.
 
 # Reproducible SBOM timestamp — the commit date, or a fixed fallback.
 SOURCE_DATE ?= $(shell git log -1 --format=%cI 2>/dev/null || echo 2026-01-01T00:00:00+00:00)
