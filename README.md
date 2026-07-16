@@ -34,6 +34,37 @@ apm compile -t claude,codex    # generate the agent context (see below)
 # then open the folder in Claude Code or Codex
 ```
 
+## Use in another repo
+
+You don't copy `.apm/` around. Depend on this repo as a single APM package and `apm install` pulls the whole thing — all skills, subagents, instructions, guardrail hooks, MCP, and LSP — into that repo's `.claude/`.
+
+The entire consumer `apm.yml` is one dependency line:
+
+```yaml
+name: my-project
+version: 1.0.0
+targets:
+  - claude
+dependencies:
+  apm:
+    # '#' is the git-ref separator; '@' is reserved for the alias object-form.
+    - dirien/my-claude-apm-setup#v0.2.0
+includes: auto
+```
+
+```bash
+apm install            # writes apm.lock.yaml + materializes .claude/
+apm install --frozen   # reproducible install from the lock (use this in CI)
+```
+
+That single dependency materializes 19 skills into `.claude/skills/`, the three subagents into `.claude/agents/`, the instructions into `.claude/rules/`, the guardrail hooks into `.claude/apm-hooks.json` + `.claude/settings.json`, and the MCP/LSP servers into `.mcp.json` + `.lsp.json`.
+
+Notes:
+
+- **Pin it.** An unpinned dep installs the latest commit and drifts; `apm install` warns about it. Pin a tag (`#v0.2.0`) or a commit (`#<sha>`).
+- **Generated vs vendored.** `apm_modules/` is auto-added to `.gitignore`. `.claude/` is generated — commit it, or gitignore it and run `apm install --frozen` in CI. Don't hand-edit `.claude/skills/*`; it is overwritten.
+- **MCP.** `context7`/`pulumi` configure automatically as direct deps of this package. Nested a layer deeper they can be dropped unless re-declared or installed with `--trust-transitive-mcp`.
+
 ## How the agent context works
 
 There is one source of truth for project rules: the files under `.apm/instructions/`. Each agent receives them through its own native mechanism, so nothing is written twice and the two can't drift.
