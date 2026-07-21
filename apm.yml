@@ -9,7 +9,7 @@
 #   Install APM:  curl -sSL https://aka.ms/apm-unix | sh   (or: brew install microsoft/apm/apm)
 
 name: my-claude-apm-setup
-version: 0.2.0
+version: 0.3.0
 description: A self-contained APM-managed Claude Code + Codex setup — pinned skills, agents, guardrail hooks, MCP, LSP, and single-source generated context.
 author: Engin Diri
 license: MIT
@@ -59,6 +59,11 @@ dependencies:
     - jeffallan/claude-skills/skills/architecture-designer#e8be415bc94d8d6ebddc2fb50e5d03c6e27d4319
     # netresearch/agent-rules-skill — keep AGENTS.md / .claude/rules in sync
     - netresearch/agent-rules-skill/skills/agent-rules#76decb504e698ca884702c2388f9792892b17e6f
+    # mattpocock/skills — plan stress-testing (grilling is model-invoked, grill-me is the /grill-me entry point)
+    - mattpocock/skills/skills/productivity/grilling#ed37663cc5fbef691ddfecd080dff42f7e7e350d
+    - mattpocock/skills/skills/productivity/grill-me#ed37663cc5fbef691ddfecd080dff42f7e7e350d
+    # blader/humanizer — strip AI-writing patterns from prose (skill lives at the repo root)
+    - blader/humanizer#1b48564898e999219882660237fde01bf4843a0f
 
   # MCP servers, self-defined (registry: false) so install never hits a registry.
   mcp:
@@ -100,7 +105,7 @@ dependencies:
         ".cs": csharp
 
 # Note on devDependencies: APM supports a `devDependencies:` block (dev-only skills,
-# excluded from `apm pack`). I kept all 16 skills as regular dependencies instead, because
+# excluded from `apm pack`). I kept all 19 skills as regular dependencies instead, because
 # `apm audit --ci` flags dev entries as "orphaned" in a production (`apm install --frozen`)
 # install — the CI gate deploys only runtime deps, so the locked dev entries look undeployed.
 # See docs/APM-ADOPTION.md.

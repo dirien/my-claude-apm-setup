@@ -8,7 +8,7 @@ It is self-contained. The guardrails are plain shell scripts under `scripts/`, s
 
 ## What's in here
 
-- 16 skills pulled from git and pinned to a commit (Go, CLI, DevOps, linting, repo hygiene, code review, security).
+- 19 skills pulled from git and pinned to a commit (Go, CLI, DevOps, linting, repo hygiene, code review, security, plan grilling, prose humanizing).
 - Three local skills (`commit`, `pr`, `review`) and three subagents (`executor`, `librarian`, `reviewer`) under `.apm/`.
 - Two MCP servers: Context7 for library docs and Pulumi's hosted server.
 - Four LSP servers (gopls, typescript, pyright, csharp) written to `.lsp.json`.
@@ -48,7 +48,7 @@ targets:
 dependencies:
   apm:
     # '#' is the git-ref separator; '@' is reserved for the alias object-form.
-    - dirien/my-claude-apm-setup#v0.2.0
+    - dirien/my-claude-apm-setup#v0.3.0
 includes: auto
 ```
 
@@ -57,11 +57,11 @@ apm install            # writes apm.lock.yaml + materializes .claude/
 apm install --frozen   # reproducible install from the lock (use this in CI)
 ```
 
-That single dependency materializes 19 skills into `.claude/skills/`, the three subagents into `.claude/agents/`, the instructions into `.claude/rules/`, the guardrail hooks into `.claude/apm-hooks.json` + `.claude/settings.json`, and the MCP/LSP servers into `.mcp.json` + `.lsp.json`.
+That single dependency materializes 22 skills into `.claude/skills/`, the three subagents into `.claude/agents/`, the instructions into `.claude/rules/`, the guardrail hooks into `.claude/apm-hooks.json` + `.claude/settings.json`, and the MCP/LSP servers into `.mcp.json` + `.lsp.json`.
 
 Notes:
 
-- **Pin it.** An unpinned dep installs the latest commit and drifts; `apm install` warns about it. Pin a tag (`#v0.2.0`) or a commit (`#<sha>`).
+- **Pin it.** An unpinned dep installs the latest commit and drifts; `apm install` warns about it. Pin a tag (`#v0.3.0`) or a commit (`#<sha>`).
 - **Generated vs vendored.** `apm_modules/` is auto-added to `.gitignore`. `.claude/` is generated — commit it, or gitignore it and run `apm install --frozen` in CI. Don't hand-edit `.claude/skills/*`; it is overwritten.
 - **MCP.** `context7`/`pulumi` configure automatically as direct deps of this package. Nested a layer deeper they can be dropped unless re-declared or installed with `--trust-transitive-mcp`.
 
@@ -102,7 +102,7 @@ The GitHub Actions workflow in `.github/workflows/apm.yml` runs the install, aud
 
 ## What's mine and what's borrowed
 
-The three skills, three agents, two guardrail hooks, and the instruction files under `.apm/` are mine and live in this repo. The 16 skills under `dependencies` come from `jeffallan/claude-skills`, `rshade/agent-skills`, and `netresearch/agent-rules-skill`; `apm.lock.yaml` pins each to a commit and `apm install --frozen` reproduces them.
+The three skills, three agents, two guardrail hooks, and the instruction files under `.apm/` are mine and live in this repo. The 19 skills under `dependencies` come from `jeffallan/claude-skills`, `rshade/agent-skills`, `netresearch/agent-rules-skill`, `mattpocock/skills`, and `blader/humanizer`; `apm.lock.yaml` pins each to a commit and `apm install --frozen` reproduces them.
 
 ## Reading
 
