@@ -9,7 +9,7 @@
 #   Install APM:  curl -sSL https://aka.ms/apm-unix | sh   (or: brew install microsoft/apm/apm)
 
 name: my-claude-apm-setup
-version: 0.3.0
+version: 0.4.0
 description: A self-contained APM-managed Claude Code + Codex setup — pinned skills, agents, guardrail hooks, MCP, LSP, and single-source generated context.
 author: Engin Diri
 license: MIT
@@ -112,7 +112,7 @@ dependencies:
 
 # Local primitives under .apm/, discovered automatically:
 #   .apm/instructions/*.instructions.md → .claude/rules/ (claude) + AGENTS.md (codex)
-#   .apm/skills/{commit,pr,review}/     → three built-in skills
+#   .apm/skills/{commit,docs-pr,pr,review}/ → four built-in skills
 #   .apm/agents/{executor,librarian,reviewer}.md → three subagents
 #   .apm/hooks/guardrails.json          → PreToolUse command guard + PostToolUse format/secret-scan
 #       (self-contained shell scripts under scripts/ — no external binary needed)
