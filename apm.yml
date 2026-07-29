@@ -9,7 +9,7 @@
 #   Install APM:  curl -sSL https://aka.ms/apm-unix | sh   (or: brew install microsoft/apm/apm)
 
 name: my-claude-apm-setup
-version: 0.4.0
+version: 0.5.0
 description: A self-contained APM-managed Claude Code + Codex setup — pinned skills, agents, guardrail hooks, MCP, LSP, and single-source generated context.
 author: Engin Diri
 license: MIT
@@ -67,12 +67,6 @@ dependencies:
 
   # MCP servers, self-defined (registry: false) so install never hits a registry.
   mcp:
-    # Up-to-date library/API docs on demand.
-    - name: context7
-      registry: false
-      transport: stdio
-      command: npx
-      args: ["-y", "@context7/mcp"]
     # Pulumi's hosted MCP (OAuth on first use) — registry, code validation, Neo.
     - name: pulumi
       registry: false

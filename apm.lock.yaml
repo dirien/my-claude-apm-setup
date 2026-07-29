@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-07-21T11:18:55.720092+00:00'
+generated_at: '2026-07-29T13:56:59.899951+00:00'
 apm_version: 0.26.0
 dependencies:
 - repo_url: blader/humanizer
@@ -1302,6 +1302,24 @@ deployments:
   - .
   active_owner: .
   content_hash: sha256:73a5dcd522e872570e86e2c2826c91e02e05f1962504cb61a8d996c7e65bc062
+- kind: project-relative
+  target: agents
+  value: .agents/skills/docs-pr
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: agents
+  value: .agents/skills/docs-pr/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:bc8fa7a2a9709405d368d47fe9891c971d94fe3ef462b5a3e4dcc323ee06cffa
 - kind: project-relative
   target: agents
   value: .agents/skills/pr
@@ -3291,6 +3309,24 @@ deployments:
   - jeffallan/claude-skills/skills/devops-engineer
   active_owner: jeffallan/claude-skills/skills/devops-engineer
   content_hash: sha256:0d629d4b9826cbd97c1d5a6e826d701bacd3f057d4092cda0e5bb9da692e922b
+- kind: project-relative
+  target: claude
+  value: .claude/skills/docs-pr
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/docs-pr/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:bc8fa7a2a9709405d368d47fe9891c971d94fe3ef462b5a3e4dcc323ee06cffa
 - kind: project-relative
   target: claude
   value: .claude/skills/go-fix
@@ -6380,15 +6416,6 @@ deployments:
   content_hash: sha256:b80ac9e3c85509030d2a8f84c22eb7811ce635ab3dfeb99e30d38a2927f7c285
 - kind: uri
   target: mcp
-  value: context7
-  runtime: claude
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: null
-- kind: uri
-  target: mcp
   value: pulumi
   runtime: claude
   scope: project
@@ -6397,17 +6424,8 @@ deployments:
   active_owner: .
   content_hash: null
 mcp_servers:
-- context7
 - pulumi
 mcp_configs:
-  context7:
-    name: context7
-    transport: stdio
-    args:
-    - -y
-    - '@context7/mcp'
-    registry: false
-    command: npx
   pulumi:
     name: pulumi
     transport: http
@@ -6415,7 +6433,6 @@ mcp_configs:
     url: https://mcp.ai.pulumi.com/mcp
 mcp_target_servers:
   claude:
-  - context7
   - pulumi
 lsp_servers:
 - csharp
@@ -6453,6 +6470,8 @@ lsp_configs:
 local_deployed_files:
 - .agents/skills/commit
 - .agents/skills/commit/SKILL.md
+- .agents/skills/docs-pr
+- .agents/skills/docs-pr/SKILL.md
 - .agents/skills/pr
 - .agents/skills/pr/SKILL.md
 - .agents/skills/review
@@ -6464,6 +6483,8 @@ local_deployed_files:
 - .claude/rules/repo-conventions.md
 - .claude/skills/commit
 - .claude/skills/commit/SKILL.md
+- .claude/skills/docs-pr
+- .claude/skills/docs-pr/SKILL.md
 - .claude/skills/pr
 - .claude/skills/pr/SKILL.md
 - .claude/skills/review
@@ -6473,6 +6494,7 @@ local_deployed_files:
 - .codex/agents/reviewer.toml
 local_deployed_file_hashes:
   .agents/skills/commit/SKILL.md: sha256:73a5dcd522e872570e86e2c2826c91e02e05f1962504cb61a8d996c7e65bc062
+  .agents/skills/docs-pr/SKILL.md: sha256:bc8fa7a2a9709405d368d47fe9891c971d94fe3ef462b5a3e4dcc323ee06cffa
   .agents/skills/pr/SKILL.md: sha256:3df806c42af088805e9d6497cc32a6d873472211263aa81275f0b85210e2fa61
   .agents/skills/review/SKILL.md: sha256:74a028d980567388a6f44b22df81f485a2883302cf70c26182d515b1d144585f
   .claude/agents/executor.md: sha256:c27a8869a9fea464106b5516d2849b0ed617daac3ed25db5cdee70fe41213b6c
@@ -6481,6 +6503,7 @@ local_deployed_file_hashes:
   .claude/rules/pkg-go.md: sha256:8cc0f516e7c70f99821b553eb2a407aeb9e6f9ec253c973ae178f753eedd04a4
   .claude/rules/repo-conventions.md: sha256:42cb2d402133ce4f531dd65bc9c82c0e76812cc7043e6121f17c37513a1ffd1f
   .claude/skills/commit/SKILL.md: sha256:73a5dcd522e872570e86e2c2826c91e02e05f1962504cb61a8d996c7e65bc062
+  .claude/skills/docs-pr/SKILL.md: sha256:bc8fa7a2a9709405d368d47fe9891c971d94fe3ef462b5a3e4dcc323ee06cffa
   .claude/skills/pr/SKILL.md: sha256:3df806c42af088805e9d6497cc32a6d873472211263aa81275f0b85210e2fa61
   .claude/skills/review/SKILL.md: sha256:74a028d980567388a6f44b22df81f485a2883302cf70c26182d515b1d144585f
   .codex/agents/executor.toml: sha256:084565c6f4e64eb42c4600e8b5ba46d51468783aa1393c107b95921e8e2d6616

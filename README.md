@@ -63,7 +63,7 @@ Notes:
 
 - **Pin it.** An unpinned dep installs the latest commit and drifts; `apm install` warns about it. Pin a tag (`#v0.4.0`) or a commit (`#<sha>`).
 - **Generated vs vendored.** `apm_modules/` is auto-added to `.gitignore`. `.claude/` is generated — commit it, or gitignore it and run `apm install --frozen` in CI. Don't hand-edit `.claude/skills/*`; it is overwritten.
-- **MCP.** `context7`/`pulumi` configure automatically as direct deps of this package. Nested a layer deeper they can be dropped unless re-declared or installed with `--trust-transitive-mcp`.
+- **MCP.** `pulumi` configures automatically as a direct dep of this package. Nested a layer deeper it can be dropped unless re-declared or installed with `--trust-transitive-mcp`.
 
 ## How the agent context works
 
