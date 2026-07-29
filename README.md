@@ -10,7 +10,7 @@ It is self-contained. The guardrails are plain shell scripts under `scripts/`, s
 
 - 19 skills pulled from git and pinned to a commit (Go, CLI, DevOps, linting, repo hygiene, code review, security, plan grilling, prose humanizing).
 - Four local skills (`commit`, `docs-pr`, `pr`, `review`) and three subagents (`executor`, `librarian`, `reviewer`) under `.apm/`.
-- Two MCP servers: Context7 for library docs and Pulumi's hosted server.
+- One MCP server: Pulumi's hosted server.
 - Four LSP servers (gopls, typescript, pyright, csharp) written to `.lsp.json`.
 - Two guardrail hooks, as shell scripts in `scripts/`: a `PreToolUse` guard that blocks destructive Bash commands, and a `PostToolUse` hook that scans edited files for secrets and formats them.
 - One instruction source under `.apm/instructions/` that generates the agent context for both editors.
