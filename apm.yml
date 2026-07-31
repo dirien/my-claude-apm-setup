@@ -76,6 +76,9 @@ dependencies:
     - pulumi/agent-skills/pulumi/skills/pulumi-overview#49e2562105dbd3bd0e1829c32c023163d139452b
     # antonbabenko/terraform-skill — Terraform/OpenTofu authoring, review and debugging
     - antonbabenko/terraform-skill/skills/terraform-skill#0a3a4a66e99001347d36a41e10260a825be3ab62
+    # antonbabenko/agent-plugins — code-intelligence, terraform-skill's recommended
+    # companion (LSP-first code navigation guidance + /setup-code-intelligence)
+    - antonbabenko/agent-plugins/plugins/code-intelligence#ae17b3ebd19160e7e12e13538155e23daf1497a2
 
   # MCP servers, self-defined (registry: false) so install never hits a registry.
   mcp:

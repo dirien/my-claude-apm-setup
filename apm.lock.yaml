@@ -1,7 +1,37 @@
 lockfile_version: '1'
-generated_at: '2026-07-31T09:10:35.080163+00:00'
+generated_at: '2026-07-31T09:14:09.734763+00:00'
 apm_version: 0.26.0
 dependencies:
+- repo_url: antonbabenko/agent-plugins
+  name: agent-plugins
+  host: github.com
+  resolved_commit: ae17b3ebd19160e7e12e13538155e23daf1497a2
+  resolved_ref: ae17b3ebd19160e7e12e13538155e23daf1497a2
+  version: unknown
+  virtual_path: plugins/code-intelligence
+  is_virtual: true
+  package_type: skill_bundle
+  deployed_files:
+  - .agents/skills/code-intelligence
+  - .agents/skills/code-intelligence/SKILL.md
+  - .agents/skills/code-intelligence/references/degradation-and-disclosure.md
+  - .agents/skills/code-intelligence/references/lsp-calls.md
+  - .agents/skills/code-intelligence/references/tool-precedence.md
+  - .claude/skills/code-intelligence
+  - .claude/skills/code-intelligence/SKILL.md
+  - .claude/skills/code-intelligence/references/degradation-and-disclosure.md
+  - .claude/skills/code-intelligence/references/lsp-calls.md
+  - .claude/skills/code-intelligence/references/tool-precedence.md
+  deployed_file_hashes:
+    .agents/skills/code-intelligence/SKILL.md: sha256:1f627d39cc080d616c05147ea27c37e4ae9acb20011a02c21143ba66700a3e9c
+    .agents/skills/code-intelligence/references/degradation-and-disclosure.md: sha256:ebb886dd3bb8ef45e3e31e655faa130a0d571d32a6bcd25a549c4a6439d9ea66
+    .agents/skills/code-intelligence/references/lsp-calls.md: sha256:d84f103f6b6937e5ff30c5d49209feeb783892d0c1ab1d7e9f2b5fe3896e025d
+    .agents/skills/code-intelligence/references/tool-precedence.md: sha256:2c8bb0beb52565ed5391c7682a01ba23a862d2434d1e0abb4cec651d9299b860
+    .claude/skills/code-intelligence/SKILL.md: sha256:1f627d39cc080d616c05147ea27c37e4ae9acb20011a02c21143ba66700a3e9c
+    .claude/skills/code-intelligence/references/degradation-and-disclosure.md: sha256:ebb886dd3bb8ef45e3e31e655faa130a0d571d32a6bcd25a549c4a6439d9ea66
+    .claude/skills/code-intelligence/references/lsp-calls.md: sha256:d84f103f6b6937e5ff30c5d49209feeb783892d0c1ab1d7e9f2b5fe3896e025d
+    .claude/skills/code-intelligence/references/tool-precedence.md: sha256:2c8bb0beb52565ed5391c7682a01ba23a862d2434d1e0abb4cec651d9299b860
+  content_hash: sha256:02a7d9398cca275a57abd711e84a74227e859d892fd2c4e44d888044c3495402
 - repo_url: antonbabenko/terraform-skill
   name: terraform-skill
   host: github.com
@@ -3353,6 +3383,51 @@ deployments:
   content_hash: sha256:5c57db089d4e4bb3d8a503e76122cdfce8aac49fb2bd10d675ca281bcb778a25
 - kind: project-relative
   target: claude
+  value: .claude/skills/code-intelligence
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/agent-plugins/plugins/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/code-intelligence/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/agent-plugins/plugins/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  content_hash: sha256:1f627d39cc080d616c05147ea27c37e4ae9acb20011a02c21143ba66700a3e9c
+- kind: project-relative
+  target: claude
+  value: .claude/skills/code-intelligence/references/degradation-and-disclosure.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/agent-plugins/plugins/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  content_hash: sha256:ebb886dd3bb8ef45e3e31e655faa130a0d571d32a6bcd25a549c4a6439d9ea66
+- kind: project-relative
+  target: claude
+  value: .claude/skills/code-intelligence/references/lsp-calls.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/agent-plugins/plugins/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  content_hash: sha256:d84f103f6b6937e5ff30c5d49209feeb783892d0c1ab1d7e9f2b5fe3896e025d
+- kind: project-relative
+  target: claude
+  value: .claude/skills/code-intelligence/references/tool-precedence.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/agent-plugins/plugins/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  content_hash: sha256:2c8bb0beb52565ed5391c7682a01ba23a862d2434d1e0abb4cec651d9299b860
+- kind: project-relative
+  target: claude
   value: .claude/skills/code-reviewer
   runtime: null
   scope: project
@@ -6258,6 +6333,51 @@ deployments:
   - jeffallan/claude-skills/skills/cli-developer
   active_owner: jeffallan/claude-skills/skills/cli-developer
   content_hash: sha256:5c57db089d4e4bb3d8a503e76122cdfce8aac49fb2bd10d675ca281bcb778a25
+- kind: project-relative
+  target: codex
+  value: .agents/skills/code-intelligence
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/agent-plugins/plugins/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/code-intelligence/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/agent-plugins/plugins/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  content_hash: sha256:1f627d39cc080d616c05147ea27c37e4ae9acb20011a02c21143ba66700a3e9c
+- kind: project-relative
+  target: codex
+  value: .agents/skills/code-intelligence/references/degradation-and-disclosure.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/agent-plugins/plugins/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  content_hash: sha256:ebb886dd3bb8ef45e3e31e655faa130a0d571d32a6bcd25a549c4a6439d9ea66
+- kind: project-relative
+  target: codex
+  value: .agents/skills/code-intelligence/references/lsp-calls.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/agent-plugins/plugins/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  content_hash: sha256:d84f103f6b6937e5ff30c5d49209feeb783892d0c1ab1d7e9f2b5fe3896e025d
+- kind: project-relative
+  target: codex
+  value: .agents/skills/code-intelligence/references/tool-precedence.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/agent-plugins/plugins/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  content_hash: sha256:2c8bb0beb52565ed5391c7682a01ba23a862d2434d1e0abb4cec651d9299b860
 - kind: project-relative
   target: codex
   value: .agents/skills/code-reviewer
