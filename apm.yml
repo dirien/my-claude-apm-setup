@@ -9,7 +9,7 @@
 #   Install APM:  curl -sSL https://aka.ms/apm-unix | sh   (or: brew install microsoft/apm/apm)
 
 name: my-claude-apm-setup
-version: 0.5.0
+version: 0.6.0
 description: A self-contained APM-managed Claude Code + Codex setup — pinned skills, agents, guardrail hooks, MCP, LSP, and single-source generated context.
 author: Engin Diri
 license: MIT
@@ -64,6 +64,18 @@ dependencies:
     - mattpocock/skills/skills/productivity/grill-me#ed37663cc5fbef691ddfecd080dff42f7e7e350d
     # blader/humanizer — strip AI-writing patterns from prose (skill lives at the repo root)
     - blader/humanizer#1b48564898e999219882660237fde01bf4843a0f
+    # pulumi/agent-skills — the official Pulumi skills (only the pulumi/ plugin, not
+    # delegation/migration/package-maintenance)
+    - pulumi/agent-skills/pulumi/skills/package-usage#49e2562105dbd3bd0e1829c32c023163d139452b
+    - pulumi/agent-skills/pulumi/skills/provider-upgrade#49e2562105dbd3bd0e1829c32c023163d139452b
+    - pulumi/agent-skills/pulumi/skills/pulumi-automation-api#49e2562105dbd3bd0e1829c32c023163d139452b
+    - pulumi/agent-skills/pulumi/skills/pulumi-best-practices#49e2562105dbd3bd0e1829c32c023163d139452b
+    - pulumi/agent-skills/pulumi/skills/pulumi-component#49e2562105dbd3bd0e1829c32c023163d139452b
+    - pulumi/agent-skills/pulumi/skills/pulumi-debug-failed-operation#49e2562105dbd3bd0e1829c32c023163d139452b
+    - pulumi/agent-skills/pulumi/skills/pulumi-esc#49e2562105dbd3bd0e1829c32c023163d139452b
+    - pulumi/agent-skills/pulumi/skills/pulumi-overview#49e2562105dbd3bd0e1829c32c023163d139452b
+    # antonbabenko/terraform-skill — Terraform/OpenTofu authoring, review and debugging
+    - antonbabenko/terraform-skill/skills/terraform-skill#0a3a4a66e99001347d36a41e10260a825be3ab62
 
   # MCP servers, self-defined (registry: false) so install never hits a registry.
   mcp:
