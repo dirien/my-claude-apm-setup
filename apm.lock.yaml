@@ -1,7 +1,87 @@
 lockfile_version: '1'
-generated_at: '2026-07-29T13:56:59.899951+00:00'
+generated_at: '2026-07-31T09:14:09.734763+00:00'
 apm_version: 0.26.0
 dependencies:
+- repo_url: antonbabenko/agent-plugins
+  name: agent-plugins
+  host: github.com
+  resolved_commit: ae17b3ebd19160e7e12e13538155e23daf1497a2
+  resolved_ref: ae17b3ebd19160e7e12e13538155e23daf1497a2
+  version: unknown
+  virtual_path: plugins/code-intelligence
+  is_virtual: true
+  package_type: skill_bundle
+  deployed_files:
+  - .agents/skills/code-intelligence
+  - .agents/skills/code-intelligence/SKILL.md
+  - .agents/skills/code-intelligence/references/degradation-and-disclosure.md
+  - .agents/skills/code-intelligence/references/lsp-calls.md
+  - .agents/skills/code-intelligence/references/tool-precedence.md
+  - .claude/skills/code-intelligence
+  - .claude/skills/code-intelligence/SKILL.md
+  - .claude/skills/code-intelligence/references/degradation-and-disclosure.md
+  - .claude/skills/code-intelligence/references/lsp-calls.md
+  - .claude/skills/code-intelligence/references/tool-precedence.md
+  deployed_file_hashes:
+    .agents/skills/code-intelligence/SKILL.md: sha256:1f627d39cc080d616c05147ea27c37e4ae9acb20011a02c21143ba66700a3e9c
+    .agents/skills/code-intelligence/references/degradation-and-disclosure.md: sha256:ebb886dd3bb8ef45e3e31e655faa130a0d571d32a6bcd25a549c4a6439d9ea66
+    .agents/skills/code-intelligence/references/lsp-calls.md: sha256:d84f103f6b6937e5ff30c5d49209feeb783892d0c1ab1d7e9f2b5fe3896e025d
+    .agents/skills/code-intelligence/references/tool-precedence.md: sha256:2c8bb0beb52565ed5391c7682a01ba23a862d2434d1e0abb4cec651d9299b860
+    .claude/skills/code-intelligence/SKILL.md: sha256:1f627d39cc080d616c05147ea27c37e4ae9acb20011a02c21143ba66700a3e9c
+    .claude/skills/code-intelligence/references/degradation-and-disclosure.md: sha256:ebb886dd3bb8ef45e3e31e655faa130a0d571d32a6bcd25a549c4a6439d9ea66
+    .claude/skills/code-intelligence/references/lsp-calls.md: sha256:d84f103f6b6937e5ff30c5d49209feeb783892d0c1ab1d7e9f2b5fe3896e025d
+    .claude/skills/code-intelligence/references/tool-precedence.md: sha256:2c8bb0beb52565ed5391c7682a01ba23a862d2434d1e0abb4cec651d9299b860
+  content_hash: sha256:02a7d9398cca275a57abd711e84a74227e859d892fd2c4e44d888044c3495402
+- repo_url: antonbabenko/terraform-skill
+  name: terraform-skill
+  host: github.com
+  resolved_commit: 0a3a4a66e99001347d36a41e10260a825be3ab62
+  resolved_ref: 0a3a4a66e99001347d36a41e10260a825be3ab62
+  version: unknown
+  virtual_path: skills/terraform-skill
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/terraform-skill
+  - .agents/skills/terraform-skill/SKILL.md
+  - .agents/skills/terraform-skill/references/ci-cd-workflows.md
+  - .agents/skills/terraform-skill/references/code-intelligence-lsp.md
+  - .agents/skills/terraform-skill/references/code-patterns.md
+  - .agents/skills/terraform-skill/references/module-patterns.md
+  - .agents/skills/terraform-skill/references/quick-reference.md
+  - .agents/skills/terraform-skill/references/security-compliance.md
+  - .agents/skills/terraform-skill/references/state-management.md
+  - .agents/skills/terraform-skill/references/testing-frameworks.md
+  - .claude/skills/terraform-skill
+  - .claude/skills/terraform-skill/SKILL.md
+  - .claude/skills/terraform-skill/references/ci-cd-workflows.md
+  - .claude/skills/terraform-skill/references/code-intelligence-lsp.md
+  - .claude/skills/terraform-skill/references/code-patterns.md
+  - .claude/skills/terraform-skill/references/module-patterns.md
+  - .claude/skills/terraform-skill/references/quick-reference.md
+  - .claude/skills/terraform-skill/references/security-compliance.md
+  - .claude/skills/terraform-skill/references/state-management.md
+  - .claude/skills/terraform-skill/references/testing-frameworks.md
+  deployed_file_hashes:
+    .agents/skills/terraform-skill/SKILL.md: sha256:70c0038375d3738b4ecfca1016add39ef48a206cbed653c9a1cb336026a5e384
+    .agents/skills/terraform-skill/references/ci-cd-workflows.md: sha256:3ebb9a1d1e88c1f321381a0c179b9f9701e5dc0376bd6fac889feac4dd2de6c4
+    .agents/skills/terraform-skill/references/code-intelligence-lsp.md: sha256:ee5f167d265948960f37dddb393e8473f67090e68e1f2be612db9d1c02e7434e
+    .agents/skills/terraform-skill/references/code-patterns.md: sha256:791e4cb2ed1097fd0b7ddfec94da5440a2ea79bc521c36c6f2fc7e54a14eb1a1
+    .agents/skills/terraform-skill/references/module-patterns.md: sha256:1d98ddc72dca8be36e12ee669c2ba605d255fc5f67ad42e0ee23314e7fe05a3d
+    .agents/skills/terraform-skill/references/quick-reference.md: sha256:07fefaa3d3f84ef53129dc61a081415291d396666d9a613b0a9820e92ca1dd8e
+    .agents/skills/terraform-skill/references/security-compliance.md: sha256:9db93c0a08001ec759b380855afd9378a9b6f452c0f875415c7509888038a2b8
+    .agents/skills/terraform-skill/references/state-management.md: sha256:9912a56d21df2ddc12f9dbda6fa8f9712c16d85e7030991f3011971f999ecc64
+    .agents/skills/terraform-skill/references/testing-frameworks.md: sha256:a35483a965a649603065882498587c62a2badc373a05d6e6620b19eb8dcb425f
+    .claude/skills/terraform-skill/SKILL.md: sha256:70c0038375d3738b4ecfca1016add39ef48a206cbed653c9a1cb336026a5e384
+    .claude/skills/terraform-skill/references/ci-cd-workflows.md: sha256:3ebb9a1d1e88c1f321381a0c179b9f9701e5dc0376bd6fac889feac4dd2de6c4
+    .claude/skills/terraform-skill/references/code-intelligence-lsp.md: sha256:ee5f167d265948960f37dddb393e8473f67090e68e1f2be612db9d1c02e7434e
+    .claude/skills/terraform-skill/references/code-patterns.md: sha256:791e4cb2ed1097fd0b7ddfec94da5440a2ea79bc521c36c6f2fc7e54a14eb1a1
+    .claude/skills/terraform-skill/references/module-patterns.md: sha256:1d98ddc72dca8be36e12ee669c2ba605d255fc5f67ad42e0ee23314e7fe05a3d
+    .claude/skills/terraform-skill/references/quick-reference.md: sha256:07fefaa3d3f84ef53129dc61a081415291d396666d9a613b0a9820e92ca1dd8e
+    .claude/skills/terraform-skill/references/security-compliance.md: sha256:9db93c0a08001ec759b380855afd9378a9b6f452c0f875415c7509888038a2b8
+    .claude/skills/terraform-skill/references/state-management.md: sha256:9912a56d21df2ddc12f9dbda6fa8f9712c16d85e7030991f3011971f999ecc64
+    .claude/skills/terraform-skill/references/testing-frameworks.md: sha256:a35483a965a649603065882498587c62a2badc373a05d6e6620b19eb8dcb425f
+  content_hash: sha256:f00210f88a20678005a95175bb5505131ba7a5530266a36465a54df012df9737
 - repo_url: blader/humanizer
   name: humanizer
   host: github.com
@@ -935,6 +1015,214 @@ dependencies:
     .claude/skills/agent-rules/scripts/verify-commands.sh: sha256:9e2a7de778f00e549a668eb95dd6ebc23d3fb3c60e0df66907e8f9fbe1c4dca5
     .claude/skills/agent-rules/scripts/verify-content.sh: sha256:6bc2a3b9c34d17cb193b7a822f4169bdfb1e8ed182ef3436008deece83b664b6
   content_hash: sha256:c2078c38f89dde057e71166cd414fbe99002398de98b2d734fac4af070e7171d
+- repo_url: pulumi/agent-skills
+  name: package-usage
+  host: github.com
+  resolved_commit: 49e2562105dbd3bd0e1829c32c023163d139452b
+  resolved_ref: 49e2562105dbd3bd0e1829c32c023163d139452b
+  version: unknown
+  virtual_path: pulumi/skills/package-usage
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/package-usage
+  - .agents/skills/package-usage/SKILL.md
+  - .agents/skills/package-usage/agents/openai.yaml
+  - .agents/skills/package-usage/use_cases.yaml
+  - .claude/skills/package-usage
+  - .claude/skills/package-usage/SKILL.md
+  - .claude/skills/package-usage/agents/openai.yaml
+  - .claude/skills/package-usage/use_cases.yaml
+  deployed_file_hashes:
+    .agents/skills/package-usage/SKILL.md: sha256:60a91a13b11d1a914e662505be3c94c2bd400cb0c327ad6372af8906204d222e
+    .agents/skills/package-usage/agents/openai.yaml: sha256:73b260f964fe41b3582eb61ed6ed8995a61f87d5c5e46cb4a925e52ea8f2f664
+    .agents/skills/package-usage/use_cases.yaml: sha256:0909f8c77788a0550039761b004dba708c0d5f1fd64f2d4434bb1119da5b733d
+    .claude/skills/package-usage/SKILL.md: sha256:60a91a13b11d1a914e662505be3c94c2bd400cb0c327ad6372af8906204d222e
+    .claude/skills/package-usage/agents/openai.yaml: sha256:73b260f964fe41b3582eb61ed6ed8995a61f87d5c5e46cb4a925e52ea8f2f664
+    .claude/skills/package-usage/use_cases.yaml: sha256:0909f8c77788a0550039761b004dba708c0d5f1fd64f2d4434bb1119da5b733d
+  content_hash: sha256:e2a9a903f57f7ae6f64b49162b55f10e7568097b3f361b15bfc6c40e8029e752
+- repo_url: pulumi/agent-skills
+  name: provider-upgrade
+  host: github.com
+  resolved_commit: 49e2562105dbd3bd0e1829c32c023163d139452b
+  resolved_ref: 49e2562105dbd3bd0e1829c32c023163d139452b
+  version: unknown
+  virtual_path: pulumi/skills/provider-upgrade
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/provider-upgrade
+  - .agents/skills/provider-upgrade/SKILL.md
+  - .agents/skills/provider-upgrade/agents/openai.yaml
+  - .agents/skills/provider-upgrade/references/diagnostic-toolbox.md
+  - .agents/skills/provider-upgrade/use_cases.yaml
+  - .claude/skills/provider-upgrade
+  - .claude/skills/provider-upgrade/SKILL.md
+  - .claude/skills/provider-upgrade/agents/openai.yaml
+  - .claude/skills/provider-upgrade/references/diagnostic-toolbox.md
+  - .claude/skills/provider-upgrade/use_cases.yaml
+  deployed_file_hashes:
+    .agents/skills/provider-upgrade/SKILL.md: sha256:fb5544bff98c3b0837005efa513761536775de0f1748e77545d2725cbcbd4587
+    .agents/skills/provider-upgrade/agents/openai.yaml: sha256:0619cf3d3aea8f7bbf0ff4c9d9955801ee9486f2c644f176aac9cb1dbfecc108
+    .agents/skills/provider-upgrade/references/diagnostic-toolbox.md: sha256:d97ec1df70be7d1e19c422f893273b851e23518dcb71dfb295692da2a057ac8c
+    .agents/skills/provider-upgrade/use_cases.yaml: sha256:cf27447ecb5aa0962fbeae3cd3a459cf714fc0098909fff914d09fff0f794878
+    .claude/skills/provider-upgrade/SKILL.md: sha256:fb5544bff98c3b0837005efa513761536775de0f1748e77545d2725cbcbd4587
+    .claude/skills/provider-upgrade/agents/openai.yaml: sha256:0619cf3d3aea8f7bbf0ff4c9d9955801ee9486f2c644f176aac9cb1dbfecc108
+    .claude/skills/provider-upgrade/references/diagnostic-toolbox.md: sha256:d97ec1df70be7d1e19c422f893273b851e23518dcb71dfb295692da2a057ac8c
+    .claude/skills/provider-upgrade/use_cases.yaml: sha256:cf27447ecb5aa0962fbeae3cd3a459cf714fc0098909fff914d09fff0f794878
+  content_hash: sha256:082f50abbcbc6a0792467431458bc6000227d18a063561e899209ac385cb823e
+- repo_url: pulumi/agent-skills
+  name: pulumi-automation-api
+  host: github.com
+  resolved_commit: 49e2562105dbd3bd0e1829c32c023163d139452b
+  resolved_ref: 49e2562105dbd3bd0e1829c32c023163d139452b
+  version: unknown
+  virtual_path: pulumi/skills/pulumi-automation-api
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/pulumi-automation-api
+  - .agents/skills/pulumi-automation-api/SKILL.md
+  - .agents/skills/pulumi-automation-api/agents/openai.yaml
+  - .agents/skills/pulumi-automation-api/use_cases.yaml
+  - .claude/skills/pulumi-automation-api
+  - .claude/skills/pulumi-automation-api/SKILL.md
+  - .claude/skills/pulumi-automation-api/agents/openai.yaml
+  - .claude/skills/pulumi-automation-api/use_cases.yaml
+  deployed_file_hashes:
+    .agents/skills/pulumi-automation-api/SKILL.md: sha256:5c77a27edc6458b60837fe465c4232555626a0a5e63c431adab599e36d17bf9f
+    .agents/skills/pulumi-automation-api/agents/openai.yaml: sha256:0d70cc2c7eb3bf9cc6ca534d8731c33347952e46203d7faab960e1ec1c33ecce
+    .agents/skills/pulumi-automation-api/use_cases.yaml: sha256:011eb361ccf6c7037b4028f6d26884c8f9e155a1d480296b5528d70c88d97a0c
+    .claude/skills/pulumi-automation-api/SKILL.md: sha256:5c77a27edc6458b60837fe465c4232555626a0a5e63c431adab599e36d17bf9f
+    .claude/skills/pulumi-automation-api/agents/openai.yaml: sha256:0d70cc2c7eb3bf9cc6ca534d8731c33347952e46203d7faab960e1ec1c33ecce
+    .claude/skills/pulumi-automation-api/use_cases.yaml: sha256:011eb361ccf6c7037b4028f6d26884c8f9e155a1d480296b5528d70c88d97a0c
+  content_hash: sha256:13b15eb0be5e88d6aaa22d30b4d120ac48d254f3fde8278ce6ce004a94de46da
+- repo_url: pulumi/agent-skills
+  name: pulumi-best-practices
+  host: github.com
+  resolved_commit: 49e2562105dbd3bd0e1829c32c023163d139452b
+  resolved_ref: 49e2562105dbd3bd0e1829c32c023163d139452b
+  version: unknown
+  virtual_path: pulumi/skills/pulumi-best-practices
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/pulumi-best-practices
+  - .agents/skills/pulumi-best-practices/SKILL.md
+  - .agents/skills/pulumi-best-practices/agents/openai.yaml
+  - .agents/skills/pulumi-best-practices/use_cases.yaml
+  - .claude/skills/pulumi-best-practices
+  - .claude/skills/pulumi-best-practices/SKILL.md
+  - .claude/skills/pulumi-best-practices/agents/openai.yaml
+  - .claude/skills/pulumi-best-practices/use_cases.yaml
+  deployed_file_hashes:
+    .agents/skills/pulumi-best-practices/SKILL.md: sha256:701bf94433f77f7851ed979ea74700a50dc69f958a20327f13da53d6a1468765
+    .agents/skills/pulumi-best-practices/agents/openai.yaml: sha256:2026466b871f83c3a00164eea9c20e3e913712faf56f76241be9d9fbd40bdf88
+    .agents/skills/pulumi-best-practices/use_cases.yaml: sha256:e3de56d96bd00a3c3a146e40a021ad03ca3d2e16319b00225deb4a8d708a0980
+    .claude/skills/pulumi-best-practices/SKILL.md: sha256:701bf94433f77f7851ed979ea74700a50dc69f958a20327f13da53d6a1468765
+    .claude/skills/pulumi-best-practices/agents/openai.yaml: sha256:2026466b871f83c3a00164eea9c20e3e913712faf56f76241be9d9fbd40bdf88
+    .claude/skills/pulumi-best-practices/use_cases.yaml: sha256:e3de56d96bd00a3c3a146e40a021ad03ca3d2e16319b00225deb4a8d708a0980
+  content_hash: sha256:c30df908e9283daec0bcb13ea7396782a4040d5c8cc5e65bb275a64cbdce65cc
+- repo_url: pulumi/agent-skills
+  name: pulumi-component
+  host: github.com
+  resolved_commit: 49e2562105dbd3bd0e1829c32c023163d139452b
+  resolved_ref: 49e2562105dbd3bd0e1829c32c023163d139452b
+  version: unknown
+  virtual_path: pulumi/skills/pulumi-component
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/pulumi-component
+  - .agents/skills/pulumi-component/SKILL.md
+  - .agents/skills/pulumi-component/agents/openai.yaml
+  - .agents/skills/pulumi-component/use_cases.yaml
+  - .claude/skills/pulumi-component
+  - .claude/skills/pulumi-component/SKILL.md
+  - .claude/skills/pulumi-component/agents/openai.yaml
+  - .claude/skills/pulumi-component/use_cases.yaml
+  deployed_file_hashes:
+    .agents/skills/pulumi-component/SKILL.md: sha256:eef36cb66dfcaf062ac2ef97b4ce050b04afa680f3c76c4e536659a686481cac
+    .agents/skills/pulumi-component/agents/openai.yaml: sha256:daee5038b424cc3d912bc2645f512359e5623b470ffe78560228d3bef13ec536
+    .agents/skills/pulumi-component/use_cases.yaml: sha256:6d4931a0901ae1c12f77330d0ad4e6f90c29880dcf7e9d486609c32656422508
+    .claude/skills/pulumi-component/SKILL.md: sha256:eef36cb66dfcaf062ac2ef97b4ce050b04afa680f3c76c4e536659a686481cac
+    .claude/skills/pulumi-component/agents/openai.yaml: sha256:daee5038b424cc3d912bc2645f512359e5623b470ffe78560228d3bef13ec536
+    .claude/skills/pulumi-component/use_cases.yaml: sha256:6d4931a0901ae1c12f77330d0ad4e6f90c29880dcf7e9d486609c32656422508
+  content_hash: sha256:f5bb269c9759bbef9d8fe2b1af998ceaa8e15fba9c0ed66a7c5bf8b36b471b35
+- repo_url: pulumi/agent-skills
+  name: pulumi-debug-failed-operation
+  host: github.com
+  resolved_commit: 49e2562105dbd3bd0e1829c32c023163d139452b
+  resolved_ref: 49e2562105dbd3bd0e1829c32c023163d139452b
+  version: unknown
+  virtual_path: pulumi/skills/pulumi-debug-failed-operation
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/pulumi-debug-failed-operation
+  - .agents/skills/pulumi-debug-failed-operation/SKILL.md
+  - .agents/skills/pulumi-debug-failed-operation/agents/openai.yaml
+  - .agents/skills/pulumi-debug-failed-operation/use_cases.yaml
+  - .claude/skills/pulumi-debug-failed-operation
+  - .claude/skills/pulumi-debug-failed-operation/SKILL.md
+  - .claude/skills/pulumi-debug-failed-operation/agents/openai.yaml
+  - .claude/skills/pulumi-debug-failed-operation/use_cases.yaml
+  deployed_file_hashes:
+    .agents/skills/pulumi-debug-failed-operation/SKILL.md: sha256:80e1bb71194fb8040d36fe2ff9a2f6f7f9a5880681abaf862f0f997c235d83c6
+    .agents/skills/pulumi-debug-failed-operation/agents/openai.yaml: sha256:e397fc46bdd1a74e8e5dcbb2a2354d27075f4a7800a95248cb657ee1b286f30a
+    .agents/skills/pulumi-debug-failed-operation/use_cases.yaml: sha256:a59f4c56dd71d95cd247da20b9bb6d0d93b75a562c6508c19e9ae1bff909dd38
+    .claude/skills/pulumi-debug-failed-operation/SKILL.md: sha256:80e1bb71194fb8040d36fe2ff9a2f6f7f9a5880681abaf862f0f997c235d83c6
+    .claude/skills/pulumi-debug-failed-operation/agents/openai.yaml: sha256:e397fc46bdd1a74e8e5dcbb2a2354d27075f4a7800a95248cb657ee1b286f30a
+    .claude/skills/pulumi-debug-failed-operation/use_cases.yaml: sha256:a59f4c56dd71d95cd247da20b9bb6d0d93b75a562c6508c19e9ae1bff909dd38
+  content_hash: sha256:abc91c3bff5bc170f7383997d54b8a8ed76bd3f2303668d44ba1cc4a203cda9a
+- repo_url: pulumi/agent-skills
+  name: pulumi-esc
+  host: github.com
+  resolved_commit: 49e2562105dbd3bd0e1829c32c023163d139452b
+  resolved_ref: 49e2562105dbd3bd0e1829c32c023163d139452b
+  version: unknown
+  virtual_path: pulumi/skills/pulumi-esc
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/pulumi-esc
+  - .agents/skills/pulumi-esc/SKILL.md
+  - .agents/skills/pulumi-esc/agents/openai.yaml
+  - .agents/skills/pulumi-esc/use_cases.yaml
+  - .claude/skills/pulumi-esc
+  - .claude/skills/pulumi-esc/SKILL.md
+  - .claude/skills/pulumi-esc/agents/openai.yaml
+  - .claude/skills/pulumi-esc/use_cases.yaml
+  deployed_file_hashes:
+    .agents/skills/pulumi-esc/SKILL.md: sha256:a3ec09df6514ba4c47345b5ce8d0de111e80c29b600d660d4261ce8dbd8cfdb3
+    .agents/skills/pulumi-esc/agents/openai.yaml: sha256:0e23a2305b4611f24c44d3cec91cb2c9a8b1e0b5fc6a6dfdb050965cb60e9896
+    .agents/skills/pulumi-esc/use_cases.yaml: sha256:75e6acbf2eb20e14a42641bc4f4cc19df08079c0837627c099735a8983bf5d76
+    .claude/skills/pulumi-esc/SKILL.md: sha256:a3ec09df6514ba4c47345b5ce8d0de111e80c29b600d660d4261ce8dbd8cfdb3
+    .claude/skills/pulumi-esc/agents/openai.yaml: sha256:0e23a2305b4611f24c44d3cec91cb2c9a8b1e0b5fc6a6dfdb050965cb60e9896
+    .claude/skills/pulumi-esc/use_cases.yaml: sha256:75e6acbf2eb20e14a42641bc4f4cc19df08079c0837627c099735a8983bf5d76
+  content_hash: sha256:61071edd3672805bd30b3671ca484a9b63b340e73bc34b14ed6d29c4091c292d
+- repo_url: pulumi/agent-skills
+  name: pulumi-overview
+  host: github.com
+  resolved_commit: 49e2562105dbd3bd0e1829c32c023163d139452b
+  resolved_ref: 49e2562105dbd3bd0e1829c32c023163d139452b
+  version: unknown
+  virtual_path: pulumi/skills/pulumi-overview
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/pulumi-overview
+  - .agents/skills/pulumi-overview/SKILL.md
+  - .agents/skills/pulumi-overview/use_cases.yaml
+  - .claude/skills/pulumi-overview
+  - .claude/skills/pulumi-overview/SKILL.md
+  - .claude/skills/pulumi-overview/use_cases.yaml
+  deployed_file_hashes:
+    .agents/skills/pulumi-overview/SKILL.md: sha256:b8b56717d09bd6e291455b8e645e261ff8e6f1547771da81467f1d9c967aa303
+    .agents/skills/pulumi-overview/use_cases.yaml: sha256:eb7058582acbe0cc874468704d977d9832afc5a914581fa6b859a6c2552cb95e
+    .claude/skills/pulumi-overview/SKILL.md: sha256:b8b56717d09bd6e291455b8e645e261ff8e6f1547771da81467f1d9c967aa303
+    .claude/skills/pulumi-overview/use_cases.yaml: sha256:eb7058582acbe0cc874468704d977d9832afc5a914581fa6b859a6c2552cb95e
+  content_hash: sha256:821a6bfe2cf8c17950f3dac0aea69c72189b7cc6326e1b5772be1180c72e3212
 - repo_url: rshade/agent-skills
   name: actionlint
   host: github.com
@@ -3095,6 +3383,51 @@ deployments:
   content_hash: sha256:5c57db089d4e4bb3d8a503e76122cdfce8aac49fb2bd10d675ca281bcb778a25
 - kind: project-relative
   target: claude
+  value: .claude/skills/code-intelligence
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/agent-plugins/plugins/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/code-intelligence/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/agent-plugins/plugins/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  content_hash: sha256:1f627d39cc080d616c05147ea27c37e4ae9acb20011a02c21143ba66700a3e9c
+- kind: project-relative
+  target: claude
+  value: .claude/skills/code-intelligence/references/degradation-and-disclosure.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/agent-plugins/plugins/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  content_hash: sha256:ebb886dd3bb8ef45e3e31e655faa130a0d571d32a6bcd25a549c4a6439d9ea66
+- kind: project-relative
+  target: claude
+  value: .claude/skills/code-intelligence/references/lsp-calls.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/agent-plugins/plugins/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  content_hash: sha256:d84f103f6b6937e5ff30c5d49209feeb783892d0c1ab1d7e9f2b5fe3896e025d
+- kind: project-relative
+  target: claude
+  value: .claude/skills/code-intelligence/references/tool-precedence.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/agent-plugins/plugins/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  content_hash: sha256:2c8bb0beb52565ed5391c7682a01ba23a862d2434d1e0abb4cec651d9299b860
+- kind: project-relative
+  target: claude
   value: .claude/skills/code-reviewer
   runtime: null
   scope: project
@@ -3743,6 +4076,42 @@ deployments:
   content_hash: sha256:90ea655f7eae8ce4a0b3192115867fa7b196ad48d6f8fb2d88b762c1f8784fd8
 - kind: project-relative
   target: claude
+  value: .claude/skills/package-usage
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/package-usage
+  active_owner: pulumi/agent-skills/pulumi/skills/package-usage
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/package-usage/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/package-usage
+  active_owner: pulumi/agent-skills/pulumi/skills/package-usage
+  content_hash: sha256:60a91a13b11d1a914e662505be3c94c2bd400cb0c327ad6372af8906204d222e
+- kind: project-relative
+  target: claude
+  value: .claude/skills/package-usage/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/package-usage
+  active_owner: pulumi/agent-skills/pulumi/skills/package-usage
+  content_hash: sha256:73b260f964fe41b3582eb61ed6ed8995a61f87d5c5e46cb4a925e52ea8f2f664
+- kind: project-relative
+  target: claude
+  value: .claude/skills/package-usage/use_cases.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/package-usage
+  active_owner: pulumi/agent-skills/pulumi/skills/package-usage
+  content_hash: sha256:0909f8c77788a0550039761b004dba708c0d5f1fd64f2d4434bb1119da5b733d
+- kind: project-relative
+  target: claude
   value: .claude/skills/pr
   runtime: null
   scope: project
@@ -3759,6 +4128,258 @@ deployments:
   - .
   active_owner: .
   content_hash: sha256:3df806c42af088805e9d6497cc32a6d873472211263aa81275f0b85210e2fa61
+- kind: project-relative
+  target: claude
+  value: .claude/skills/provider-upgrade
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/provider-upgrade
+  active_owner: pulumi/agent-skills/pulumi/skills/provider-upgrade
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/provider-upgrade/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/provider-upgrade
+  active_owner: pulumi/agent-skills/pulumi/skills/provider-upgrade
+  content_hash: sha256:fb5544bff98c3b0837005efa513761536775de0f1748e77545d2725cbcbd4587
+- kind: project-relative
+  target: claude
+  value: .claude/skills/provider-upgrade/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/provider-upgrade
+  active_owner: pulumi/agent-skills/pulumi/skills/provider-upgrade
+  content_hash: sha256:0619cf3d3aea8f7bbf0ff4c9d9955801ee9486f2c644f176aac9cb1dbfecc108
+- kind: project-relative
+  target: claude
+  value: .claude/skills/provider-upgrade/references/diagnostic-toolbox.md
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/provider-upgrade
+  active_owner: pulumi/agent-skills/pulumi/skills/provider-upgrade
+  content_hash: sha256:d97ec1df70be7d1e19c422f893273b851e23518dcb71dfb295692da2a057ac8c
+- kind: project-relative
+  target: claude
+  value: .claude/skills/provider-upgrade/use_cases.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/provider-upgrade
+  active_owner: pulumi/agent-skills/pulumi/skills/provider-upgrade
+  content_hash: sha256:cf27447ecb5aa0962fbeae3cd3a459cf714fc0098909fff914d09fff0f794878
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-automation-api
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-automation-api
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-automation-api
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-automation-api/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-automation-api
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-automation-api
+  content_hash: sha256:5c77a27edc6458b60837fe465c4232555626a0a5e63c431adab599e36d17bf9f
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-automation-api/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-automation-api
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-automation-api
+  content_hash: sha256:0d70cc2c7eb3bf9cc6ca534d8731c33347952e46203d7faab960e1ec1c33ecce
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-automation-api/use_cases.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-automation-api
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-automation-api
+  content_hash: sha256:011eb361ccf6c7037b4028f6d26884c8f9e155a1d480296b5528d70c88d97a0c
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-best-practices
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-best-practices
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-best-practices
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-best-practices/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-best-practices
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-best-practices
+  content_hash: sha256:701bf94433f77f7851ed979ea74700a50dc69f958a20327f13da53d6a1468765
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-best-practices/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-best-practices
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-best-practices
+  content_hash: sha256:2026466b871f83c3a00164eea9c20e3e913712faf56f76241be9d9fbd40bdf88
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-best-practices/use_cases.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-best-practices
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-best-practices
+  content_hash: sha256:e3de56d96bd00a3c3a146e40a021ad03ca3d2e16319b00225deb4a8d708a0980
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-component
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-component
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-component
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-component/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-component
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-component
+  content_hash: sha256:eef36cb66dfcaf062ac2ef97b4ce050b04afa680f3c76c4e536659a686481cac
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-component/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-component
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-component
+  content_hash: sha256:daee5038b424cc3d912bc2645f512359e5623b470ffe78560228d3bef13ec536
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-component/use_cases.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-component
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-component
+  content_hash: sha256:6d4931a0901ae1c12f77330d0ad4e6f90c29880dcf7e9d486609c32656422508
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-debug-failed-operation
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-debug-failed-operation
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-debug-failed-operation
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-debug-failed-operation/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-debug-failed-operation
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-debug-failed-operation
+  content_hash: sha256:80e1bb71194fb8040d36fe2ff9a2f6f7f9a5880681abaf862f0f997c235d83c6
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-debug-failed-operation/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-debug-failed-operation
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-debug-failed-operation
+  content_hash: sha256:e397fc46bdd1a74e8e5dcbb2a2354d27075f4a7800a95248cb657ee1b286f30a
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-debug-failed-operation/use_cases.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-debug-failed-operation
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-debug-failed-operation
+  content_hash: sha256:a59f4c56dd71d95cd247da20b9bb6d0d93b75a562c6508c19e9ae1bff909dd38
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-esc
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-esc
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-esc
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-esc/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-esc
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-esc
+  content_hash: sha256:a3ec09df6514ba4c47345b5ce8d0de111e80c29b600d660d4261ce8dbd8cfdb3
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-esc/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-esc
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-esc
+  content_hash: sha256:0e23a2305b4611f24c44d3cec91cb2c9a8b1e0b5fc6a6dfdb050965cb60e9896
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-esc/use_cases.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-esc
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-esc
+  content_hash: sha256:75e6acbf2eb20e14a42641bc4f4cc19df08079c0837627c099735a8983bf5d76
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-overview
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-overview
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-overview
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-overview/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-overview
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-overview
+  content_hash: sha256:b8b56717d09bd6e291455b8e645e261ff8e6f1547771da81467f1d9c967aa303
+- kind: project-relative
+  target: claude
+  value: .claude/skills/pulumi-overview/use_cases.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-overview
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-overview
+  content_hash: sha256:eb7058582acbe0cc874468704d977d9832afc5a914581fa6b859a6c2552cb95e
 - kind: project-relative
   target: claude
   value: .claude/skills/review
@@ -3930,6 +4551,96 @@ deployments:
   - rshade/agent-skills/skills/tech-debt
   active_owner: rshade/agent-skills/skills/tech-debt
   content_hash: sha256:442fbf0aa0382e0d94a2153ab46b3e0f018953827ea66a05589250fa0a3139bb
+- kind: project-relative
+  target: claude
+  value: .claude/skills/terraform-skill
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/terraform-skill/skills/terraform-skill
+  active_owner: antonbabenko/terraform-skill/skills/terraform-skill
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/terraform-skill/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/terraform-skill/skills/terraform-skill
+  active_owner: antonbabenko/terraform-skill/skills/terraform-skill
+  content_hash: sha256:70c0038375d3738b4ecfca1016add39ef48a206cbed653c9a1cb336026a5e384
+- kind: project-relative
+  target: claude
+  value: .claude/skills/terraform-skill/references/ci-cd-workflows.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/terraform-skill/skills/terraform-skill
+  active_owner: antonbabenko/terraform-skill/skills/terraform-skill
+  content_hash: sha256:3ebb9a1d1e88c1f321381a0c179b9f9701e5dc0376bd6fac889feac4dd2de6c4
+- kind: project-relative
+  target: claude
+  value: .claude/skills/terraform-skill/references/code-intelligence-lsp.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/terraform-skill/skills/terraform-skill
+  active_owner: antonbabenko/terraform-skill/skills/terraform-skill
+  content_hash: sha256:ee5f167d265948960f37dddb393e8473f67090e68e1f2be612db9d1c02e7434e
+- kind: project-relative
+  target: claude
+  value: .claude/skills/terraform-skill/references/code-patterns.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/terraform-skill/skills/terraform-skill
+  active_owner: antonbabenko/terraform-skill/skills/terraform-skill
+  content_hash: sha256:791e4cb2ed1097fd0b7ddfec94da5440a2ea79bc521c36c6f2fc7e54a14eb1a1
+- kind: project-relative
+  target: claude
+  value: .claude/skills/terraform-skill/references/module-patterns.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/terraform-skill/skills/terraform-skill
+  active_owner: antonbabenko/terraform-skill/skills/terraform-skill
+  content_hash: sha256:1d98ddc72dca8be36e12ee669c2ba605d255fc5f67ad42e0ee23314e7fe05a3d
+- kind: project-relative
+  target: claude
+  value: .claude/skills/terraform-skill/references/quick-reference.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/terraform-skill/skills/terraform-skill
+  active_owner: antonbabenko/terraform-skill/skills/terraform-skill
+  content_hash: sha256:07fefaa3d3f84ef53129dc61a081415291d396666d9a613b0a9820e92ca1dd8e
+- kind: project-relative
+  target: claude
+  value: .claude/skills/terraform-skill/references/security-compliance.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/terraform-skill/skills/terraform-skill
+  active_owner: antonbabenko/terraform-skill/skills/terraform-skill
+  content_hash: sha256:9db93c0a08001ec759b380855afd9378a9b6f452c0f875415c7509888038a2b8
+- kind: project-relative
+  target: claude
+  value: .claude/skills/terraform-skill/references/state-management.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/terraform-skill/skills/terraform-skill
+  active_owner: antonbabenko/terraform-skill/skills/terraform-skill
+  content_hash: sha256:9912a56d21df2ddc12f9dbda6fa8f9712c16d85e7030991f3011971f999ecc64
+- kind: project-relative
+  target: claude
+  value: .claude/skills/terraform-skill/references/testing-frameworks.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/terraform-skill/skills/terraform-skill
+  active_owner: antonbabenko/terraform-skill/skills/terraform-skill
+  content_hash: sha256:a35483a965a649603065882498587c62a2badc373a05d6e6620b19eb8dcb425f
 - kind: project-relative
   target: codex
   value: .agents/skills/actionlint
@@ -5624,6 +6335,51 @@ deployments:
   content_hash: sha256:5c57db089d4e4bb3d8a503e76122cdfce8aac49fb2bd10d675ca281bcb778a25
 - kind: project-relative
   target: codex
+  value: .agents/skills/code-intelligence
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/agent-plugins/plugins/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/code-intelligence/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/agent-plugins/plugins/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  content_hash: sha256:1f627d39cc080d616c05147ea27c37e4ae9acb20011a02c21143ba66700a3e9c
+- kind: project-relative
+  target: codex
+  value: .agents/skills/code-intelligence/references/degradation-and-disclosure.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/agent-plugins/plugins/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  content_hash: sha256:ebb886dd3bb8ef45e3e31e655faa130a0d571d32a6bcd25a549c4a6439d9ea66
+- kind: project-relative
+  target: codex
+  value: .agents/skills/code-intelligence/references/lsp-calls.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/agent-plugins/plugins/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  content_hash: sha256:d84f103f6b6937e5ff30c5d49209feeb783892d0c1ab1d7e9f2b5fe3896e025d
+- kind: project-relative
+  target: codex
+  value: .agents/skills/code-intelligence/references/tool-precedence.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/agent-plugins/plugins/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  content_hash: sha256:2c8bb0beb52565ed5391c7682a01ba23a862d2434d1e0abb4cec651d9299b860
+- kind: project-relative
+  target: codex
   value: .agents/skills/code-reviewer
   runtime: null
   scope: project
@@ -6236,6 +6992,294 @@ deployments:
   content_hash: sha256:90ea655f7eae8ce4a0b3192115867fa7b196ad48d6f8fb2d88b762c1f8784fd8
 - kind: project-relative
   target: codex
+  value: .agents/skills/package-usage
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/package-usage
+  active_owner: pulumi/agent-skills/pulumi/skills/package-usage
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/package-usage/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/package-usage
+  active_owner: pulumi/agent-skills/pulumi/skills/package-usage
+  content_hash: sha256:60a91a13b11d1a914e662505be3c94c2bd400cb0c327ad6372af8906204d222e
+- kind: project-relative
+  target: codex
+  value: .agents/skills/package-usage/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/package-usage
+  active_owner: pulumi/agent-skills/pulumi/skills/package-usage
+  content_hash: sha256:73b260f964fe41b3582eb61ed6ed8995a61f87d5c5e46cb4a925e52ea8f2f664
+- kind: project-relative
+  target: codex
+  value: .agents/skills/package-usage/use_cases.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/package-usage
+  active_owner: pulumi/agent-skills/pulumi/skills/package-usage
+  content_hash: sha256:0909f8c77788a0550039761b004dba708c0d5f1fd64f2d4434bb1119da5b733d
+- kind: project-relative
+  target: codex
+  value: .agents/skills/provider-upgrade
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/provider-upgrade
+  active_owner: pulumi/agent-skills/pulumi/skills/provider-upgrade
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/provider-upgrade/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/provider-upgrade
+  active_owner: pulumi/agent-skills/pulumi/skills/provider-upgrade
+  content_hash: sha256:fb5544bff98c3b0837005efa513761536775de0f1748e77545d2725cbcbd4587
+- kind: project-relative
+  target: codex
+  value: .agents/skills/provider-upgrade/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/provider-upgrade
+  active_owner: pulumi/agent-skills/pulumi/skills/provider-upgrade
+  content_hash: sha256:0619cf3d3aea8f7bbf0ff4c9d9955801ee9486f2c644f176aac9cb1dbfecc108
+- kind: project-relative
+  target: codex
+  value: .agents/skills/provider-upgrade/references/diagnostic-toolbox.md
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/provider-upgrade
+  active_owner: pulumi/agent-skills/pulumi/skills/provider-upgrade
+  content_hash: sha256:d97ec1df70be7d1e19c422f893273b851e23518dcb71dfb295692da2a057ac8c
+- kind: project-relative
+  target: codex
+  value: .agents/skills/provider-upgrade/use_cases.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/provider-upgrade
+  active_owner: pulumi/agent-skills/pulumi/skills/provider-upgrade
+  content_hash: sha256:cf27447ecb5aa0962fbeae3cd3a459cf714fc0098909fff914d09fff0f794878
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-automation-api
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-automation-api
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-automation-api
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-automation-api/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-automation-api
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-automation-api
+  content_hash: sha256:5c77a27edc6458b60837fe465c4232555626a0a5e63c431adab599e36d17bf9f
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-automation-api/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-automation-api
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-automation-api
+  content_hash: sha256:0d70cc2c7eb3bf9cc6ca534d8731c33347952e46203d7faab960e1ec1c33ecce
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-automation-api/use_cases.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-automation-api
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-automation-api
+  content_hash: sha256:011eb361ccf6c7037b4028f6d26884c8f9e155a1d480296b5528d70c88d97a0c
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-best-practices
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-best-practices
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-best-practices
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-best-practices/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-best-practices
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-best-practices
+  content_hash: sha256:701bf94433f77f7851ed979ea74700a50dc69f958a20327f13da53d6a1468765
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-best-practices/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-best-practices
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-best-practices
+  content_hash: sha256:2026466b871f83c3a00164eea9c20e3e913712faf56f76241be9d9fbd40bdf88
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-best-practices/use_cases.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-best-practices
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-best-practices
+  content_hash: sha256:e3de56d96bd00a3c3a146e40a021ad03ca3d2e16319b00225deb4a8d708a0980
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-component
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-component
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-component
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-component/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-component
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-component
+  content_hash: sha256:eef36cb66dfcaf062ac2ef97b4ce050b04afa680f3c76c4e536659a686481cac
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-component/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-component
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-component
+  content_hash: sha256:daee5038b424cc3d912bc2645f512359e5623b470ffe78560228d3bef13ec536
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-component/use_cases.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-component
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-component
+  content_hash: sha256:6d4931a0901ae1c12f77330d0ad4e6f90c29880dcf7e9d486609c32656422508
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-debug-failed-operation
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-debug-failed-operation
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-debug-failed-operation
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-debug-failed-operation/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-debug-failed-operation
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-debug-failed-operation
+  content_hash: sha256:80e1bb71194fb8040d36fe2ff9a2f6f7f9a5880681abaf862f0f997c235d83c6
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-debug-failed-operation/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-debug-failed-operation
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-debug-failed-operation
+  content_hash: sha256:e397fc46bdd1a74e8e5dcbb2a2354d27075f4a7800a95248cb657ee1b286f30a
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-debug-failed-operation/use_cases.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-debug-failed-operation
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-debug-failed-operation
+  content_hash: sha256:a59f4c56dd71d95cd247da20b9bb6d0d93b75a562c6508c19e9ae1bff909dd38
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-esc
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-esc
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-esc
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-esc/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-esc
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-esc
+  content_hash: sha256:a3ec09df6514ba4c47345b5ce8d0de111e80c29b600d660d4261ce8dbd8cfdb3
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-esc/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-esc
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-esc
+  content_hash: sha256:0e23a2305b4611f24c44d3cec91cb2c9a8b1e0b5fc6a6dfdb050965cb60e9896
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-esc/use_cases.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-esc
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-esc
+  content_hash: sha256:75e6acbf2eb20e14a42641bc4f4cc19df08079c0837627c099735a8983bf5d76
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-overview
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-overview
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-overview
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-overview/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-overview
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-overview
+  content_hash: sha256:b8b56717d09bd6e291455b8e645e261ff8e6f1547771da81467f1d9c967aa303
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pulumi-overview/use_cases.yaml
+  runtime: null
+  scope: project
+  owners:
+  - pulumi/agent-skills/pulumi/skills/pulumi-overview
+  active_owner: pulumi/agent-skills/pulumi/skills/pulumi-overview
+  content_hash: sha256:eb7058582acbe0cc874468704d977d9832afc5a914581fa6b859a6c2552cb95e
+- kind: project-relative
+  target: codex
   value: .agents/skills/security-audit
   runtime: null
   scope: project
@@ -6387,6 +7431,96 @@ deployments:
   - rshade/agent-skills/skills/tech-debt
   active_owner: rshade/agent-skills/skills/tech-debt
   content_hash: sha256:442fbf0aa0382e0d94a2153ab46b3e0f018953827ea66a05589250fa0a3139bb
+- kind: project-relative
+  target: codex
+  value: .agents/skills/terraform-skill
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/terraform-skill/skills/terraform-skill
+  active_owner: antonbabenko/terraform-skill/skills/terraform-skill
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/terraform-skill/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/terraform-skill/skills/terraform-skill
+  active_owner: antonbabenko/terraform-skill/skills/terraform-skill
+  content_hash: sha256:70c0038375d3738b4ecfca1016add39ef48a206cbed653c9a1cb336026a5e384
+- kind: project-relative
+  target: codex
+  value: .agents/skills/terraform-skill/references/ci-cd-workflows.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/terraform-skill/skills/terraform-skill
+  active_owner: antonbabenko/terraform-skill/skills/terraform-skill
+  content_hash: sha256:3ebb9a1d1e88c1f321381a0c179b9f9701e5dc0376bd6fac889feac4dd2de6c4
+- kind: project-relative
+  target: codex
+  value: .agents/skills/terraform-skill/references/code-intelligence-lsp.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/terraform-skill/skills/terraform-skill
+  active_owner: antonbabenko/terraform-skill/skills/terraform-skill
+  content_hash: sha256:ee5f167d265948960f37dddb393e8473f67090e68e1f2be612db9d1c02e7434e
+- kind: project-relative
+  target: codex
+  value: .agents/skills/terraform-skill/references/code-patterns.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/terraform-skill/skills/terraform-skill
+  active_owner: antonbabenko/terraform-skill/skills/terraform-skill
+  content_hash: sha256:791e4cb2ed1097fd0b7ddfec94da5440a2ea79bc521c36c6f2fc7e54a14eb1a1
+- kind: project-relative
+  target: codex
+  value: .agents/skills/terraform-skill/references/module-patterns.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/terraform-skill/skills/terraform-skill
+  active_owner: antonbabenko/terraform-skill/skills/terraform-skill
+  content_hash: sha256:1d98ddc72dca8be36e12ee669c2ba605d255fc5f67ad42e0ee23314e7fe05a3d
+- kind: project-relative
+  target: codex
+  value: .agents/skills/terraform-skill/references/quick-reference.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/terraform-skill/skills/terraform-skill
+  active_owner: antonbabenko/terraform-skill/skills/terraform-skill
+  content_hash: sha256:07fefaa3d3f84ef53129dc61a081415291d396666d9a613b0a9820e92ca1dd8e
+- kind: project-relative
+  target: codex
+  value: .agents/skills/terraform-skill/references/security-compliance.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/terraform-skill/skills/terraform-skill
+  active_owner: antonbabenko/terraform-skill/skills/terraform-skill
+  content_hash: sha256:9db93c0a08001ec759b380855afd9378a9b6f452c0f875415c7509888038a2b8
+- kind: project-relative
+  target: codex
+  value: .agents/skills/terraform-skill/references/state-management.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/terraform-skill/skills/terraform-skill
+  active_owner: antonbabenko/terraform-skill/skills/terraform-skill
+  content_hash: sha256:9912a56d21df2ddc12f9dbda6fa8f9712c16d85e7030991f3011971f999ecc64
+- kind: project-relative
+  target: codex
+  value: .agents/skills/terraform-skill/references/testing-frameworks.md
+  runtime: null
+  scope: project
+  owners:
+  - antonbabenko/terraform-skill/skills/terraform-skill
+  active_owner: antonbabenko/terraform-skill/skills/terraform-skill
+  content_hash: sha256:a35483a965a649603065882498587c62a2badc373a05d6e6620b19eb8dcb425f
 - kind: project-relative
   target: codex
   value: .codex/agents/executor.toml

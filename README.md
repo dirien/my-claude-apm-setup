@@ -8,7 +8,7 @@ It is self-contained. The guardrails are plain shell scripts under `scripts/`, s
 
 ## What's in here
 
-- 19 skills pulled from git and pinned to a commit (Go, CLI, DevOps, linting, repo hygiene, code review, security, plan grilling, prose humanizing).
+- 29 skills pulled from git and pinned to a commit (Go, CLI, DevOps, linting, repo hygiene, code review, security, plan grilling, prose humanizing, the official Pulumi skills, Terraform/OpenTofu, LSP-first code intelligence).
 - Four local skills (`commit`, `docs-pr`, `pr`, `review`) and three subagents (`executor`, `librarian`, `reviewer`) under `.apm/`.
 - One MCP server: Pulumi's hosted server.
 - Four LSP servers (gopls, typescript, pyright, csharp) written to `.lsp.json`.
@@ -57,7 +57,7 @@ apm install            # writes apm.lock.yaml + materializes .claude/
 apm install --frozen   # reproducible install from the lock (use this in CI)
 ```
 
-That single dependency materializes 23 skills into `.claude/skills/`, the three subagents into `.claude/agents/`, the instructions into `.claude/rules/`, the guardrail hooks into `.claude/apm-hooks.json` + `.claude/settings.json`, and the MCP/LSP servers into `.mcp.json` + `.lsp.json`.
+That single dependency materializes 33 skills into `.claude/skills/`, the three subagents into `.claude/agents/`, the instructions into `.claude/rules/`, the guardrail hooks into `.claude/apm-hooks.json` + `.claude/settings.json`, and the MCP/LSP servers into `.mcp.json` + `.lsp.json`.
 
 Notes:
 
@@ -102,7 +102,7 @@ The GitHub Actions workflow in `.github/workflows/apm.yml` runs the install, aud
 
 ## What's mine and what's borrowed
 
-The four skills, three agents, two guardrail hooks, and the instruction files under `.apm/` are mine and live in this repo. The 19 skills under `dependencies` come from `jeffallan/claude-skills`, `rshade/agent-skills`, `netresearch/agent-rules-skill`, `mattpocock/skills`, and `blader/humanizer`; `apm.lock.yaml` pins each to a commit and `apm install --frozen` reproduces them.
+The four skills, three agents, two guardrail hooks, and the instruction files under `.apm/` are mine and live in this repo. The 29 skills under `dependencies` come from `jeffallan/claude-skills`, `rshade/agent-skills`, `netresearch/agent-rules-skill`, `mattpocock/skills`, `blader/humanizer`, `pulumi/agent-skills` (the eight skills of its `pulumi/` plugin), and `antonbabenko/terraform-skill` plus its recommended companion plugin `antonbabenko/agent-plugins/plugins/code-intelligence`; `apm.lock.yaml` pins each to a commit and `apm install --frozen` reproduces them.
 
 ## Reading
 
