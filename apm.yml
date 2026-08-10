@@ -77,6 +77,9 @@ dependencies:
     # antonbabenko/agent-plugins — code-intelligence, terraform-skill's recommended
     # companion (LSP-first code navigation guidance + /setup-code-intelligence)
     - antonbabenko/agent-plugins/plugins/code-intelligence#ae17b3ebd19160e7e12e13538155e23daf1497a2
+    # wshobson/agents — ShellCheck configuration & static-analysis workflow
+    # (the shell-scripting plugin's one skill we use)
+    - wshobson/agents/plugins/shell-scripting/skills/shellcheck-configuration#c4b82b0ad771190355eb8e204b1329732a18449a
 
   # MCP servers, self-defined (registry: false) so install never hits a registry.
   mcp:
