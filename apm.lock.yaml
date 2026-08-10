@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-07-31T09:14:09.734763+00:00'
+generated_at: '2026-08-10T10:44:14.313532+00:00'
 apm_version: 0.26.0
 dependencies:
 - repo_url: antonbabenko/agent-plugins
@@ -82,47 +82,6 @@ dependencies:
     .claude/skills/terraform-skill/references/state-management.md: sha256:9912a56d21df2ddc12f9dbda6fa8f9712c16d85e7030991f3011971f999ecc64
     .claude/skills/terraform-skill/references/testing-frameworks.md: sha256:a35483a965a649603065882498587c62a2badc373a05d6e6620b19eb8dcb425f
   content_hash: sha256:f00210f88a20678005a95175bb5505131ba7a5530266a36465a54df012df9737
-- repo_url: blader/humanizer
-  name: humanizer
-  host: github.com
-  resolved_commit: 1b48564898e999219882660237fde01bf4843a0f
-  resolved_ref: 1b48564898e999219882660237fde01bf4843a0f
-  version: 2.8.2
-  package_type: marketplace_plugin
-  deployed_files:
-  - .agents/skills/humanizer
-  - .agents/skills/humanizer/.claude-plugin/marketplace.json
-  - .agents/skills/humanizer/.claude-plugin/plugin.json
-  - .agents/skills/humanizer/AGENTS.md
-  - .agents/skills/humanizer/LICENSE
-  - .agents/skills/humanizer/README.md
-  - .agents/skills/humanizer/SKILL.md
-  - .agents/skills/humanizer/apm.yml
-  - .claude/skills/humanizer
-  - .claude/skills/humanizer/.claude-plugin/marketplace.json
-  - .claude/skills/humanizer/.claude-plugin/plugin.json
-  - .claude/skills/humanizer/AGENTS.md
-  - .claude/skills/humanizer/LICENSE
-  - .claude/skills/humanizer/README.md
-  - .claude/skills/humanizer/SKILL.md
-  - .claude/skills/humanizer/apm.yml
-  deployed_file_hashes:
-    .agents/skills/humanizer/.claude-plugin/marketplace.json: sha256:141736822a343ca0b605d7a9298fef4b692a69368215338df76efb876af442e4
-    .agents/skills/humanizer/.claude-plugin/plugin.json: sha256:4d0663f4f41e0519222d3837be1a127326cbe0ed1c17df07b508064d4237a2f8
-    .agents/skills/humanizer/AGENTS.md: sha256:703873b933df4b07b1df52e207ad2de3695e30ac6cb0db245986ab3f30f96ac3
-    .agents/skills/humanizer/LICENSE: sha256:4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96
-    .agents/skills/humanizer/README.md: sha256:9c24e6b51459d3dc3e614596f749c0d1dc221b240a908f526322cf852ed80085
-    .agents/skills/humanizer/SKILL.md: sha256:243aecdafecb5e11c2d45e2e088b7876e3f6eee34aa50c53f624d8468039afa8
-    .agents/skills/humanizer/apm.yml: sha256:bfdd58f4ebaa4dbfe2d07b79f95591b2471270c8bc88f5cd5abf36cfce6418a6
-    .claude/skills/humanizer/.claude-plugin/marketplace.json: sha256:141736822a343ca0b605d7a9298fef4b692a69368215338df76efb876af442e4
-    .claude/skills/humanizer/.claude-plugin/plugin.json: sha256:4d0663f4f41e0519222d3837be1a127326cbe0ed1c17df07b508064d4237a2f8
-    .claude/skills/humanizer/AGENTS.md: sha256:703873b933df4b07b1df52e207ad2de3695e30ac6cb0db245986ab3f30f96ac3
-    .claude/skills/humanizer/LICENSE: sha256:4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96
-    .claude/skills/humanizer/README.md: sha256:9c24e6b51459d3dc3e614596f749c0d1dc221b240a908f526322cf852ed80085
-    .claude/skills/humanizer/SKILL.md: sha256:243aecdafecb5e11c2d45e2e088b7876e3f6eee34aa50c53f624d8468039afa8
-    .claude/skills/humanizer/apm.yml: sha256:bfdd58f4ebaa4dbfe2d07b79f95591b2471270c8bc88f5cd5abf36cfce6418a6
-  content_hash: sha256:230054f0de58b6b448918b5f400d408b0c02956362144a024e9c83357a882de9
-  declared_license: MIT
 - repo_url: jeffallan/claude-skills
   name: architecture-designer
   host: github.com
@@ -1608,6 +1567,51 @@ deployments:
   - .
   active_owner: .
   content_hash: sha256:bc8fa7a2a9709405d368d47fe9891c971d94fe3ef462b5a3e4dcc323ee06cffa
+- kind: project-relative
+  target: agents
+  value: .agents/skills/humanizer
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: agents
+  value: .agents/skills/humanizer/AGENTS.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:703873b933df4b07b1df52e207ad2de3695e30ac6cb0db245986ab3f30f96ac3
+- kind: project-relative
+  target: agents
+  value: .agents/skills/humanizer/LICENSE
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96
+- kind: project-relative
+  target: agents
+  value: .agents/skills/humanizer/README.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:9c24e6b51459d3dc3e614596f749c0d1dc221b240a908f526322cf852ed80085
+- kind: project-relative
+  target: agents
+  value: .agents/skills/humanizer/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:db0d9f424d36c38bcc3e741c62813041ea1c49dbcc9674954f6565ae0ba0d91a
 - kind: project-relative
   target: agents
   value: .agents/skills/pr
@@ -3918,72 +3922,27 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - blader/humanizer
-  active_owner: blader/humanizer
+  - .
+  active_owner: .
   content_hash: null
-- kind: project-relative
-  target: claude
-  value: .claude/skills/humanizer/.claude-plugin/marketplace.json
-  runtime: null
-  scope: project
-  owners:
-  - blader/humanizer
-  active_owner: blader/humanizer
-  content_hash: sha256:141736822a343ca0b605d7a9298fef4b692a69368215338df76efb876af442e4
-- kind: project-relative
-  target: claude
-  value: .claude/skills/humanizer/.claude-plugin/plugin.json
-  runtime: null
-  scope: project
-  owners:
-  - blader/humanizer
-  active_owner: blader/humanizer
-  content_hash: sha256:4d0663f4f41e0519222d3837be1a127326cbe0ed1c17df07b508064d4237a2f8
-- kind: project-relative
-  target: claude
-  value: .claude/skills/humanizer/AGENTS.md
-  runtime: null
-  scope: project
-  owners:
-  - blader/humanizer
-  active_owner: blader/humanizer
-  content_hash: sha256:703873b933df4b07b1df52e207ad2de3695e30ac6cb0db245986ab3f30f96ac3
 - kind: project-relative
   target: claude
   value: .claude/skills/humanizer/LICENSE
   runtime: null
   scope: project
   owners:
-  - blader/humanizer
-  active_owner: blader/humanizer
+  - .
+  active_owner: .
   content_hash: sha256:4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96
-- kind: project-relative
-  target: claude
-  value: .claude/skills/humanizer/README.md
-  runtime: null
-  scope: project
-  owners:
-  - blader/humanizer
-  active_owner: blader/humanizer
-  content_hash: sha256:9c24e6b51459d3dc3e614596f749c0d1dc221b240a908f526322cf852ed80085
 - kind: project-relative
   target: claude
   value: .claude/skills/humanizer/SKILL.md
   runtime: null
   scope: project
   owners:
-  - blader/humanizer
-  active_owner: blader/humanizer
-  content_hash: sha256:243aecdafecb5e11c2d45e2e088b7876e3f6eee34aa50c53f624d8468039afa8
-- kind: project-relative
-  target: claude
-  value: .claude/skills/humanizer/apm.yml
-  runtime: null
-  scope: project
-  owners:
-  - blader/humanizer
-  active_owner: blader/humanizer
-  content_hash: sha256:bfdd58f4ebaa4dbfe2d07b79f95591b2471270c8bc88f5cd5abf36cfce6418a6
+  - .
+  active_owner: .
+  content_hash: sha256:db0d9f424d36c38bcc3e741c62813041ea1c49dbcc9674954f6565ae0ba0d91a
 - kind: project-relative
   target: claude
   value: .claude/skills/lint-fix
@@ -6830,78 +6789,6 @@ deployments:
   content_hash: sha256:cf29b9a8dbf35a58a908a6ca4f64dcd86c2b2130291eee0a78b9f706b138825b
 - kind: project-relative
   target: codex
-  value: .agents/skills/humanizer
-  runtime: null
-  scope: project
-  owners:
-  - blader/humanizer
-  active_owner: blader/humanizer
-  content_hash: null
-- kind: project-relative
-  target: codex
-  value: .agents/skills/humanizer/.claude-plugin/marketplace.json
-  runtime: null
-  scope: project
-  owners:
-  - blader/humanizer
-  active_owner: blader/humanizer
-  content_hash: sha256:141736822a343ca0b605d7a9298fef4b692a69368215338df76efb876af442e4
-- kind: project-relative
-  target: codex
-  value: .agents/skills/humanizer/.claude-plugin/plugin.json
-  runtime: null
-  scope: project
-  owners:
-  - blader/humanizer
-  active_owner: blader/humanizer
-  content_hash: sha256:4d0663f4f41e0519222d3837be1a127326cbe0ed1c17df07b508064d4237a2f8
-- kind: project-relative
-  target: codex
-  value: .agents/skills/humanizer/AGENTS.md
-  runtime: null
-  scope: project
-  owners:
-  - blader/humanizer
-  active_owner: blader/humanizer
-  content_hash: sha256:703873b933df4b07b1df52e207ad2de3695e30ac6cb0db245986ab3f30f96ac3
-- kind: project-relative
-  target: codex
-  value: .agents/skills/humanizer/LICENSE
-  runtime: null
-  scope: project
-  owners:
-  - blader/humanizer
-  active_owner: blader/humanizer
-  content_hash: sha256:4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96
-- kind: project-relative
-  target: codex
-  value: .agents/skills/humanizer/README.md
-  runtime: null
-  scope: project
-  owners:
-  - blader/humanizer
-  active_owner: blader/humanizer
-  content_hash: sha256:9c24e6b51459d3dc3e614596f749c0d1dc221b240a908f526322cf852ed80085
-- kind: project-relative
-  target: codex
-  value: .agents/skills/humanizer/SKILL.md
-  runtime: null
-  scope: project
-  owners:
-  - blader/humanizer
-  active_owner: blader/humanizer
-  content_hash: sha256:243aecdafecb5e11c2d45e2e088b7876e3f6eee34aa50c53f624d8468039afa8
-- kind: project-relative
-  target: codex
-  value: .agents/skills/humanizer/apm.yml
-  runtime: null
-  scope: project
-  owners:
-  - blader/humanizer
-  active_owner: blader/humanizer
-  content_hash: sha256:bfdd58f4ebaa4dbfe2d07b79f95591b2471270c8bc88f5cd5abf36cfce6418a6
-- kind: project-relative
-  target: codex
   value: .agents/skills/lint-fix
   runtime: null
   scope: project
@@ -7606,6 +7493,11 @@ local_deployed_files:
 - .agents/skills/commit/SKILL.md
 - .agents/skills/docs-pr
 - .agents/skills/docs-pr/SKILL.md
+- .agents/skills/humanizer
+- .agents/skills/humanizer/AGENTS.md
+- .agents/skills/humanizer/LICENSE
+- .agents/skills/humanizer/README.md
+- .agents/skills/humanizer/SKILL.md
 - .agents/skills/pr
 - .agents/skills/pr/SKILL.md
 - .agents/skills/review
@@ -7619,6 +7511,9 @@ local_deployed_files:
 - .claude/skills/commit/SKILL.md
 - .claude/skills/docs-pr
 - .claude/skills/docs-pr/SKILL.md
+- .claude/skills/humanizer
+- .claude/skills/humanizer/LICENSE
+- .claude/skills/humanizer/SKILL.md
 - .claude/skills/pr
 - .claude/skills/pr/SKILL.md
 - .claude/skills/review
@@ -7629,6 +7524,10 @@ local_deployed_files:
 local_deployed_file_hashes:
   .agents/skills/commit/SKILL.md: sha256:73a5dcd522e872570e86e2c2826c91e02e05f1962504cb61a8d996c7e65bc062
   .agents/skills/docs-pr/SKILL.md: sha256:bc8fa7a2a9709405d368d47fe9891c971d94fe3ef462b5a3e4dcc323ee06cffa
+  .agents/skills/humanizer/AGENTS.md: sha256:703873b933df4b07b1df52e207ad2de3695e30ac6cb0db245986ab3f30f96ac3
+  .agents/skills/humanizer/LICENSE: sha256:4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96
+  .agents/skills/humanizer/README.md: sha256:9c24e6b51459d3dc3e614596f749c0d1dc221b240a908f526322cf852ed80085
+  .agents/skills/humanizer/SKILL.md: sha256:db0d9f424d36c38bcc3e741c62813041ea1c49dbcc9674954f6565ae0ba0d91a
   .agents/skills/pr/SKILL.md: sha256:3df806c42af088805e9d6497cc32a6d873472211263aa81275f0b85210e2fa61
   .agents/skills/review/SKILL.md: sha256:74a028d980567388a6f44b22df81f485a2883302cf70c26182d515b1d144585f
   .claude/agents/executor.md: sha256:c27a8869a9fea464106b5516d2849b0ed617daac3ed25db5cdee70fe41213b6c
@@ -7638,6 +7537,8 @@ local_deployed_file_hashes:
   .claude/rules/repo-conventions.md: sha256:42cb2d402133ce4f531dd65bc9c82c0e76812cc7043e6121f17c37513a1ffd1f
   .claude/skills/commit/SKILL.md: sha256:73a5dcd522e872570e86e2c2826c91e02e05f1962504cb61a8d996c7e65bc062
   .claude/skills/docs-pr/SKILL.md: sha256:bc8fa7a2a9709405d368d47fe9891c971d94fe3ef462b5a3e4dcc323ee06cffa
+  .claude/skills/humanizer/LICENSE: sha256:4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96
+  .claude/skills/humanizer/SKILL.md: sha256:db0d9f424d36c38bcc3e741c62813041ea1c49dbcc9674954f6565ae0ba0d91a
   .claude/skills/pr/SKILL.md: sha256:3df806c42af088805e9d6497cc32a6d873472211263aa81275f0b85210e2fa61
   .claude/skills/review/SKILL.md: sha256:74a028d980567388a6f44b22df81f485a2883302cf70c26182d515b1d144585f
   .codex/agents/executor.toml: sha256:084565c6f4e64eb42c4600e8b5ba46d51468783aa1393c107b95921e8e2d6616

@@ -62,8 +62,6 @@ dependencies:
     # mattpocock/skills — plan stress-testing (grilling is model-invoked, grill-me is the /grill-me entry point)
     - mattpocock/skills/skills/productivity/grilling#ed37663cc5fbef691ddfecd080dff42f7e7e350d
     - mattpocock/skills/skills/productivity/grill-me#ed37663cc5fbef691ddfecd080dff42f7e7e350d
-    # blader/humanizer — strip AI-writing patterns from prose (skill lives at the repo root)
-    - blader/humanizer#1b48564898e999219882660237fde01bf4843a0f
     # pulumi/agent-skills — the official Pulumi skills (only the pulumi/ plugin, not
     # delegation/migration/package-maintenance)
     - pulumi/agent-skills/pulumi/skills/package-usage#49e2562105dbd3bd0e1829c32c023163d139452b
