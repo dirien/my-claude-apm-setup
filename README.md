@@ -102,7 +102,7 @@ The GitHub Actions workflow in `.github/workflows/apm.yml` runs the install, aud
 
 ## What's mine and what's borrowed
 
-The four skills, three agents, two guardrail hooks, and the instruction files under `.apm/` are mine and live in this repo. The 29 skills under `dependencies` come from `jeffallan/claude-skills`, `rshade/agent-skills`, `netresearch/agent-rules-skill`, `mattpocock/skills`, `blader/humanizer`, `pulumi/agent-skills` (the eight skills of its `pulumi/` plugin), and `antonbabenko/terraform-skill` plus its recommended companion plugin `antonbabenko/agent-plugins/plugins/code-intelligence`; `apm.lock.yaml` pins each to a commit and `apm install --frozen` reproduces them.
+The four workflow skills, the vendored `humanizer` skill (copied from `blader/humanizer@1b48564` — its skill sits at the repo root, which apm 0.27+ no longer resolves as a dependency), three agents, two guardrail hooks, and the instruction files under `.apm/` live in this repo. The 28 skills under `dependencies` come from `jeffallan/claude-skills`, `rshade/agent-skills`, `netresearch/agent-rules-skill`, `mattpocock/skills`, `pulumi/agent-skills` (the eight skills of its `pulumi/` plugin), and `antonbabenko/terraform-skill` plus its recommended companion plugin `antonbabenko/agent-plugins/plugins/code-intelligence`; `apm.lock.yaml` pins each to a commit and `apm install --frozen` reproduces them.
 
 ## Reading
 
