@@ -1,6 +1,6 @@
 lockfile_version: '1'
-generated_at: '2026-08-10T10:44:14.313532+00:00'
-apm_version: 0.26.0
+generated_at: '2026-08-10T11:01:24.797013+00:00'
+apm_version: 0.28.0
 dependencies:
 - repo_url: antonbabenko/agent-plugins
   name: agent-plugins
@@ -1530,6 +1530,28 @@ dependencies:
     .claude/skills/tech-debt/references/analysis-patterns.md: sha256:dd521de570d3a51396951551e185df2a70d0cd5a6520db1a8a17e89f1aabf707
     .claude/skills/tech-debt/references/scoring-guide.md: sha256:442fbf0aa0382e0d94a2153ab46b3e0f018953827ea66a05589250fa0a3139bb
   content_hash: sha256:144865b7aba7bb26870020bb2126ad250a158b1a9b8fe81547d9fb9b8525e75f
+- repo_url: wshobson/agents
+  name: shellcheck-configuration
+  host: github.com
+  resolved_commit: c4b82b0ad771190355eb8e204b1329732a18449a
+  resolved_ref: c4b82b0ad771190355eb8e204b1329732a18449a
+  version: unknown
+  virtual_path: plugins/shell-scripting/skills/shellcheck-configuration
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/shellcheck-configuration
+  - .agents/skills/shellcheck-configuration/SKILL.md
+  - .agents/skills/shellcheck-configuration/references/details.md
+  - .claude/skills/shellcheck-configuration
+  - .claude/skills/shellcheck-configuration/SKILL.md
+  - .claude/skills/shellcheck-configuration/references/details.md
+  deployed_file_hashes:
+    .agents/skills/shellcheck-configuration/SKILL.md: sha256:0442d7cb63b35ac5eccb60450822b66bf036381d476f5aed7a148aa635c5c598
+    .agents/skills/shellcheck-configuration/references/details.md: sha256:65ba7c3e5ac0132e1fa4f75fe9776a68cb3c14b60d2b504f63e3ffad781e5723
+    .claude/skills/shellcheck-configuration/SKILL.md: sha256:0442d7cb63b35ac5eccb60450822b66bf036381d476f5aed7a148aa635c5c598
+    .claude/skills/shellcheck-configuration/references/details.md: sha256:65ba7c3e5ac0132e1fa4f75fe9776a68cb3c14b60d2b504f63e3ffad781e5723
+  content_hash: sha256:b616a5de408fd1983552148913fcb9c51eea6a8b3efac0e2a841335987075a6a
 deployments:
 - kind: project-relative
   target: agents
@@ -4431,6 +4453,33 @@ deployments:
   content_hash: null
 - kind: project-relative
   target: claude
+  value: .claude/skills/shellcheck-configuration
+  runtime: null
+  scope: project
+  owners:
+  - wshobson/agents/plugins/shell-scripting/skills/shellcheck-configuration
+  active_owner: wshobson/agents/plugins/shell-scripting/skills/shellcheck-configuration
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/shellcheck-configuration/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - wshobson/agents/plugins/shell-scripting/skills/shellcheck-configuration
+  active_owner: wshobson/agents/plugins/shell-scripting/skills/shellcheck-configuration
+  content_hash: sha256:0442d7cb63b35ac5eccb60450822b66bf036381d476f5aed7a148aa635c5c598
+- kind: project-relative
+  target: claude
+  value: .claude/skills/shellcheck-configuration/references/details.md
+  runtime: null
+  scope: project
+  owners:
+  - wshobson/agents/plugins/shell-scripting/skills/shellcheck-configuration
+  active_owner: wshobson/agents/plugins/shell-scripting/skills/shellcheck-configuration
+  content_hash: sha256:65ba7c3e5ac0132e1fa4f75fe9776a68cb3c14b60d2b504f63e3ffad781e5723
+- kind: project-relative
+  target: claude
   value: .claude/skills/shellcheck/SKILL.md
   runtime: null
   scope: project
@@ -7239,6 +7288,33 @@ deployments:
   content_hash: null
 - kind: project-relative
   target: codex
+  value: .agents/skills/shellcheck-configuration
+  runtime: null
+  scope: project
+  owners:
+  - wshobson/agents/plugins/shell-scripting/skills/shellcheck-configuration
+  active_owner: wshobson/agents/plugins/shell-scripting/skills/shellcheck-configuration
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/shellcheck-configuration/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - wshobson/agents/plugins/shell-scripting/skills/shellcheck-configuration
+  active_owner: wshobson/agents/plugins/shell-scripting/skills/shellcheck-configuration
+  content_hash: sha256:0442d7cb63b35ac5eccb60450822b66bf036381d476f5aed7a148aa635c5c598
+- kind: project-relative
+  target: codex
+  value: .agents/skills/shellcheck-configuration/references/details.md
+  runtime: null
+  scope: project
+  owners:
+  - wshobson/agents/plugins/shell-scripting/skills/shellcheck-configuration
+  active_owner: wshobson/agents/plugins/shell-scripting/skills/shellcheck-configuration
+  content_hash: sha256:65ba7c3e5ac0132e1fa4f75fe9776a68cb3c14b60d2b504f63e3ffad781e5723
+- kind: project-relative
+  target: codex
   value: .agents/skills/shellcheck/SKILL.md
   runtime: null
   scope: project
@@ -7444,6 +7520,15 @@ deployments:
   - .
   active_owner: .
   content_hash: null
+- kind: uri
+  target: mcp
+  value: pulumi
+  runtime: codex
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
 mcp_servers:
 - pulumi
 mcp_configs:
@@ -7454,6 +7539,8 @@ mcp_configs:
     url: https://mcp.ai.pulumi.com/mcp
 mcp_target_servers:
   claude:
+  - pulumi
+  codex:
   - pulumi
 lsp_servers:
 - csharp
