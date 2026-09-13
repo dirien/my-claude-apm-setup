@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-08-10T11:01:24.797013+00:00'
+generated_at: '2026-09-13T08:03:22.265584+00:00'
 apm_version: 0.28.0
 dependencies:
 - repo_url: antonbabenko/agent-plugins
@@ -1530,6 +1530,40 @@ dependencies:
     .claude/skills/tech-debt/references/analysis-patterns.md: sha256:dd521de570d3a51396951551e185df2a70d0cd5a6520db1a8a17e89f1aabf707
     .claude/skills/tech-debt/references/scoring-guide.md: sha256:442fbf0aa0382e0d94a2153ab46b3e0f018953827ea66a05589250fa0a3139bb
   content_hash: sha256:144865b7aba7bb26870020bb2126ad250a158b1a9b8fe81547d9fb9b8525e75f
+- repo_url: sickn33/agentic-awesome-skills
+  name: typescript-expert
+  host: github.com
+  resolved_commit: 46cafc80378eabd5b04b1d32ad1e96a00476df59
+  resolved_ref: 46cafc80378eabd5b04b1d32ad1e96a00476df59
+  version: unknown
+  virtual_path: skills/typescript-expert
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/typescript-expert
+  - .agents/skills/typescript-expert/SKILL.md
+  - .agents/skills/typescript-expert/references/tsconfig-strict.json
+  - .agents/skills/typescript-expert/references/typescript-cheatsheet.md
+  - .agents/skills/typescript-expert/references/utility-types.ts
+  - .agents/skills/typescript-expert/scripts/ts_diagnostic.py
+  - .claude/skills/typescript-expert
+  - .claude/skills/typescript-expert/SKILL.md
+  - .claude/skills/typescript-expert/references/tsconfig-strict.json
+  - .claude/skills/typescript-expert/references/typescript-cheatsheet.md
+  - .claude/skills/typescript-expert/references/utility-types.ts
+  - .claude/skills/typescript-expert/scripts/ts_diagnostic.py
+  deployed_file_hashes:
+    .agents/skills/typescript-expert/SKILL.md: sha256:28ecb5757f53cc357fcbaae6f1fbd046836000deaf2dba83e0f2ab9cb5c0e3f7
+    .agents/skills/typescript-expert/references/tsconfig-strict.json: sha256:baa3936ec045998a5b751166cc118ce9e9c7877f583562e75849f0a1d8bc59ac
+    .agents/skills/typescript-expert/references/typescript-cheatsheet.md: sha256:48e2298805f0f0f1081a2a3637470dac17714f838b6ae594a036a1c5364b6c5a
+    .agents/skills/typescript-expert/references/utility-types.ts: sha256:72c9a65db30be18fa08a7e3fe9335aba271f871e91085ab586d5da49f7a6ca7e
+    .agents/skills/typescript-expert/scripts/ts_diagnostic.py: sha256:5748639b1202052332554151d677dd6b1d2376c4985db08a17ae66561dc228a8
+    .claude/skills/typescript-expert/SKILL.md: sha256:28ecb5757f53cc357fcbaae6f1fbd046836000deaf2dba83e0f2ab9cb5c0e3f7
+    .claude/skills/typescript-expert/references/tsconfig-strict.json: sha256:baa3936ec045998a5b751166cc118ce9e9c7877f583562e75849f0a1d8bc59ac
+    .claude/skills/typescript-expert/references/typescript-cheatsheet.md: sha256:48e2298805f0f0f1081a2a3637470dac17714f838b6ae594a036a1c5364b6c5a
+    .claude/skills/typescript-expert/references/utility-types.ts: sha256:72c9a65db30be18fa08a7e3fe9335aba271f871e91085ab586d5da49f7a6ca7e
+    .claude/skills/typescript-expert/scripts/ts_diagnostic.py: sha256:5748639b1202052332554151d677dd6b1d2376c4985db08a17ae66561dc228a8
+  content_hash: sha256:548d9cae5a6065d29c2d802bd3232021ae4e84362f270578d06f9f45f78e3634
 - repo_url: wshobson/agents
   name: shellcheck-configuration
   host: github.com
@@ -4650,6 +4684,60 @@ deployments:
   active_owner: antonbabenko/terraform-skill/skills/terraform-skill
   content_hash: sha256:a35483a965a649603065882498587c62a2badc373a05d6e6620b19eb8dcb425f
 - kind: project-relative
+  target: claude
+  value: .claude/skills/typescript-expert
+  runtime: null
+  scope: project
+  owners:
+  - sickn33/agentic-awesome-skills/skills/typescript-expert
+  active_owner: sickn33/agentic-awesome-skills/skills/typescript-expert
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/typescript-expert/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - sickn33/agentic-awesome-skills/skills/typescript-expert
+  active_owner: sickn33/agentic-awesome-skills/skills/typescript-expert
+  content_hash: sha256:28ecb5757f53cc357fcbaae6f1fbd046836000deaf2dba83e0f2ab9cb5c0e3f7
+- kind: project-relative
+  target: claude
+  value: .claude/skills/typescript-expert/references/tsconfig-strict.json
+  runtime: null
+  scope: project
+  owners:
+  - sickn33/agentic-awesome-skills/skills/typescript-expert
+  active_owner: sickn33/agentic-awesome-skills/skills/typescript-expert
+  content_hash: sha256:baa3936ec045998a5b751166cc118ce9e9c7877f583562e75849f0a1d8bc59ac
+- kind: project-relative
+  target: claude
+  value: .claude/skills/typescript-expert/references/typescript-cheatsheet.md
+  runtime: null
+  scope: project
+  owners:
+  - sickn33/agentic-awesome-skills/skills/typescript-expert
+  active_owner: sickn33/agentic-awesome-skills/skills/typescript-expert
+  content_hash: sha256:48e2298805f0f0f1081a2a3637470dac17714f838b6ae594a036a1c5364b6c5a
+- kind: project-relative
+  target: claude
+  value: .claude/skills/typescript-expert/references/utility-types.ts
+  runtime: null
+  scope: project
+  owners:
+  - sickn33/agentic-awesome-skills/skills/typescript-expert
+  active_owner: sickn33/agentic-awesome-skills/skills/typescript-expert
+  content_hash: sha256:72c9a65db30be18fa08a7e3fe9335aba271f871e91085ab586d5da49f7a6ca7e
+- kind: project-relative
+  target: claude
+  value: .claude/skills/typescript-expert/scripts/ts_diagnostic.py
+  runtime: null
+  scope: project
+  owners:
+  - sickn33/agentic-awesome-skills/skills/typescript-expert
+  active_owner: sickn33/agentic-awesome-skills/skills/typescript-expert
+  content_hash: sha256:5748639b1202052332554151d677dd6b1d2376c4985db08a17ae66561dc228a8
+- kind: project-relative
   target: codex
   value: .agents/skills/actionlint
   runtime: null
@@ -7484,6 +7572,60 @@ deployments:
   - antonbabenko/terraform-skill/skills/terraform-skill
   active_owner: antonbabenko/terraform-skill/skills/terraform-skill
   content_hash: sha256:a35483a965a649603065882498587c62a2badc373a05d6e6620b19eb8dcb425f
+- kind: project-relative
+  target: codex
+  value: .agents/skills/typescript-expert
+  runtime: null
+  scope: project
+  owners:
+  - sickn33/agentic-awesome-skills/skills/typescript-expert
+  active_owner: sickn33/agentic-awesome-skills/skills/typescript-expert
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/typescript-expert/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - sickn33/agentic-awesome-skills/skills/typescript-expert
+  active_owner: sickn33/agentic-awesome-skills/skills/typescript-expert
+  content_hash: sha256:28ecb5757f53cc357fcbaae6f1fbd046836000deaf2dba83e0f2ab9cb5c0e3f7
+- kind: project-relative
+  target: codex
+  value: .agents/skills/typescript-expert/references/tsconfig-strict.json
+  runtime: null
+  scope: project
+  owners:
+  - sickn33/agentic-awesome-skills/skills/typescript-expert
+  active_owner: sickn33/agentic-awesome-skills/skills/typescript-expert
+  content_hash: sha256:baa3936ec045998a5b751166cc118ce9e9c7877f583562e75849f0a1d8bc59ac
+- kind: project-relative
+  target: codex
+  value: .agents/skills/typescript-expert/references/typescript-cheatsheet.md
+  runtime: null
+  scope: project
+  owners:
+  - sickn33/agentic-awesome-skills/skills/typescript-expert
+  active_owner: sickn33/agentic-awesome-skills/skills/typescript-expert
+  content_hash: sha256:48e2298805f0f0f1081a2a3637470dac17714f838b6ae594a036a1c5364b6c5a
+- kind: project-relative
+  target: codex
+  value: .agents/skills/typescript-expert/references/utility-types.ts
+  runtime: null
+  scope: project
+  owners:
+  - sickn33/agentic-awesome-skills/skills/typescript-expert
+  active_owner: sickn33/agentic-awesome-skills/skills/typescript-expert
+  content_hash: sha256:72c9a65db30be18fa08a7e3fe9335aba271f871e91085ab586d5da49f7a6ca7e
+- kind: project-relative
+  target: codex
+  value: .agents/skills/typescript-expert/scripts/ts_diagnostic.py
+  runtime: null
+  scope: project
+  owners:
+  - sickn33/agentic-awesome-skills/skills/typescript-expert
+  active_owner: sickn33/agentic-awesome-skills/skills/typescript-expert
+  content_hash: sha256:5748639b1202052332554151d677dd6b1d2376c4985db08a17ae66561dc228a8
 - kind: project-relative
   target: codex
   value: .codex/agents/executor.toml
