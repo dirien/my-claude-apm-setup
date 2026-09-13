@@ -80,6 +80,9 @@ dependencies:
     # wshobson/agents — ShellCheck configuration & static-analysis workflow
     # (the shell-scripting plugin's one skill we use)
     - wshobson/agents/plugins/shell-scripting/skills/shellcheck-configuration#c4b82b0ad771190355eb8e204b1329732a18449a
+    # sickn33/agentic-awesome-skills — huge community skill catalog; pinning only
+    # typescript-expert (deep TS/JS type-level programming, perf, monorepos)
+    - sickn33/agentic-awesome-skills/skills/typescript-expert#46cafc80378eabd5b04b1d32ad1e96a00476df59
 
   # MCP servers, self-defined (registry: false) so install never hits a registry.
   mcp:
