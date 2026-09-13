@@ -1,16 +1,16 @@
 lockfile_version: '1'
-generated_at: '2026-09-13T08:03:22.265584+00:00'
-apm_version: 0.28.0
+generated_at: '2026-09-13T08:22:24.794564+00:00'
+apm_version: 0.29.0
 dependencies:
 - repo_url: antonbabenko/agent-plugins
-  name: agent-plugins
+  name: code-intelligence
   host: github.com
   resolved_commit: ae17b3ebd19160e7e12e13538155e23daf1497a2
   resolved_ref: ae17b3ebd19160e7e12e13538155e23daf1497a2
   version: unknown
-  virtual_path: plugins/code-intelligence
+  virtual_path: plugins/code-intelligence/skills/code-intelligence
   is_virtual: true
-  package_type: skill_bundle
+  package_type: claude_skill
   deployed_files:
   - .agents/skills/code-intelligence
   - .agents/skills/code-intelligence/SKILL.md
@@ -31,7 +31,7 @@ dependencies:
     .claude/skills/code-intelligence/references/degradation-and-disclosure.md: sha256:ebb886dd3bb8ef45e3e31e655faa130a0d571d32a6bcd25a549c4a6439d9ea66
     .claude/skills/code-intelligence/references/lsp-calls.md: sha256:d84f103f6b6937e5ff30c5d49209feeb783892d0c1ab1d7e9f2b5fe3896e025d
     .claude/skills/code-intelligence/references/tool-precedence.md: sha256:2c8bb0beb52565ed5391c7682a01ba23a862d2434d1e0abb4cec651d9299b860
-  content_hash: sha256:02a7d9398cca275a57abd711e84a74227e859d892fd2c4e44d888044c3495402
+  content_hash: sha256:2299952891065a90f8e11abdca6307d2571fbfd2cade302edf55c062f76d765a
 - repo_url: antonbabenko/terraform-skill
   name: terraform-skill
   host: github.com
@@ -1634,15 +1634,6 @@ deployments:
   content_hash: null
 - kind: project-relative
   target: agents
-  value: .agents/skills/humanizer/AGENTS.md
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: sha256:703873b933df4b07b1df52e207ad2de3695e30ac6cb0db245986ab3f30f96ac3
-- kind: project-relative
-  target: agents
   value: .agents/skills/humanizer/LICENSE
   runtime: null
   scope: project
@@ -1650,15 +1641,6 @@ deployments:
   - .
   active_owner: .
   content_hash: sha256:4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96
-- kind: project-relative
-  target: agents
-  value: .agents/skills/humanizer/README.md
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: sha256:9c24e6b51459d3dc3e614596f749c0d1dc221b240a908f526322cf852ed80085
 - kind: project-relative
   target: agents
   value: .agents/skills/humanizer/SKILL.md
@@ -3447,8 +3429,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - antonbabenko/agent-plugins/plugins/code-intelligence
-  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  - antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence
   content_hash: null
 - kind: project-relative
   target: claude
@@ -3456,8 +3438,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - antonbabenko/agent-plugins/plugins/code-intelligence
-  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  - antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence
   content_hash: sha256:1f627d39cc080d616c05147ea27c37e4ae9acb20011a02c21143ba66700a3e9c
 - kind: project-relative
   target: claude
@@ -3465,8 +3447,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - antonbabenko/agent-plugins/plugins/code-intelligence
-  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  - antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence
   content_hash: sha256:ebb886dd3bb8ef45e3e31e655faa130a0d571d32a6bcd25a549c4a6439d9ea66
 - kind: project-relative
   target: claude
@@ -3474,8 +3456,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - antonbabenko/agent-plugins/plugins/code-intelligence
-  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  - antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence
   content_hash: sha256:d84f103f6b6937e5ff30c5d49209feeb783892d0c1ab1d7e9f2b5fe3896e025d
 - kind: project-relative
   target: claude
@@ -3483,8 +3465,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - antonbabenko/agent-plugins/plugins/code-intelligence
-  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  - antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence
   content_hash: sha256:2c8bb0beb52565ed5391c7682a01ba23a862d2434d1e0abb4cec651d9299b860
 - kind: project-relative
   target: claude
@@ -6435,8 +6417,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - antonbabenko/agent-plugins/plugins/code-intelligence
-  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  - antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence
   content_hash: null
 - kind: project-relative
   target: codex
@@ -6444,8 +6426,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - antonbabenko/agent-plugins/plugins/code-intelligence
-  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  - antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence
   content_hash: sha256:1f627d39cc080d616c05147ea27c37e4ae9acb20011a02c21143ba66700a3e9c
 - kind: project-relative
   target: codex
@@ -6453,8 +6435,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - antonbabenko/agent-plugins/plugins/code-intelligence
-  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  - antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence
   content_hash: sha256:ebb886dd3bb8ef45e3e31e655faa130a0d571d32a6bcd25a549c4a6439d9ea66
 - kind: project-relative
   target: codex
@@ -6462,8 +6444,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - antonbabenko/agent-plugins/plugins/code-intelligence
-  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  - antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence
   content_hash: sha256:d84f103f6b6937e5ff30c5d49209feeb783892d0c1ab1d7e9f2b5fe3896e025d
 - kind: project-relative
   target: codex
@@ -6471,8 +6453,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - antonbabenko/agent-plugins/plugins/code-intelligence
-  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence
+  - antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence
+  active_owner: antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence
   content_hash: sha256:2c8bb0beb52565ed5391c7682a01ba23a862d2434d1e0abb4cec651d9299b860
 - kind: project-relative
   target: codex
@@ -7723,9 +7705,7 @@ local_deployed_files:
 - .agents/skills/docs-pr
 - .agents/skills/docs-pr/SKILL.md
 - .agents/skills/humanizer
-- .agents/skills/humanizer/AGENTS.md
 - .agents/skills/humanizer/LICENSE
-- .agents/skills/humanizer/README.md
 - .agents/skills/humanizer/SKILL.md
 - .agents/skills/pr
 - .agents/skills/pr/SKILL.md
@@ -7753,9 +7733,7 @@ local_deployed_files:
 local_deployed_file_hashes:
   .agents/skills/commit/SKILL.md: sha256:73a5dcd522e872570e86e2c2826c91e02e05f1962504cb61a8d996c7e65bc062
   .agents/skills/docs-pr/SKILL.md: sha256:bc8fa7a2a9709405d368d47fe9891c971d94fe3ef462b5a3e4dcc323ee06cffa
-  .agents/skills/humanizer/AGENTS.md: sha256:703873b933df4b07b1df52e207ad2de3695e30ac6cb0db245986ab3f30f96ac3
   .agents/skills/humanizer/LICENSE: sha256:4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96
-  .agents/skills/humanizer/README.md: sha256:9c24e6b51459d3dc3e614596f749c0d1dc221b240a908f526322cf852ed80085
   .agents/skills/humanizer/SKILL.md: sha256:db0d9f424d36c38bcc3e741c62813041ea1c49dbcc9674954f6565ae0ba0d91a
   .agents/skills/pr/SKILL.md: sha256:3df806c42af088805e9d6497cc32a6d873472211263aa81275f0b85210e2fa61
   .agents/skills/review/SKILL.md: sha256:74a028d980567388a6f44b22df81f485a2883302cf70c26182d515b1d144585f
