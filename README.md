@@ -121,6 +121,13 @@ anything, and it leaves destructive commands (`rm -rf /`, `git reset --hard`) un
 `guard.sh` to block. Claude Code merges concurrent hook verdicts most-restrictive-first, so the
 guard's deny always wins.
 
+One cosmetic wart: rtk decides whether "a hook is installed" by looking for a settings.json
+command that shell-splits to exactly `rtk hook claude`. Our entry guards that call so it
+degrades to a no-op when the binary is missing, which defeats that check — so rtk prints
+`[rtk] /!\ No hook installed` to stderr **once per 24h**. The hook works; the check is just
+fooled. That is the deliberate trade: a bare `rtk hook claude` would silence it but exit 127 on
+*every* Bash call for anyone who skipped `apm lifecycle trust`.
+
 ## Make targets
 
 ```
