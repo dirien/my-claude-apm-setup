@@ -11,9 +11,10 @@ It is self-contained. The guardrails are plain shell scripts under `scripts/`, s
 - 30 skills pulled from git and pinned to a commit (Go, CLI, DevOps, linting, repo hygiene, code review, security, plan grilling, prose humanizing, the official Pulumi skills, Terraform/OpenTofu, LSP-first code intelligence, TypeScript).
 - Four local skills (`commit`, `docs-pr`, `pr`, `review`) and three subagents (`executor`, `librarian`, `reviewer`) under `.apm/`.
 - One MCP server: Pulumi's hosted server.
-- Four LSP servers (gopls, typescript, pyright, csharp) written to `.lsp.json`.
+- Four LSP servers (gopls, typescript, pyright, csharp), deployed as the `apm-lsp` plugin apm 0.29.1+ emits.
 - Two guardrail hooks, as shell scripts in `scripts/`: a `PreToolUse` guard that blocks destructive Bash commands, and a `PostToolUse` hook that scans edited files for secrets and formats them.
-- One instruction source under `.apm/instructions/` that generates the agent context for both editors.
+- [rtk](https://github.com/rtk-ai/rtk) wired end to end: a `PreToolUse` hook that compresses command output before the agent reads it, plus a `lifecycle: post-install` step that fetches the pinned binary. See [rtk](#rtk-command-output-compression).
+- Instruction sources under `.apm/instructions/` that generate the agent context for both editors.
 
 ## Requirements
 
@@ -57,7 +58,7 @@ apm install            # writes apm.lock.yaml + materializes .claude/
 apm install --frozen   # reproducible install from the lock (use this in CI)
 ```
 
-That single dependency materializes 34 skills into `.claude/skills/`, the three subagents into `.claude/agents/`, the instructions into `.claude/rules/`, the guardrail hooks into `.claude/apm-hooks.json` + `.claude/settings.json`, and the MCP/LSP servers into `.mcp.json` + `.lsp.json`.
+That single dependency materializes 34 skills into `.claude/skills/`, the three subagents into `.claude/agents/`, the instructions into `.claude/rules/`, the guardrail hooks into `.claude/apm-hooks.json` + `.claude/settings.json`, the MCP server into `.mcp.json`, and the LSP servers into the `apm-lsp` plugin under `.claude/skills/`.
 
 Notes:
 
@@ -87,6 +88,46 @@ Two small POSIX shell scripts, wired to Claude Code and Codex through `.apm/hook
 
 Both read the hook JSON on stdin and exit 2 to block. Edit the patterns to taste.
 
+## rtk — command output compression
+
+[rtk](https://github.com/rtk-ai/rtk) is a CLI proxy that compresses command output before it
+reaches the model. A `PreToolUse` hook rewrites Bash commands transparently (`git status` →
+`rtk git status`), so the agent reads a condensed result without knowing rtk is involved.
+Measured here: `git status` −85%, `git log -n 20` −61%, `ls -la` −61%. Filters cover git, ls,
+grep, test runners and linters, plus `terraform`, `tofu`, `pulumi`, `kubectl`, `docker` and `aws`.
+
+Both halves are declared in this repo, so there is no `rtk init` step:
+
+- `.apm/hooks/rtk.json` installs the hook. The command is `rtk hook claude`, a native
+  subcommand — the legacy `rtk-rewrite.sh` script is deliberately **not** vendored (rtk deletes
+  it on sight and nags daily about it, and it needs `jq`).
+- `lifecycle: post-install` in `apm.yml` runs `scripts/install-rtk.sh`, which fetches the pinned
+  release into `~/.local/bin`, SHA256-verified against the release's own `checksums.txt`.
+  Linux and macOS, arm64 and x86_64.
+
+**Lifecycle scripts are trust-gated**, so a fresh clone skips the binary install with a warning
+until you run this once per machine:
+
+```bash
+apm lifecycle trust     # then: apm install
+```
+
+That gate is the opt-out: without it you still get every hook, skill and rule — just no token
+savings, because the hook no-ops when the binary is absent. `RTK_VERSION` and `RTK_BIN_DIR`
+override the pin and the install location.
+
+Safety: the hook only *rewrites*. It returns no `permissionDecision`, so it cannot auto-approve
+anything, and it leaves destructive commands (`rm -rf /`, `git reset --hard`) untouched for
+`guard.sh` to block. Claude Code merges concurrent hook verdicts most-restrictive-first, so the
+guard's deny always wins.
+
+One cosmetic wart: rtk decides whether "a hook is installed" by looking for a settings.json
+command that shell-splits to exactly `rtk hook claude`. Our entry guards that call so it
+degrades to a no-op when the binary is missing, which defeats that check — so rtk prints
+`[rtk] /!\ No hook installed` to stderr **once per 24h**. The hook works; the check is just
+fooled. That is the deliberate trade: a bare `rtk hook claude` would silence it but exit 127 on
+*every* Bash call for anyone who skipped `apm lifecycle trust`.
+
 ## Make targets
 
 ```
@@ -102,7 +143,7 @@ The GitHub Actions workflow in `.github/workflows/apm.yml` runs the install, aud
 
 ## What's mine and what's borrowed
 
-The four workflow skills, the vendored `humanizer` skill (copied from `blader/humanizer@1b48564` — its skill sits at the repo root, which apm 0.27+ no longer resolves as a dependency), three agents, two guardrail hooks, and the instruction files under `.apm/` live in this repo. The 30 skills under `dependencies` come from `jeffallan/claude-skills`, `rshade/agent-skills`, `netresearch/agent-rules-skill`, `mattpocock/skills`, `wshobson/agents` (the `shellcheck-configuration` skill of its `shell-scripting` plugin), `pulumi/agent-skills` (the eight skills of its `pulumi/` plugin), `antonbabenko/terraform-skill` plus its recommended companion plugin `antonbabenko/agent-plugins/plugins/code-intelligence`, and `sickn33/agentic-awesome-skills` (just its `typescript-expert` skill); `apm.lock.yaml` pins each to a commit and `apm install --frozen` reproduces them.
+The four workflow skills, the vendored `humanizer` skill (copied from `blader/humanizer@1b48564` — its skill sits at the repo root, which apm 0.27+ no longer resolves as a dependency), three agents, two guardrail hooks, the rtk hook and its installer, and the instruction files under `.apm/` live in this repo. rtk itself is upstream — this repo only pins and wires it. The 30 skills under `dependencies` come from `jeffallan/claude-skills`, `rshade/agent-skills`, `netresearch/agent-rules-skill`, `mattpocock/skills`, `wshobson/agents` (the `shellcheck-configuration` skill of its `shell-scripting` plugin), `pulumi/agent-skills` (the eight skills of its `pulumi/` plugin), `antonbabenko/terraform-skill` plus its recommended companion plugin `antonbabenko/agent-plugins/plugins/code-intelligence`, and `sickn33/agentic-awesome-skills` (just its `typescript-expert` skill); `apm.lock.yaml` pins each to a commit and `apm install --frozen` reproduces them.
 
 ## Reading
 
