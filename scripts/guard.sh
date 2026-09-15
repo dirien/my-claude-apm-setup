@@ -15,7 +15,7 @@ print((d.get("tool_input") or {}).get("command", ""))' 2>/dev/null)"
 
 # Destructive patterns worth stopping before they run.
 if printf '%s\n' "$cmd" | grep -Eiq \
-  'rm[[:space:]]+-[a-z]*rf?[[:space:]]+(/|/\*|~|\$HOME)([[:space:]]|$)|rm[[:space:]]+.*--no-preserve-root|:\(\)\{[[:space:]]*:\|:&[[:space:]]*\};:|git[[:space:]]+push[[:space:]].*(--force([[:space:]]|=)|[[:space:]]-f([[:space:]]|$))|git[[:space:]]+reset[[:space:]]+--hard|\bmkfs\b|dd[[:space:]]+if=|chmod[[:space:]]+-R[[:space:]]+777[[:space:]]+/|DROP[[:space:]]+TABLE'; then
+  'rm[[:space:]]+-[a-z]*rf?[[:space:]]+(/|/\*|~|\$HOME)([[:space:]]|$)|rm[[:space:]]+.*--no-preserve-root|:\(\)\{[[:space:]]*:\|:&[[:space:]]*\};:|git[[:space:]]+push[[:space:]]+(.*[[:space:]])?((--force|-[a-zA-Z]*f)([[:space:]]|=|$)|\+[^[:space:]])|git[[:space:]]+reset[[:space:]]+--hard|\bmkfs\b|dd[[:space:]]+if=|chmod[[:space:]]+-R[[:space:]]+777[[:space:]]+/|DROP[[:space:]]+TABLE'; then
   printf 'guard: blocked a destructive command:\n  %s\n' "$cmd" >&2
   exit 2
 fi
