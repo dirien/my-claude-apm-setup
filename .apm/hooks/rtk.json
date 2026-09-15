@@ -1,0 +1,13 @@
+{
+  "PreToolUse": [
+    {
+      "matcher": "(?i)^Bash$",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "PATH=\"$HOME/.local/bin:$PATH\"; command -v rtk >/dev/null 2>&1 && exec rtk hook claude || exit 0"
+        }
+      ]
+    }
+  ]
+}

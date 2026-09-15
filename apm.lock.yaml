@@ -1,6 +1,6 @@
 lockfile_version: '1'
-generated_at: '2026-09-13T08:22:24.794564+00:00'
-apm_version: 0.29.0
+generated_at: '2026-09-15T05:05:31.387085+00:00'
+apm_version: 0.30.0
 dependencies:
 - repo_url: antonbabenko/agent-plugins
   name: code-intelligence
@@ -1588,105 +1588,6 @@ dependencies:
   content_hash: sha256:b616a5de408fd1983552148913fcb9c51eea6a8b3efac0e2a841335987075a6a
 deployments:
 - kind: project-relative
-  target: agents
-  value: .agents/skills/commit
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: null
-- kind: project-relative
-  target: agents
-  value: .agents/skills/commit/SKILL.md
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: sha256:73a5dcd522e872570e86e2c2826c91e02e05f1962504cb61a8d996c7e65bc062
-- kind: project-relative
-  target: agents
-  value: .agents/skills/docs-pr
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: null
-- kind: project-relative
-  target: agents
-  value: .agents/skills/docs-pr/SKILL.md
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: sha256:bc8fa7a2a9709405d368d47fe9891c971d94fe3ef462b5a3e4dcc323ee06cffa
-- kind: project-relative
-  target: agents
-  value: .agents/skills/humanizer
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: null
-- kind: project-relative
-  target: agents
-  value: .agents/skills/humanizer/LICENSE
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: sha256:4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96
-- kind: project-relative
-  target: agents
-  value: .agents/skills/humanizer/SKILL.md
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: sha256:db0d9f424d36c38bcc3e741c62813041ea1c49dbcc9674954f6565ae0ba0d91a
-- kind: project-relative
-  target: agents
-  value: .agents/skills/pr
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: null
-- kind: project-relative
-  target: agents
-  value: .agents/skills/pr/SKILL.md
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: sha256:3df806c42af088805e9d6497cc32a6d873472211263aa81275f0b85210e2fa61
-- kind: project-relative
-  target: agents
-  value: .agents/skills/review
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: null
-- kind: project-relative
-  target: agents
-  value: .agents/skills/review/SKILL.md
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: sha256:74a028d980567388a6f44b22df81f485a2883302cf70c26182d515b1d144585f
-- kind: project-relative
   target: claude
   value: .claude/agents/executor.md
   runtime: null
@@ -1731,6 +1632,15 @@ deployments:
   - .
   active_owner: .
   content_hash: sha256:42cb2d402133ce4f531dd65bc9c82c0e76812cc7043e6121f17c37513a1ffd1f
+- kind: project-relative
+  target: claude
+  value: .claude/rules/rtk.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:38f81dc0c2003e4eb977b7c8441a6a6750799ebcde29b8e00dc2f17af83251ef
 - kind: project-relative
   target: claude
   value: .claude/skills/actionlint
@@ -7635,6 +7545,141 @@ deployments:
   - .
   active_owner: .
   content_hash: sha256:b80ac9e3c85509030d2a8f84c22eb7811ce635ab3dfeb99e30d38a2927f7c285
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/commit
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/commit/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:73a5dcd522e872570e86e2c2826c91e02e05f1962504cb61a8d996c7e65bc062
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/docs-pr
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/docs-pr/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:bc8fa7a2a9709405d368d47fe9891c971d94fe3ef462b5a3e4dcc323ee06cffa
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/humanizer
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/humanizer/LICENSE
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/humanizer/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:db0d9f424d36c38bcc3e741c62813041ea1c49dbcc9674954f6565ae0ba0d91a
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/pr
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/pr/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:3df806c42af088805e9d6497cc32a6d873472211263aa81275f0b85210e2fa61
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/review
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/review/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:74a028d980567388a6f44b22df81f485a2883302cf70c26182d515b1d144585f
+- kind: uri
+  target: lsp
+  value: csharp
+  runtime: claude
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: uri
+  target: lsp
+  value: gopls
+  runtime: claude
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: uri
+  target: lsp
+  value: pyright
+  runtime: claude
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: uri
+  target: lsp
+  value: typescript-language-server
+  runtime: claude
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
 - kind: uri
   target: mcp
   value: pulumi
@@ -7699,6 +7744,17 @@ lsp_configs:
     extensionToLanguage:
       .ts: typescript
       .tsx: typescriptreact
+lsp_target_servers:
+  claude:
+  - csharp
+  - gopls
+  - pyright
+  - typescript-language-server
+lsp_config_provenance:
+  csharp: project:.
+  gopls: project:.
+  pyright: project:.
+  typescript-language-server: project:.
 local_deployed_files:
 - .agents/skills/commit
 - .agents/skills/commit/SKILL.md
@@ -7716,6 +7772,7 @@ local_deployed_files:
 - .claude/agents/reviewer.md
 - .claude/rules/pkg-go.md
 - .claude/rules/repo-conventions.md
+- .claude/rules/rtk.md
 - .claude/skills/commit
 - .claude/skills/commit/SKILL.md
 - .claude/skills/docs-pr
@@ -7742,6 +7799,7 @@ local_deployed_file_hashes:
   .claude/agents/reviewer.md: sha256:35d8cc26a2e7dc5f42b4c587f64e2c5f60490568822317fde063b5febf99d0ef
   .claude/rules/pkg-go.md: sha256:8cc0f516e7c70f99821b553eb2a407aeb9e6f9ec253c973ae178f753eedd04a4
   .claude/rules/repo-conventions.md: sha256:42cb2d402133ce4f531dd65bc9c82c0e76812cc7043e6121f17c37513a1ffd1f
+  .claude/rules/rtk.md: sha256:38f81dc0c2003e4eb977b7c8441a6a6750799ebcde29b8e00dc2f17af83251ef
   .claude/skills/commit/SKILL.md: sha256:73a5dcd522e872570e86e2c2826c91e02e05f1962504cb61a8d996c7e65bc062
   .claude/skills/docs-pr/SKILL.md: sha256:bc8fa7a2a9709405d368d47fe9891c971d94fe3ef462b5a3e4dcc323ee06cffa
   .claude/skills/humanizer/LICENSE: sha256:4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96

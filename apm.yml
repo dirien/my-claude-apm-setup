@@ -132,7 +132,29 @@ dependencies:
 #   .apm/agents/{executor,librarian,reviewer}.md → three subagents
 #   .apm/hooks/guardrails.json          → PreToolUse command guard + PostToolUse format/secret-scan
 #       (self-contained shell scripts under scripts/ — no external binary needed)
+#   .apm/hooks/rtk.json                 → PreToolUse rtk rewrite (token savings; see below)
 includes: auto
+
+# rtk (https://github.com/rtk-ai/rtk) — a CLI proxy that compresses command output
+# before the agent reads it. Two halves, both declared here so the setup stays
+# self-contained and no consumer has to run `rtk init`:
+#   * .apm/hooks/rtk.json installs the PreToolUse hook (`rtk hook claude`, a native
+#     subcommand — do NOT vendor the legacy hooks/claude/rtk-rewrite.sh, which rtk
+#     deletes on sight and nags about). The hook only rewrites; it returns no
+#     permissionDecision, so it cannot auto-approve anything and the guardrail
+#     hook's deny still wins (Claude Code merges hooks most-restrictive-first).
+#   * this post-install step fetches the pinned binary into ~/.local/bin.
+# Lifecycle scripts are trust-gated: `apm install` SKIPS this (with a warning)
+# until someone runs `apm lifecycle trust` once per machine. That is deliberate —
+# it is the escape hatch for anyone who wants the hooks without the binary. The
+# hook no-ops when rtk is absent, so an untrusted install is still fully working,
+# just without the token savings.
+lifecycle:
+  post-install:
+    - type: command
+      description: "Install the pinned rtk CLI into ~/.local/bin (token-saving command proxy)"
+      command: "sh ./scripts/install-rtk.sh"
+      timeoutSec: 120
 
 # Convenience wrapper. `apm run sync` regenerates the agent context from .apm/instructions.
 scripts:
