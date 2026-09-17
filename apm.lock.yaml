@@ -1,7 +1,387 @@
 lockfile_version: '1'
-generated_at: '2026-09-15T05:05:31.387085+00:00'
-apm_version: 0.30.0
+generated_at: '2026-09-17T13:43:35.712723+00:00'
+apm_version: 0.31.0
 dependencies:
+- repo_url: addyosmani/clarity
+  name: clarity
+  host: github.com
+  resolved_commit: e27ceeff60368cf6966b4ea00a5b9b36418ee9a0
+  resolved_ref: e27ceeff60368cf6966b4ea00a5b9b36418ee9a0
+  version: unknown
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/clarity
+  - .agents/skills/clarity/.claude/launch.json
+  - .agents/skills/clarity/.github/workflows/validate.yml
+  - .agents/skills/clarity/.gitignore
+  - .agents/skills/clarity/DESIGN.md
+  - .agents/skills/clarity/LICENSE
+  - .agents/skills/clarity/PRODUCT.md
+  - .agents/skills/clarity/README.md
+  - .agents/skills/clarity/SKILL.md
+  - .agents/skills/clarity/commands/clarity-interview.md
+  - .agents/skills/clarity/commands/clarity-review.md
+  - .agents/skills/clarity/commands/clarity-rewrite.md
+  - .agents/skills/clarity/evals/JUDGE.md
+  - .agents/skills/clarity/evals/cases.json
+  - .agents/skills/clarity/netlify.toml
+  - .agents/skills/clarity/references/edit.md
+  - .agents/skills/clarity/references/interview.md
+  - .agents/skills/clarity/references/longform.md
+  - .agents/skills/clarity/references/medium.md
+  - .agents/skills/clarity/references/review.md
+  - .agents/skills/clarity/samples/README.md
+  - .agents/skills/clarity/samples/how-ai-works.after.md
+  - .agents/skills/clarity/samples/how-ai-works.before.md
+  - .agents/skills/clarity/samples/pangram-after-interview.png
+  - .agents/skills/clarity/samples/what-it-means-to-be-human.after-interview.md
+  - .agents/skills/clarity/samples/what-it-means-to-be-human.after.md
+  - .agents/skills/clarity/samples/what-it-means-to-be-human.before.md
+  - .agents/skills/clarity/samples/what-it-means-to-be-human.transcript.txt
+  - .agents/skills/clarity/scripts/prose_stats.py
+  - .agents/skills/clarity/scripts/strip_markdown.py
+  - .agents/skills/clarity/scripts/validate_package.py
+  - .agents/skills/clarity/site/.gitignore
+  - .agents/skills/clarity/site/astro.config.mjs
+  - .agents/skills/clarity/site/components.json
+  - .agents/skills/clarity/site/netlify/edge-functions/content-negotiation.js
+  - .agents/skills/clarity/site/package-lock.json
+  - .agents/skills/clarity/site/package.json
+  - .agents/skills/clarity/site/public/.well-known/agent-instructions.md
+  - .agents/skills/clarity/site/public/404.md
+  - .agents/skills/clarity/site/public/app/index.md
+  - .agents/skills/clarity/site/public/apple-touch-icon.png
+  - .agents/skills/clarity/site/public/approach/index.md
+  - .agents/skills/clarity/site/public/clarity-logo-site.png
+  - .agents/skills/clarity/site/public/clarity-logo-yellow.png
+  - .agents/skills/clarity/site/public/detector-result.png
+  - .agents/skills/clarity/site/public/developers/index.md
+  - .agents/skills/clarity/site/public/example/index.md
+  - .agents/skills/clarity/site/public/favicon.svg
+  - .agents/skills/clarity/site/public/llms.txt
+  - .agents/skills/clarity/site/public/og-editor.png
+  - .agents/skills/clarity/site/public/og.png
+  - .agents/skills/clarity/site/public/robots.txt
+  - .agents/skills/clarity/site/public/tutorials/index.md
+  - .agents/skills/clarity/site/public/video-poster.jpg
+  - .agents/skills/clarity/site/scripts/generate-agent-files.mjs
+  - .agents/skills/clarity/site/src/assets/og-editor.svg
+  - .agents/skills/clarity/site/src/components/Install.astro
+  - .agents/skills/clarity/site/src/components/VideoEssay.astro
+  - .agents/skills/clarity/site/src/components/editor/EditorApp.tsx
+  - .agents/skills/clarity/site/src/components/ui/badge.tsx
+  - .agents/skills/clarity/site/src/components/ui/button.tsx
+  - .agents/skills/clarity/site/src/components/ui/card.tsx
+  - .agents/skills/clarity/site/src/components/ui/progress.tsx
+  - .agents/skills/clarity/site/src/components/ui/scroll-area.tsx
+  - .agents/skills/clarity/site/src/components/ui/separator.tsx
+  - .agents/skills/clarity/site/src/components/ui/tabs.tsx
+  - .agents/skills/clarity/site/src/components/ui/tooltip.tsx
+  - .agents/skills/clarity/site/src/data/rules.ts
+  - .agents/skills/clarity/site/src/data/samples.ts
+  - .agents/skills/clarity/site/src/layouts/Base.astro
+  - .agents/skills/clarity/site/src/lib/editor/clarity.js
+  - .agents/skills/clarity/site/src/lib/editor/draft.js
+  - .agents/skills/clarity/site/src/lib/editor/patterns.js
+  - .agents/skills/clarity/site/src/lib/editor/prompt.js
+  - .agents/skills/clarity/site/src/lib/utils.ts
+  - .agents/skills/clarity/site/src/pages/404.astro
+  - .agents/skills/clarity/site/src/pages/app.astro
+  - .agents/skills/clarity/site/src/pages/approach.astro
+  - .agents/skills/clarity/site/src/pages/developers.astro
+  - .agents/skills/clarity/site/src/pages/example.astro
+  - .agents/skills/clarity/site/src/pages/index.astro
+  - .agents/skills/clarity/site/src/pages/tutorials.astro
+  - .agents/skills/clarity/site/src/styles/editor.css
+  - .agents/skills/clarity/site/src/styles/global.css
+  - .agents/skills/clarity/site/src/types.d.ts
+  - .agents/skills/clarity/site/tests/app/clarity.test.mjs
+  - .agents/skills/clarity/site/tests/app/draft.test.mjs
+  - .agents/skills/clarity/site/tests/app/editor-ui.test.mjs
+  - .agents/skills/clarity/site/tests/app/patterns.test.mjs
+  - .agents/skills/clarity/site/tests/app/prompt.test.mjs
+  - .agents/skills/clarity/site/tests/site/agent-readiness.test.mjs
+  - .agents/skills/clarity/site/tsconfig.json
+  - .agents/skills/clarity/skills.sh.json
+  - .claude/skills/clarity
+  - .claude/skills/clarity/.claude/launch.json
+  - .claude/skills/clarity/.github/workflows/validate.yml
+  - .claude/skills/clarity/.gitignore
+  - .claude/skills/clarity/DESIGN.md
+  - .claude/skills/clarity/LICENSE
+  - .claude/skills/clarity/PRODUCT.md
+  - .claude/skills/clarity/README.md
+  - .claude/skills/clarity/SKILL.md
+  - .claude/skills/clarity/commands/clarity-interview.md
+  - .claude/skills/clarity/commands/clarity-review.md
+  - .claude/skills/clarity/commands/clarity-rewrite.md
+  - .claude/skills/clarity/evals/JUDGE.md
+  - .claude/skills/clarity/evals/cases.json
+  - .claude/skills/clarity/netlify.toml
+  - .claude/skills/clarity/references/edit.md
+  - .claude/skills/clarity/references/interview.md
+  - .claude/skills/clarity/references/longform.md
+  - .claude/skills/clarity/references/medium.md
+  - .claude/skills/clarity/references/review.md
+  - .claude/skills/clarity/samples/README.md
+  - .claude/skills/clarity/samples/how-ai-works.after.md
+  - .claude/skills/clarity/samples/how-ai-works.before.md
+  - .claude/skills/clarity/samples/pangram-after-interview.png
+  - .claude/skills/clarity/samples/what-it-means-to-be-human.after-interview.md
+  - .claude/skills/clarity/samples/what-it-means-to-be-human.after.md
+  - .claude/skills/clarity/samples/what-it-means-to-be-human.before.md
+  - .claude/skills/clarity/samples/what-it-means-to-be-human.transcript.txt
+  - .claude/skills/clarity/scripts/prose_stats.py
+  - .claude/skills/clarity/scripts/strip_markdown.py
+  - .claude/skills/clarity/scripts/validate_package.py
+  - .claude/skills/clarity/site/.gitignore
+  - .claude/skills/clarity/site/astro.config.mjs
+  - .claude/skills/clarity/site/components.json
+  - .claude/skills/clarity/site/netlify/edge-functions/content-negotiation.js
+  - .claude/skills/clarity/site/package-lock.json
+  - .claude/skills/clarity/site/package.json
+  - .claude/skills/clarity/site/public/.well-known/agent-instructions.md
+  - .claude/skills/clarity/site/public/404.md
+  - .claude/skills/clarity/site/public/app/index.md
+  - .claude/skills/clarity/site/public/apple-touch-icon.png
+  - .claude/skills/clarity/site/public/approach/index.md
+  - .claude/skills/clarity/site/public/clarity-logo-site.png
+  - .claude/skills/clarity/site/public/clarity-logo-yellow.png
+  - .claude/skills/clarity/site/public/detector-result.png
+  - .claude/skills/clarity/site/public/developers/index.md
+  - .claude/skills/clarity/site/public/example/index.md
+  - .claude/skills/clarity/site/public/favicon.svg
+  - .claude/skills/clarity/site/public/llms.txt
+  - .claude/skills/clarity/site/public/og-editor.png
+  - .claude/skills/clarity/site/public/og.png
+  - .claude/skills/clarity/site/public/robots.txt
+  - .claude/skills/clarity/site/public/tutorials/index.md
+  - .claude/skills/clarity/site/public/video-poster.jpg
+  - .claude/skills/clarity/site/scripts/generate-agent-files.mjs
+  - .claude/skills/clarity/site/src/assets/og-editor.svg
+  - .claude/skills/clarity/site/src/components/Install.astro
+  - .claude/skills/clarity/site/src/components/VideoEssay.astro
+  - .claude/skills/clarity/site/src/components/editor/EditorApp.tsx
+  - .claude/skills/clarity/site/src/components/ui/badge.tsx
+  - .claude/skills/clarity/site/src/components/ui/button.tsx
+  - .claude/skills/clarity/site/src/components/ui/card.tsx
+  - .claude/skills/clarity/site/src/components/ui/progress.tsx
+  - .claude/skills/clarity/site/src/components/ui/scroll-area.tsx
+  - .claude/skills/clarity/site/src/components/ui/separator.tsx
+  - .claude/skills/clarity/site/src/components/ui/tabs.tsx
+  - .claude/skills/clarity/site/src/components/ui/tooltip.tsx
+  - .claude/skills/clarity/site/src/data/rules.ts
+  - .claude/skills/clarity/site/src/data/samples.ts
+  - .claude/skills/clarity/site/src/layouts/Base.astro
+  - .claude/skills/clarity/site/src/lib/editor/clarity.js
+  - .claude/skills/clarity/site/src/lib/editor/draft.js
+  - .claude/skills/clarity/site/src/lib/editor/patterns.js
+  - .claude/skills/clarity/site/src/lib/editor/prompt.js
+  - .claude/skills/clarity/site/src/lib/utils.ts
+  - .claude/skills/clarity/site/src/pages/404.astro
+  - .claude/skills/clarity/site/src/pages/app.astro
+  - .claude/skills/clarity/site/src/pages/approach.astro
+  - .claude/skills/clarity/site/src/pages/developers.astro
+  - .claude/skills/clarity/site/src/pages/example.astro
+  - .claude/skills/clarity/site/src/pages/index.astro
+  - .claude/skills/clarity/site/src/pages/tutorials.astro
+  - .claude/skills/clarity/site/src/styles/editor.css
+  - .claude/skills/clarity/site/src/styles/global.css
+  - .claude/skills/clarity/site/src/types.d.ts
+  - .claude/skills/clarity/site/tests/app/clarity.test.mjs
+  - .claude/skills/clarity/site/tests/app/draft.test.mjs
+  - .claude/skills/clarity/site/tests/app/editor-ui.test.mjs
+  - .claude/skills/clarity/site/tests/app/patterns.test.mjs
+  - .claude/skills/clarity/site/tests/app/prompt.test.mjs
+  - .claude/skills/clarity/site/tests/site/agent-readiness.test.mjs
+  - .claude/skills/clarity/site/tsconfig.json
+  - .claude/skills/clarity/skills.sh.json
+  deployed_file_hashes:
+    .agents/skills/clarity/.claude/launch.json: sha256:721729c6271fd12feaf358bb67a2b4f026b95d88ca8843aaa21d116ba4d3e05c
+    .agents/skills/clarity/.github/workflows/validate.yml: sha256:ee0345194d56983512ceae178dc46b494011df8c37ba3f3532290ac7fcc4a7ed
+    .agents/skills/clarity/.gitignore: sha256:b3fc5b27477c51cbbf6c556f58a8499d2c90e2807ea9a0920d49f2e2063db900
+    .agents/skills/clarity/DESIGN.md: sha256:81f9381b04425eede4b86dc8d5be74587f40d1bed131046b9eed972ddaa38ada
+    .agents/skills/clarity/LICENSE: sha256:c122223ac43e86421958e18623979942c21b642951e2e3736dcb63eff13587c3
+    .agents/skills/clarity/PRODUCT.md: sha256:1c5b161af021d1bccda0753856a7ef45bae0a88f8a277711236b0e292fa52f00
+    .agents/skills/clarity/README.md: sha256:ee8b862654ef031fe4fd4f5477c25f836d3540b8f74bd7e917160138dc907196
+    .agents/skills/clarity/SKILL.md: sha256:6ddb091c98595a7a718842b6877cfa94384df6a72feea50441322070827e684c
+    .agents/skills/clarity/commands/clarity-interview.md: sha256:327fc3bc06dfc3621122351ee268692121fce9b8bf6eaf6cdbb51cff983a0578
+    .agents/skills/clarity/commands/clarity-review.md: sha256:c86d78287fe501f8c4c60e7ddf11bb782391b497f547f00a5c430a5f35d4e2e1
+    .agents/skills/clarity/commands/clarity-rewrite.md: sha256:7dac49b359b39f93538191737b2f3bae419a8496cf17b300c59340b1911c3bd3
+    .agents/skills/clarity/evals/JUDGE.md: sha256:b8f8bdb4bd5621e8c19baf953bba087c2682097c90da506c80bdca4811304dc6
+    .agents/skills/clarity/evals/cases.json: sha256:f16b07aa80567e7b89f15ac972fe00ae48ea92cdf77a2652d640c1c6191806d3
+    .agents/skills/clarity/netlify.toml: sha256:ead4cf81f1e7ab1604f83cb5f0e1be4cfdba09bfd515fb0c87c469c80c914cb3
+    .agents/skills/clarity/references/edit.md: sha256:37ee13563118eb7ff2af3394befbdb8321e8e104962df3de3e15511df4ed17e3
+    .agents/skills/clarity/references/interview.md: sha256:b73be76227c3fcd0a1b9385f918cf8fcfb6b686a49906329565ac7b9e3f314ba
+    .agents/skills/clarity/references/longform.md: sha256:957abe3b9a9953acd7b835baa6a4dec10f46df4c5d58100183ccac020308bb43
+    .agents/skills/clarity/references/medium.md: sha256:1b571440c59cc367246cd26fbc3e1e25a51ef8f58854b947071a865a7e6294cf
+    .agents/skills/clarity/references/review.md: sha256:61c75ed39c69c1ad9a39c41a243979bacd27d45494a4d6d7c0a75963dbe3e3a0
+    .agents/skills/clarity/samples/README.md: sha256:5985c5350f46137d742fe6631d1ce295489dcb4512771eeed24dc38abcff5968
+    .agents/skills/clarity/samples/how-ai-works.after.md: sha256:49d40c2391defaa2a90b0c0f219ea1275f3499fd8d42362dea09273bb2cc4f93
+    .agents/skills/clarity/samples/how-ai-works.before.md: sha256:fe33eb47b9219405ee4c35f5461f62393efa751269940d29d00388a2ea99f1c1
+    .agents/skills/clarity/samples/pangram-after-interview.png: sha256:7a3120d84ac11078e8d3287d7ec3a220dca98a143995994810de254cb6541b97
+    .agents/skills/clarity/samples/what-it-means-to-be-human.after-interview.md: sha256:547c07763fbcf66a32504c34f3996f76c85fb8dbd8f7cabe43dfe8182668b5b8
+    .agents/skills/clarity/samples/what-it-means-to-be-human.after.md: sha256:140b983fbb95ddb06d520d2d8a9b3c95976e8dfd1e328aca5655f2e1c8cac98f
+    .agents/skills/clarity/samples/what-it-means-to-be-human.before.md: sha256:a69adc92ecfa27046be1aa6408e68b8832af60532d67c909c1e164d5a538ad37
+    .agents/skills/clarity/samples/what-it-means-to-be-human.transcript.txt: sha256:43356422c437aba2efb5bd921ccf605801bc72b275b05d3e0c760c66088448ef
+    .agents/skills/clarity/scripts/prose_stats.py: sha256:d9b9b8e562de3b741d1e3b27c141e2b248740747a1e7b2cebfebb6d127571063
+    .agents/skills/clarity/scripts/strip_markdown.py: sha256:ed69bd01a9f847ee48000fb65599bb27bcc4916380c9cfb4de112881f63182f1
+    .agents/skills/clarity/scripts/validate_package.py: sha256:0ca40da41d703c7a0da8f073428a2455c25498133097055422a11d837b075058
+    .agents/skills/clarity/site/.gitignore: sha256:87432c17e1430bd6e52cbacf7e04fdaf5a3871a98119c60319bc06bd98e37a50
+    .agents/skills/clarity/site/astro.config.mjs: sha256:aed8b07fd0cf9ded06e4942d6e565b87b8f1dcc73cfa8011e4903beaef4c287b
+    .agents/skills/clarity/site/components.json: sha256:0552af73cdaef8387c8185c4b99bde62a930545b3de05a669dee4b8f4aac3ec3
+    .agents/skills/clarity/site/netlify/edge-functions/content-negotiation.js: sha256:9bce8dedd11d8ff1beae72e1890d9b2636f98c9c35b8065b1474f2bf012584bb
+    .agents/skills/clarity/site/package-lock.json: sha256:8501edfa53e389bac815530c4e9cc7e4372acb85e1af2f5aae4c3ef63daa80c0
+    .agents/skills/clarity/site/package.json: sha256:dfe9c1217e338ae51a50365dc68ee208bfac0826cca8f7b964454e9c0fb685c7
+    .agents/skills/clarity/site/public/.well-known/agent-instructions.md: sha256:8c969899fa1f9abc6929da627b766ab84930a94507c06a7e53b085e283d28ea8
+    .agents/skills/clarity/site/public/404.md: sha256:9387df942780ebdb15e57ac769b309ebacdb11f6071e12b5933f8b08c47fe958
+    .agents/skills/clarity/site/public/app/index.md: sha256:f08e8eccb23344be4e658d62bc694b167fd6fb2d74227f9e12488b34557b3b98
+    .agents/skills/clarity/site/public/apple-touch-icon.png: sha256:55a2f9c39e53cec353d5714513db8370535da17336cb419d19651eb3777ea462
+    .agents/skills/clarity/site/public/approach/index.md: sha256:d09dccdaa82c81531251ba788b30ea4947dfcb801cf3948afee279d4479df4c5
+    .agents/skills/clarity/site/public/clarity-logo-site.png: sha256:34730e7a90455ae23f565e41bca1b2c6d8f0ff5c90de719b44599f5e2d1fbfe1
+    .agents/skills/clarity/site/public/clarity-logo-yellow.png: sha256:2d5c4faf7e9097f856d72fe5804cb2ee2f67f839dee2176d1d368206142494f5
+    .agents/skills/clarity/site/public/detector-result.png: sha256:3944dde7248c4963996e2fe82a74a51af8837aa5a340191d239b1891720d163d
+    .agents/skills/clarity/site/public/developers/index.md: sha256:96a6aa3dc51483d0b0306646f0baa279e56fe29113540d905e189ecacdd68051
+    .agents/skills/clarity/site/public/example/index.md: sha256:500d6a3ead1a1d0376c5498a070ad9d76f89a2953e789a51f5f4f7dd55e1d3d8
+    .agents/skills/clarity/site/public/favicon.svg: sha256:4c3c09fb896fb810f2971a3736242bb2a3be0fab8875b1c9ea00920cd882c61c
+    .agents/skills/clarity/site/public/llms.txt: sha256:b6230d932da740031bc450b3dcc014325354fcb3598c106a6dea4a8db83dc7e1
+    .agents/skills/clarity/site/public/og-editor.png: sha256:96ae4efb4e8d43399d3ec346c16ee074decedd52debe7a17b40bac9775cd1dcb
+    .agents/skills/clarity/site/public/og.png: sha256:d10460115d32c4667b02e8bb049de974870c29a7c3fa2b8bc8be063158447093
+    .agents/skills/clarity/site/public/robots.txt: sha256:f579b8dda09b946609f72c1e67d138361006567346680907b084ffcde6ddc4ce
+    .agents/skills/clarity/site/public/tutorials/index.md: sha256:5686405316a39a13f1a8f02b4574c27b8d9dcfecc52bd50e316154652182b5cf
+    .agents/skills/clarity/site/public/video-poster.jpg: sha256:857978398281a5d3e4a9e5e1644e27ec18614ad36b49c2c2eaaace1f9d88b3b6
+    .agents/skills/clarity/site/scripts/generate-agent-files.mjs: sha256:817002d2434eff982afe086c5ffb243c26cb4e8876a9251c7c89a2ae303b518e
+    .agents/skills/clarity/site/src/assets/og-editor.svg: sha256:a1e8fe4c5695644512c49381ddb796f35fe075bf7719a63bdb2b07fc9044441c
+    .agents/skills/clarity/site/src/components/Install.astro: sha256:26183b2adff577a25c4f730f62339155ecd3da2e32e8cb347cbb75bafc135483
+    .agents/skills/clarity/site/src/components/VideoEssay.astro: sha256:13e49eaeb2d85eb676c6f4bd8913344f7a792273b6b12146457867b0d4a9aa02
+    .agents/skills/clarity/site/src/components/editor/EditorApp.tsx: sha256:f4a94c495d0a3b43a419e2533abd69468f790fde8c753f1532d2912ad7245b81
+    .agents/skills/clarity/site/src/components/ui/badge.tsx: sha256:03cd6ad4c78e24127706934a617f56a6ce6fcf9ea05ccb83ce02764e6f2c3f5d
+    .agents/skills/clarity/site/src/components/ui/button.tsx: sha256:6e2d8003497e19b231f10fad05cb3b67a90d47e1ee9a2076bd4e0e491d320c48
+    .agents/skills/clarity/site/src/components/ui/card.tsx: sha256:55e5845f6f31bcb05e539336a48ced65fce64e02af796e6da40f4aee7bc78e91
+    .agents/skills/clarity/site/src/components/ui/progress.tsx: sha256:5348d25e902bd70974707e4d533c405d2f4a4c3ac4631c0549517b6b1a21f127
+    .agents/skills/clarity/site/src/components/ui/scroll-area.tsx: sha256:01a8c56323b23aecb4c6603940c91df9d794d994db10efbf4cc466f6f25ad162
+    .agents/skills/clarity/site/src/components/ui/separator.tsx: sha256:b7063ead0116c8ad94c391f599de1fac632a17ae2153d360fdaab4310fcda795
+    .agents/skills/clarity/site/src/components/ui/tabs.tsx: sha256:13c109251151b26ead193e93585ab1db204d831ba879d1582f66f8343cd1f84d
+    .agents/skills/clarity/site/src/components/ui/tooltip.tsx: sha256:308f8618c7075970fc718609554e31cdf52a915ab4e47d1c0e42145198e9a454
+    .agents/skills/clarity/site/src/data/rules.ts: sha256:086f4e3a63ef7dd296408ad1fed94ba0771a6d1164e81624b7d11e6cf9468a71
+    .agents/skills/clarity/site/src/data/samples.ts: sha256:4cf7c87a2b240c169e17a393b9029f41204066bf82847a6b60a88a81bd82585f
+    .agents/skills/clarity/site/src/layouts/Base.astro: sha256:518e1540f9978751b4604f8b3986ba720bd6e920bc4a160d215ddd90ce2e1659
+    .agents/skills/clarity/site/src/lib/editor/clarity.js: sha256:74a239fb4423e4bc56c11a6cfdeb7b2fcec6542b0366eb2a09710c5f3de76895
+    .agents/skills/clarity/site/src/lib/editor/draft.js: sha256:31c4a3e3cd2b9b5de003d574bef095b76670e4f54a60f504560f61eb60eab915
+    .agents/skills/clarity/site/src/lib/editor/patterns.js: sha256:b839e9145b2d243d4d167630df7d9d37e8693f1c55bb62e1c39f2253fdb5dcac
+    .agents/skills/clarity/site/src/lib/editor/prompt.js: sha256:48a89df67b5df3946097f794dbc4f5848e5e53e0350b8e86ebdea87a70eb2e93
+    .agents/skills/clarity/site/src/lib/utils.ts: sha256:7c8c3dfc0cdd370d44932828eb067ef771c8fe7996693221d5d4b90af6d54f2d
+    .agents/skills/clarity/site/src/pages/404.astro: sha256:3638f28c0b28b68d48243eb9d525b75e4befc33367614194ae0e48ddbe3d0161
+    .agents/skills/clarity/site/src/pages/app.astro: sha256:b188b90aa1e2d0e307e45d5cb56ef11238feae267f0182593f8514e4bfeb943b
+    .agents/skills/clarity/site/src/pages/approach.astro: sha256:5eb20703975b370fc35315fe31e1863baede737c9dd0ed9da71ceacb67148f57
+    .agents/skills/clarity/site/src/pages/developers.astro: sha256:b98ad2d6f19d7c43f62b4747a97a9084b7c3288143937c7c4fcb8b1ddac09df9
+    .agents/skills/clarity/site/src/pages/example.astro: sha256:4daa9a6c337938b74c54193f4a9362a7bcb76d6ff95c7f8e8aa04d53f004e53f
+    .agents/skills/clarity/site/src/pages/index.astro: sha256:b05ef0078d3ca341e307e20ec16435e0c136600b8ce5e75e1d96d00681675fc9
+    .agents/skills/clarity/site/src/pages/tutorials.astro: sha256:d1c2da06f1b3bad2168cf6fb16d7452857a2dacdff3784cc12a8e3fe7730bf10
+    .agents/skills/clarity/site/src/styles/editor.css: sha256:66002a8a000232c97caa44de9c7e9e2311fbff76d1841eddf9e24b5b8f9f617b
+    .agents/skills/clarity/site/src/styles/global.css: sha256:e9b3fbc16181b31d2f1246d6986423039ab2ce764ef897d0a4e06024f01b3ba8
+    .agents/skills/clarity/site/src/types.d.ts: sha256:9c818b687fee37e93100ab2a4fac9325ad7698993eee6416664e872b8cffcd2e
+    .agents/skills/clarity/site/tests/app/clarity.test.mjs: sha256:7635a0ba548b07a9a8f4b6fa9234479356ad339a9400305fca9e370b14faa6a4
+    .agents/skills/clarity/site/tests/app/draft.test.mjs: sha256:b1e28a870933c29411bb874843d44ca8987ee58c0a8fd02b959a2c60dde59714
+    .agents/skills/clarity/site/tests/app/editor-ui.test.mjs: sha256:ae19fa398881659ddfad43c04a2b5ad079ada2310c53445c6aeafb660f406c86
+    .agents/skills/clarity/site/tests/app/patterns.test.mjs: sha256:43a866100d6a5ba3d7d5ff7c441877d64507a4980bf08c8bea6bd3038f835c9d
+    .agents/skills/clarity/site/tests/app/prompt.test.mjs: sha256:3713e391f2a75f8e82e17e51a52934741f8106a5e004066d4dd7e0b9f8ea7053
+    .agents/skills/clarity/site/tests/site/agent-readiness.test.mjs: sha256:e59352f2d85e8a824aaf2a0d9c3709a54851ee05d87dcaeb412cdd6df4ddcf45
+    .agents/skills/clarity/site/tsconfig.json: sha256:b0ac3b403de7dcf2965c74c28ed3af6d5b5b292dfdf6c67311b31a4d0ec43c61
+    .agents/skills/clarity/skills.sh.json: sha256:176a2fb39270ea48307491c45c330e92792f2234a874da204ec6ea39a035dddd
+    .claude/skills/clarity/.claude/launch.json: sha256:721729c6271fd12feaf358bb67a2b4f026b95d88ca8843aaa21d116ba4d3e05c
+    .claude/skills/clarity/.github/workflows/validate.yml: sha256:ee0345194d56983512ceae178dc46b494011df8c37ba3f3532290ac7fcc4a7ed
+    .claude/skills/clarity/.gitignore: sha256:b3fc5b27477c51cbbf6c556f58a8499d2c90e2807ea9a0920d49f2e2063db900
+    .claude/skills/clarity/DESIGN.md: sha256:81f9381b04425eede4b86dc8d5be74587f40d1bed131046b9eed972ddaa38ada
+    .claude/skills/clarity/LICENSE: sha256:c122223ac43e86421958e18623979942c21b642951e2e3736dcb63eff13587c3
+    .claude/skills/clarity/PRODUCT.md: sha256:1c5b161af021d1bccda0753856a7ef45bae0a88f8a277711236b0e292fa52f00
+    .claude/skills/clarity/README.md: sha256:ee8b862654ef031fe4fd4f5477c25f836d3540b8f74bd7e917160138dc907196
+    .claude/skills/clarity/SKILL.md: sha256:6ddb091c98595a7a718842b6877cfa94384df6a72feea50441322070827e684c
+    .claude/skills/clarity/commands/clarity-interview.md: sha256:327fc3bc06dfc3621122351ee268692121fce9b8bf6eaf6cdbb51cff983a0578
+    .claude/skills/clarity/commands/clarity-review.md: sha256:c86d78287fe501f8c4c60e7ddf11bb782391b497f547f00a5c430a5f35d4e2e1
+    .claude/skills/clarity/commands/clarity-rewrite.md: sha256:7dac49b359b39f93538191737b2f3bae419a8496cf17b300c59340b1911c3bd3
+    .claude/skills/clarity/evals/JUDGE.md: sha256:b8f8bdb4bd5621e8c19baf953bba087c2682097c90da506c80bdca4811304dc6
+    .claude/skills/clarity/evals/cases.json: sha256:f16b07aa80567e7b89f15ac972fe00ae48ea92cdf77a2652d640c1c6191806d3
+    .claude/skills/clarity/netlify.toml: sha256:ead4cf81f1e7ab1604f83cb5f0e1be4cfdba09bfd515fb0c87c469c80c914cb3
+    .claude/skills/clarity/references/edit.md: sha256:37ee13563118eb7ff2af3394befbdb8321e8e104962df3de3e15511df4ed17e3
+    .claude/skills/clarity/references/interview.md: sha256:b73be76227c3fcd0a1b9385f918cf8fcfb6b686a49906329565ac7b9e3f314ba
+    .claude/skills/clarity/references/longform.md: sha256:957abe3b9a9953acd7b835baa6a4dec10f46df4c5d58100183ccac020308bb43
+    .claude/skills/clarity/references/medium.md: sha256:1b571440c59cc367246cd26fbc3e1e25a51ef8f58854b947071a865a7e6294cf
+    .claude/skills/clarity/references/review.md: sha256:61c75ed39c69c1ad9a39c41a243979bacd27d45494a4d6d7c0a75963dbe3e3a0
+    .claude/skills/clarity/samples/README.md: sha256:5985c5350f46137d742fe6631d1ce295489dcb4512771eeed24dc38abcff5968
+    .claude/skills/clarity/samples/how-ai-works.after.md: sha256:49d40c2391defaa2a90b0c0f219ea1275f3499fd8d42362dea09273bb2cc4f93
+    .claude/skills/clarity/samples/how-ai-works.before.md: sha256:fe33eb47b9219405ee4c35f5461f62393efa751269940d29d00388a2ea99f1c1
+    .claude/skills/clarity/samples/pangram-after-interview.png: sha256:7a3120d84ac11078e8d3287d7ec3a220dca98a143995994810de254cb6541b97
+    .claude/skills/clarity/samples/what-it-means-to-be-human.after-interview.md: sha256:547c07763fbcf66a32504c34f3996f76c85fb8dbd8f7cabe43dfe8182668b5b8
+    .claude/skills/clarity/samples/what-it-means-to-be-human.after.md: sha256:140b983fbb95ddb06d520d2d8a9b3c95976e8dfd1e328aca5655f2e1c8cac98f
+    .claude/skills/clarity/samples/what-it-means-to-be-human.before.md: sha256:a69adc92ecfa27046be1aa6408e68b8832af60532d67c909c1e164d5a538ad37
+    .claude/skills/clarity/samples/what-it-means-to-be-human.transcript.txt: sha256:43356422c437aba2efb5bd921ccf605801bc72b275b05d3e0c760c66088448ef
+    .claude/skills/clarity/scripts/prose_stats.py: sha256:d9b9b8e562de3b741d1e3b27c141e2b248740747a1e7b2cebfebb6d127571063
+    .claude/skills/clarity/scripts/strip_markdown.py: sha256:ed69bd01a9f847ee48000fb65599bb27bcc4916380c9cfb4de112881f63182f1
+    .claude/skills/clarity/scripts/validate_package.py: sha256:0ca40da41d703c7a0da8f073428a2455c25498133097055422a11d837b075058
+    .claude/skills/clarity/site/.gitignore: sha256:87432c17e1430bd6e52cbacf7e04fdaf5a3871a98119c60319bc06bd98e37a50
+    .claude/skills/clarity/site/astro.config.mjs: sha256:aed8b07fd0cf9ded06e4942d6e565b87b8f1dcc73cfa8011e4903beaef4c287b
+    .claude/skills/clarity/site/components.json: sha256:0552af73cdaef8387c8185c4b99bde62a930545b3de05a669dee4b8f4aac3ec3
+    .claude/skills/clarity/site/netlify/edge-functions/content-negotiation.js: sha256:9bce8dedd11d8ff1beae72e1890d9b2636f98c9c35b8065b1474f2bf012584bb
+    .claude/skills/clarity/site/package-lock.json: sha256:8501edfa53e389bac815530c4e9cc7e4372acb85e1af2f5aae4c3ef63daa80c0
+    .claude/skills/clarity/site/package.json: sha256:dfe9c1217e338ae51a50365dc68ee208bfac0826cca8f7b964454e9c0fb685c7
+    .claude/skills/clarity/site/public/.well-known/agent-instructions.md: sha256:8c969899fa1f9abc6929da627b766ab84930a94507c06a7e53b085e283d28ea8
+    .claude/skills/clarity/site/public/404.md: sha256:9387df942780ebdb15e57ac769b309ebacdb11f6071e12b5933f8b08c47fe958
+    .claude/skills/clarity/site/public/app/index.md: sha256:f08e8eccb23344be4e658d62bc694b167fd6fb2d74227f9e12488b34557b3b98
+    .claude/skills/clarity/site/public/apple-touch-icon.png: sha256:55a2f9c39e53cec353d5714513db8370535da17336cb419d19651eb3777ea462
+    .claude/skills/clarity/site/public/approach/index.md: sha256:d09dccdaa82c81531251ba788b30ea4947dfcb801cf3948afee279d4479df4c5
+    .claude/skills/clarity/site/public/clarity-logo-site.png: sha256:34730e7a90455ae23f565e41bca1b2c6d8f0ff5c90de719b44599f5e2d1fbfe1
+    .claude/skills/clarity/site/public/clarity-logo-yellow.png: sha256:2d5c4faf7e9097f856d72fe5804cb2ee2f67f839dee2176d1d368206142494f5
+    .claude/skills/clarity/site/public/detector-result.png: sha256:3944dde7248c4963996e2fe82a74a51af8837aa5a340191d239b1891720d163d
+    .claude/skills/clarity/site/public/developers/index.md: sha256:96a6aa3dc51483d0b0306646f0baa279e56fe29113540d905e189ecacdd68051
+    .claude/skills/clarity/site/public/example/index.md: sha256:500d6a3ead1a1d0376c5498a070ad9d76f89a2953e789a51f5f4f7dd55e1d3d8
+    .claude/skills/clarity/site/public/favicon.svg: sha256:4c3c09fb896fb810f2971a3736242bb2a3be0fab8875b1c9ea00920cd882c61c
+    .claude/skills/clarity/site/public/llms.txt: sha256:b6230d932da740031bc450b3dcc014325354fcb3598c106a6dea4a8db83dc7e1
+    .claude/skills/clarity/site/public/og-editor.png: sha256:96ae4efb4e8d43399d3ec346c16ee074decedd52debe7a17b40bac9775cd1dcb
+    .claude/skills/clarity/site/public/og.png: sha256:d10460115d32c4667b02e8bb049de974870c29a7c3fa2b8bc8be063158447093
+    .claude/skills/clarity/site/public/robots.txt: sha256:f579b8dda09b946609f72c1e67d138361006567346680907b084ffcde6ddc4ce
+    .claude/skills/clarity/site/public/tutorials/index.md: sha256:5686405316a39a13f1a8f02b4574c27b8d9dcfecc52bd50e316154652182b5cf
+    .claude/skills/clarity/site/public/video-poster.jpg: sha256:857978398281a5d3e4a9e5e1644e27ec18614ad36b49c2c2eaaace1f9d88b3b6
+    .claude/skills/clarity/site/scripts/generate-agent-files.mjs: sha256:817002d2434eff982afe086c5ffb243c26cb4e8876a9251c7c89a2ae303b518e
+    .claude/skills/clarity/site/src/assets/og-editor.svg: sha256:a1e8fe4c5695644512c49381ddb796f35fe075bf7719a63bdb2b07fc9044441c
+    .claude/skills/clarity/site/src/components/Install.astro: sha256:26183b2adff577a25c4f730f62339155ecd3da2e32e8cb347cbb75bafc135483
+    .claude/skills/clarity/site/src/components/VideoEssay.astro: sha256:13e49eaeb2d85eb676c6f4bd8913344f7a792273b6b12146457867b0d4a9aa02
+    .claude/skills/clarity/site/src/components/editor/EditorApp.tsx: sha256:f4a94c495d0a3b43a419e2533abd69468f790fde8c753f1532d2912ad7245b81
+    .claude/skills/clarity/site/src/components/ui/badge.tsx: sha256:03cd6ad4c78e24127706934a617f56a6ce6fcf9ea05ccb83ce02764e6f2c3f5d
+    .claude/skills/clarity/site/src/components/ui/button.tsx: sha256:6e2d8003497e19b231f10fad05cb3b67a90d47e1ee9a2076bd4e0e491d320c48
+    .claude/skills/clarity/site/src/components/ui/card.tsx: sha256:55e5845f6f31bcb05e539336a48ced65fce64e02af796e6da40f4aee7bc78e91
+    .claude/skills/clarity/site/src/components/ui/progress.tsx: sha256:5348d25e902bd70974707e4d533c405d2f4a4c3ac4631c0549517b6b1a21f127
+    .claude/skills/clarity/site/src/components/ui/scroll-area.tsx: sha256:01a8c56323b23aecb4c6603940c91df9d794d994db10efbf4cc466f6f25ad162
+    .claude/skills/clarity/site/src/components/ui/separator.tsx: sha256:b7063ead0116c8ad94c391f599de1fac632a17ae2153d360fdaab4310fcda795
+    .claude/skills/clarity/site/src/components/ui/tabs.tsx: sha256:13c109251151b26ead193e93585ab1db204d831ba879d1582f66f8343cd1f84d
+    .claude/skills/clarity/site/src/components/ui/tooltip.tsx: sha256:308f8618c7075970fc718609554e31cdf52a915ab4e47d1c0e42145198e9a454
+    .claude/skills/clarity/site/src/data/rules.ts: sha256:086f4e3a63ef7dd296408ad1fed94ba0771a6d1164e81624b7d11e6cf9468a71
+    .claude/skills/clarity/site/src/data/samples.ts: sha256:4cf7c87a2b240c169e17a393b9029f41204066bf82847a6b60a88a81bd82585f
+    .claude/skills/clarity/site/src/layouts/Base.astro: sha256:518e1540f9978751b4604f8b3986ba720bd6e920bc4a160d215ddd90ce2e1659
+    .claude/skills/clarity/site/src/lib/editor/clarity.js: sha256:74a239fb4423e4bc56c11a6cfdeb7b2fcec6542b0366eb2a09710c5f3de76895
+    .claude/skills/clarity/site/src/lib/editor/draft.js: sha256:31c4a3e3cd2b9b5de003d574bef095b76670e4f54a60f504560f61eb60eab915
+    .claude/skills/clarity/site/src/lib/editor/patterns.js: sha256:b839e9145b2d243d4d167630df7d9d37e8693f1c55bb62e1c39f2253fdb5dcac
+    .claude/skills/clarity/site/src/lib/editor/prompt.js: sha256:48a89df67b5df3946097f794dbc4f5848e5e53e0350b8e86ebdea87a70eb2e93
+    .claude/skills/clarity/site/src/lib/utils.ts: sha256:7c8c3dfc0cdd370d44932828eb067ef771c8fe7996693221d5d4b90af6d54f2d
+    .claude/skills/clarity/site/src/pages/404.astro: sha256:3638f28c0b28b68d48243eb9d525b75e4befc33367614194ae0e48ddbe3d0161
+    .claude/skills/clarity/site/src/pages/app.astro: sha256:b188b90aa1e2d0e307e45d5cb56ef11238feae267f0182593f8514e4bfeb943b
+    .claude/skills/clarity/site/src/pages/approach.astro: sha256:5eb20703975b370fc35315fe31e1863baede737c9dd0ed9da71ceacb67148f57
+    .claude/skills/clarity/site/src/pages/developers.astro: sha256:b98ad2d6f19d7c43f62b4747a97a9084b7c3288143937c7c4fcb8b1ddac09df9
+    .claude/skills/clarity/site/src/pages/example.astro: sha256:4daa9a6c337938b74c54193f4a9362a7bcb76d6ff95c7f8e8aa04d53f004e53f
+    .claude/skills/clarity/site/src/pages/index.astro: sha256:b05ef0078d3ca341e307e20ec16435e0c136600b8ce5e75e1d96d00681675fc9
+    .claude/skills/clarity/site/src/pages/tutorials.astro: sha256:d1c2da06f1b3bad2168cf6fb16d7452857a2dacdff3784cc12a8e3fe7730bf10
+    .claude/skills/clarity/site/src/styles/editor.css: sha256:66002a8a000232c97caa44de9c7e9e2311fbff76d1841eddf9e24b5b8f9f617b
+    .claude/skills/clarity/site/src/styles/global.css: sha256:e9b3fbc16181b31d2f1246d6986423039ab2ce764ef897d0a4e06024f01b3ba8
+    .claude/skills/clarity/site/src/types.d.ts: sha256:9c818b687fee37e93100ab2a4fac9325ad7698993eee6416664e872b8cffcd2e
+    .claude/skills/clarity/site/tests/app/clarity.test.mjs: sha256:7635a0ba548b07a9a8f4b6fa9234479356ad339a9400305fca9e370b14faa6a4
+    .claude/skills/clarity/site/tests/app/draft.test.mjs: sha256:b1e28a870933c29411bb874843d44ca8987ee58c0a8fd02b959a2c60dde59714
+    .claude/skills/clarity/site/tests/app/editor-ui.test.mjs: sha256:ae19fa398881659ddfad43c04a2b5ad079ada2310c53445c6aeafb660f406c86
+    .claude/skills/clarity/site/tests/app/patterns.test.mjs: sha256:43a866100d6a5ba3d7d5ff7c441877d64507a4980bf08c8bea6bd3038f835c9d
+    .claude/skills/clarity/site/tests/app/prompt.test.mjs: sha256:3713e391f2a75f8e82e17e51a52934741f8106a5e004066d4dd7e0b9f8ea7053
+    .claude/skills/clarity/site/tests/site/agent-readiness.test.mjs: sha256:e59352f2d85e8a824aaf2a0d9c3709a54851ee05d87dcaeb412cdd6df4ddcf45
+    .claude/skills/clarity/site/tsconfig.json: sha256:b0ac3b403de7dcf2965c74c28ed3af6d5b5b292dfdf6c67311b31a4d0ec43c61
+    .claude/skills/clarity/skills.sh.json: sha256:176a2fb39270ea48307491c45c330e92792f2234a874da204ec6ea39a035dddd
+  content_hash: sha256:e6685454d9caf03c81ec6fee401c950db5809883504c28cba4454a625d554c27
 - repo_url: antonbabenko/agent-plugins
   name: code-intelligence
   host: github.com
@@ -3272,6 +3652,843 @@ deployments:
   content_hash: sha256:b33ff621c6461eb321d18fc9923c4bba689776e1cd0f0c00945584c2698319a1
 - kind: project-relative
   target: claude
+  value: .claude/skills/clarity
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/.claude/launch.json
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:721729c6271fd12feaf358bb67a2b4f026b95d88ca8843aaa21d116ba4d3e05c
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/.github/workflows/validate.yml
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:ee0345194d56983512ceae178dc46b494011df8c37ba3f3532290ac7fcc4a7ed
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/.gitignore
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b3fc5b27477c51cbbf6c556f58a8499d2c90e2807ea9a0920d49f2e2063db900
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/DESIGN.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:81f9381b04425eede4b86dc8d5be74587f40d1bed131046b9eed972ddaa38ada
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/LICENSE
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:c122223ac43e86421958e18623979942c21b642951e2e3736dcb63eff13587c3
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/PRODUCT.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:1c5b161af021d1bccda0753856a7ef45bae0a88f8a277711236b0e292fa52f00
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/README.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:ee8b862654ef031fe4fd4f5477c25f836d3540b8f74bd7e917160138dc907196
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:6ddb091c98595a7a718842b6877cfa94384df6a72feea50441322070827e684c
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/commands/clarity-interview.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:327fc3bc06dfc3621122351ee268692121fce9b8bf6eaf6cdbb51cff983a0578
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/commands/clarity-review.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:c86d78287fe501f8c4c60e7ddf11bb782391b497f547f00a5c430a5f35d4e2e1
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/commands/clarity-rewrite.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:7dac49b359b39f93538191737b2f3bae419a8496cf17b300c59340b1911c3bd3
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/evals/JUDGE.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b8f8bdb4bd5621e8c19baf953bba087c2682097c90da506c80bdca4811304dc6
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/evals/cases.json
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:f16b07aa80567e7b89f15ac972fe00ae48ea92cdf77a2652d640c1c6191806d3
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/netlify.toml
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:ead4cf81f1e7ab1604f83cb5f0e1be4cfdba09bfd515fb0c87c469c80c914cb3
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/references/edit.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:37ee13563118eb7ff2af3394befbdb8321e8e104962df3de3e15511df4ed17e3
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/references/interview.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b73be76227c3fcd0a1b9385f918cf8fcfb6b686a49906329565ac7b9e3f314ba
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/references/longform.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:957abe3b9a9953acd7b835baa6a4dec10f46df4c5d58100183ccac020308bb43
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/references/medium.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:1b571440c59cc367246cd26fbc3e1e25a51ef8f58854b947071a865a7e6294cf
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/references/review.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:61c75ed39c69c1ad9a39c41a243979bacd27d45494a4d6d7c0a75963dbe3e3a0
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/samples/README.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:5985c5350f46137d742fe6631d1ce295489dcb4512771eeed24dc38abcff5968
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/samples/how-ai-works.after.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:49d40c2391defaa2a90b0c0f219ea1275f3499fd8d42362dea09273bb2cc4f93
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/samples/how-ai-works.before.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:fe33eb47b9219405ee4c35f5461f62393efa751269940d29d00388a2ea99f1c1
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/samples/pangram-after-interview.png
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:7a3120d84ac11078e8d3287d7ec3a220dca98a143995994810de254cb6541b97
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/samples/what-it-means-to-be-human.after-interview.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:547c07763fbcf66a32504c34f3996f76c85fb8dbd8f7cabe43dfe8182668b5b8
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/samples/what-it-means-to-be-human.after.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:140b983fbb95ddb06d520d2d8a9b3c95976e8dfd1e328aca5655f2e1c8cac98f
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/samples/what-it-means-to-be-human.before.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:a69adc92ecfa27046be1aa6408e68b8832af60532d67c909c1e164d5a538ad37
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/samples/what-it-means-to-be-human.transcript.txt
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:43356422c437aba2efb5bd921ccf605801bc72b275b05d3e0c760c66088448ef
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/scripts/prose_stats.py
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:d9b9b8e562de3b741d1e3b27c141e2b248740747a1e7b2cebfebb6d127571063
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/scripts/strip_markdown.py
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:ed69bd01a9f847ee48000fb65599bb27bcc4916380c9cfb4de112881f63182f1
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/scripts/validate_package.py
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:0ca40da41d703c7a0da8f073428a2455c25498133097055422a11d837b075058
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/.gitignore
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:87432c17e1430bd6e52cbacf7e04fdaf5a3871a98119c60319bc06bd98e37a50
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/astro.config.mjs
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:aed8b07fd0cf9ded06e4942d6e565b87b8f1dcc73cfa8011e4903beaef4c287b
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/components.json
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:0552af73cdaef8387c8185c4b99bde62a930545b3de05a669dee4b8f4aac3ec3
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/netlify/edge-functions/content-negotiation.js
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:9bce8dedd11d8ff1beae72e1890d9b2636f98c9c35b8065b1474f2bf012584bb
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/package-lock.json
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:8501edfa53e389bac815530c4e9cc7e4372acb85e1af2f5aae4c3ef63daa80c0
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/package.json
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:dfe9c1217e338ae51a50365dc68ee208bfac0826cca8f7b964454e9c0fb685c7
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/public/.well-known/agent-instructions.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:8c969899fa1f9abc6929da627b766ab84930a94507c06a7e53b085e283d28ea8
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/public/404.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:9387df942780ebdb15e57ac769b309ebacdb11f6071e12b5933f8b08c47fe958
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/public/app/index.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:f08e8eccb23344be4e658d62bc694b167fd6fb2d74227f9e12488b34557b3b98
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/public/apple-touch-icon.png
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:55a2f9c39e53cec353d5714513db8370535da17336cb419d19651eb3777ea462
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/public/approach/index.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:d09dccdaa82c81531251ba788b30ea4947dfcb801cf3948afee279d4479df4c5
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/public/clarity-logo-site.png
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:34730e7a90455ae23f565e41bca1b2c6d8f0ff5c90de719b44599f5e2d1fbfe1
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/public/clarity-logo-yellow.png
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:2d5c4faf7e9097f856d72fe5804cb2ee2f67f839dee2176d1d368206142494f5
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/public/detector-result.png
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:3944dde7248c4963996e2fe82a74a51af8837aa5a340191d239b1891720d163d
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/public/developers/index.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:96a6aa3dc51483d0b0306646f0baa279e56fe29113540d905e189ecacdd68051
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/public/example/index.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:500d6a3ead1a1d0376c5498a070ad9d76f89a2953e789a51f5f4f7dd55e1d3d8
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/public/favicon.svg
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:4c3c09fb896fb810f2971a3736242bb2a3be0fab8875b1c9ea00920cd882c61c
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/public/llms.txt
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b6230d932da740031bc450b3dcc014325354fcb3598c106a6dea4a8db83dc7e1
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/public/og-editor.png
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:96ae4efb4e8d43399d3ec346c16ee074decedd52debe7a17b40bac9775cd1dcb
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/public/og.png
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:d10460115d32c4667b02e8bb049de974870c29a7c3fa2b8bc8be063158447093
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/public/robots.txt
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:f579b8dda09b946609f72c1e67d138361006567346680907b084ffcde6ddc4ce
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/public/tutorials/index.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:5686405316a39a13f1a8f02b4574c27b8d9dcfecc52bd50e316154652182b5cf
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/public/video-poster.jpg
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:857978398281a5d3e4a9e5e1644e27ec18614ad36b49c2c2eaaace1f9d88b3b6
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/scripts/generate-agent-files.mjs
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:817002d2434eff982afe086c5ffb243c26cb4e8876a9251c7c89a2ae303b518e
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/assets/og-editor.svg
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:a1e8fe4c5695644512c49381ddb796f35fe075bf7719a63bdb2b07fc9044441c
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/components/Install.astro
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:26183b2adff577a25c4f730f62339155ecd3da2e32e8cb347cbb75bafc135483
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/components/VideoEssay.astro
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:13e49eaeb2d85eb676c6f4bd8913344f7a792273b6b12146457867b0d4a9aa02
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/components/editor/EditorApp.tsx
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:f4a94c495d0a3b43a419e2533abd69468f790fde8c753f1532d2912ad7245b81
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/components/ui/badge.tsx
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:03cd6ad4c78e24127706934a617f56a6ce6fcf9ea05ccb83ce02764e6f2c3f5d
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/components/ui/button.tsx
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:6e2d8003497e19b231f10fad05cb3b67a90d47e1ee9a2076bd4e0e491d320c48
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/components/ui/card.tsx
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:55e5845f6f31bcb05e539336a48ced65fce64e02af796e6da40f4aee7bc78e91
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/components/ui/progress.tsx
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:5348d25e902bd70974707e4d533c405d2f4a4c3ac4631c0549517b6b1a21f127
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/components/ui/scroll-area.tsx
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:01a8c56323b23aecb4c6603940c91df9d794d994db10efbf4cc466f6f25ad162
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/components/ui/separator.tsx
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b7063ead0116c8ad94c391f599de1fac632a17ae2153d360fdaab4310fcda795
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/components/ui/tabs.tsx
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:13c109251151b26ead193e93585ab1db204d831ba879d1582f66f8343cd1f84d
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/components/ui/tooltip.tsx
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:308f8618c7075970fc718609554e31cdf52a915ab4e47d1c0e42145198e9a454
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/data/rules.ts
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:086f4e3a63ef7dd296408ad1fed94ba0771a6d1164e81624b7d11e6cf9468a71
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/data/samples.ts
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:4cf7c87a2b240c169e17a393b9029f41204066bf82847a6b60a88a81bd82585f
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/layouts/Base.astro
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:518e1540f9978751b4604f8b3986ba720bd6e920bc4a160d215ddd90ce2e1659
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/lib/editor/clarity.js
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:74a239fb4423e4bc56c11a6cfdeb7b2fcec6542b0366eb2a09710c5f3de76895
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/lib/editor/draft.js
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:31c4a3e3cd2b9b5de003d574bef095b76670e4f54a60f504560f61eb60eab915
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/lib/editor/patterns.js
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b839e9145b2d243d4d167630df7d9d37e8693f1c55bb62e1c39f2253fdb5dcac
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/lib/editor/prompt.js
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:48a89df67b5df3946097f794dbc4f5848e5e53e0350b8e86ebdea87a70eb2e93
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/lib/utils.ts
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:7c8c3dfc0cdd370d44932828eb067ef771c8fe7996693221d5d4b90af6d54f2d
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/pages/404.astro
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:3638f28c0b28b68d48243eb9d525b75e4befc33367614194ae0e48ddbe3d0161
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/pages/app.astro
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b188b90aa1e2d0e307e45d5cb56ef11238feae267f0182593f8514e4bfeb943b
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/pages/approach.astro
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:5eb20703975b370fc35315fe31e1863baede737c9dd0ed9da71ceacb67148f57
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/pages/developers.astro
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b98ad2d6f19d7c43f62b4747a97a9084b7c3288143937c7c4fcb8b1ddac09df9
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/pages/example.astro
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:4daa9a6c337938b74c54193f4a9362a7bcb76d6ff95c7f8e8aa04d53f004e53f
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/pages/index.astro
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b05ef0078d3ca341e307e20ec16435e0c136600b8ce5e75e1d96d00681675fc9
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/pages/tutorials.astro
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:d1c2da06f1b3bad2168cf6fb16d7452857a2dacdff3784cc12a8e3fe7730bf10
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/styles/editor.css
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:66002a8a000232c97caa44de9c7e9e2311fbff76d1841eddf9e24b5b8f9f617b
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/styles/global.css
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:e9b3fbc16181b31d2f1246d6986423039ab2ce764ef897d0a4e06024f01b3ba8
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/src/types.d.ts
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:9c818b687fee37e93100ab2a4fac9325ad7698993eee6416664e872b8cffcd2e
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/tests/app/clarity.test.mjs
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:7635a0ba548b07a9a8f4b6fa9234479356ad339a9400305fca9e370b14faa6a4
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/tests/app/draft.test.mjs
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b1e28a870933c29411bb874843d44ca8987ee58c0a8fd02b959a2c60dde59714
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/tests/app/editor-ui.test.mjs
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:ae19fa398881659ddfad43c04a2b5ad079ada2310c53445c6aeafb660f406c86
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/tests/app/patterns.test.mjs
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:43a866100d6a5ba3d7d5ff7c441877d64507a4980bf08c8bea6bd3038f835c9d
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/tests/app/prompt.test.mjs
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:3713e391f2a75f8e82e17e51a52934741f8106a5e004066d4dd7e0b9f8ea7053
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/tests/site/agent-readiness.test.mjs
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:e59352f2d85e8a824aaf2a0d9c3709a54851ee05d87dcaeb412cdd6df4ddcf45
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/site/tsconfig.json
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b0ac3b403de7dcf2965c74c28ed3af6d5b5b292dfdf6c67311b31a4d0ec43c61
+- kind: project-relative
+  target: claude
+  value: .claude/skills/clarity/skills.sh.json
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:176a2fb39270ea48307491c45c330e92792f2234a874da204ec6ea39a035dddd
+- kind: project-relative
+  target: claude
   value: .claude/skills/cli-developer
   runtime: null
   scope: project
@@ -6258,6 +7475,843 @@ deployments:
   - jeffallan/claude-skills/skills/architecture-designer
   active_owner: jeffallan/claude-skills/skills/architecture-designer
   content_hash: sha256:b33ff621c6461eb321d18fc9923c4bba689776e1cd0f0c00945584c2698319a1
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/.claude/launch.json
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:721729c6271fd12feaf358bb67a2b4f026b95d88ca8843aaa21d116ba4d3e05c
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/.github/workflows/validate.yml
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:ee0345194d56983512ceae178dc46b494011df8c37ba3f3532290ac7fcc4a7ed
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/.gitignore
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b3fc5b27477c51cbbf6c556f58a8499d2c90e2807ea9a0920d49f2e2063db900
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/DESIGN.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:81f9381b04425eede4b86dc8d5be74587f40d1bed131046b9eed972ddaa38ada
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/LICENSE
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:c122223ac43e86421958e18623979942c21b642951e2e3736dcb63eff13587c3
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/PRODUCT.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:1c5b161af021d1bccda0753856a7ef45bae0a88f8a277711236b0e292fa52f00
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/README.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:ee8b862654ef031fe4fd4f5477c25f836d3540b8f74bd7e917160138dc907196
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:6ddb091c98595a7a718842b6877cfa94384df6a72feea50441322070827e684c
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/commands/clarity-interview.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:327fc3bc06dfc3621122351ee268692121fce9b8bf6eaf6cdbb51cff983a0578
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/commands/clarity-review.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:c86d78287fe501f8c4c60e7ddf11bb782391b497f547f00a5c430a5f35d4e2e1
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/commands/clarity-rewrite.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:7dac49b359b39f93538191737b2f3bae419a8496cf17b300c59340b1911c3bd3
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/evals/JUDGE.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b8f8bdb4bd5621e8c19baf953bba087c2682097c90da506c80bdca4811304dc6
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/evals/cases.json
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:f16b07aa80567e7b89f15ac972fe00ae48ea92cdf77a2652d640c1c6191806d3
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/netlify.toml
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:ead4cf81f1e7ab1604f83cb5f0e1be4cfdba09bfd515fb0c87c469c80c914cb3
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/references/edit.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:37ee13563118eb7ff2af3394befbdb8321e8e104962df3de3e15511df4ed17e3
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/references/interview.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b73be76227c3fcd0a1b9385f918cf8fcfb6b686a49906329565ac7b9e3f314ba
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/references/longform.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:957abe3b9a9953acd7b835baa6a4dec10f46df4c5d58100183ccac020308bb43
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/references/medium.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:1b571440c59cc367246cd26fbc3e1e25a51ef8f58854b947071a865a7e6294cf
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/references/review.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:61c75ed39c69c1ad9a39c41a243979bacd27d45494a4d6d7c0a75963dbe3e3a0
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/samples/README.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:5985c5350f46137d742fe6631d1ce295489dcb4512771eeed24dc38abcff5968
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/samples/how-ai-works.after.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:49d40c2391defaa2a90b0c0f219ea1275f3499fd8d42362dea09273bb2cc4f93
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/samples/how-ai-works.before.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:fe33eb47b9219405ee4c35f5461f62393efa751269940d29d00388a2ea99f1c1
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/samples/pangram-after-interview.png
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:7a3120d84ac11078e8d3287d7ec3a220dca98a143995994810de254cb6541b97
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/samples/what-it-means-to-be-human.after-interview.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:547c07763fbcf66a32504c34f3996f76c85fb8dbd8f7cabe43dfe8182668b5b8
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/samples/what-it-means-to-be-human.after.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:140b983fbb95ddb06d520d2d8a9b3c95976e8dfd1e328aca5655f2e1c8cac98f
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/samples/what-it-means-to-be-human.before.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:a69adc92ecfa27046be1aa6408e68b8832af60532d67c909c1e164d5a538ad37
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/samples/what-it-means-to-be-human.transcript.txt
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:43356422c437aba2efb5bd921ccf605801bc72b275b05d3e0c760c66088448ef
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/scripts/prose_stats.py
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:d9b9b8e562de3b741d1e3b27c141e2b248740747a1e7b2cebfebb6d127571063
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/scripts/strip_markdown.py
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:ed69bd01a9f847ee48000fb65599bb27bcc4916380c9cfb4de112881f63182f1
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/scripts/validate_package.py
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:0ca40da41d703c7a0da8f073428a2455c25498133097055422a11d837b075058
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/.gitignore
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:87432c17e1430bd6e52cbacf7e04fdaf5a3871a98119c60319bc06bd98e37a50
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/astro.config.mjs
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:aed8b07fd0cf9ded06e4942d6e565b87b8f1dcc73cfa8011e4903beaef4c287b
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/components.json
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:0552af73cdaef8387c8185c4b99bde62a930545b3de05a669dee4b8f4aac3ec3
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/netlify/edge-functions/content-negotiation.js
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:9bce8dedd11d8ff1beae72e1890d9b2636f98c9c35b8065b1474f2bf012584bb
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/package-lock.json
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:8501edfa53e389bac815530c4e9cc7e4372acb85e1af2f5aae4c3ef63daa80c0
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/package.json
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:dfe9c1217e338ae51a50365dc68ee208bfac0826cca8f7b964454e9c0fb685c7
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/public/.well-known/agent-instructions.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:8c969899fa1f9abc6929da627b766ab84930a94507c06a7e53b085e283d28ea8
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/public/404.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:9387df942780ebdb15e57ac769b309ebacdb11f6071e12b5933f8b08c47fe958
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/public/app/index.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:f08e8eccb23344be4e658d62bc694b167fd6fb2d74227f9e12488b34557b3b98
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/public/apple-touch-icon.png
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:55a2f9c39e53cec353d5714513db8370535da17336cb419d19651eb3777ea462
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/public/approach/index.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:d09dccdaa82c81531251ba788b30ea4947dfcb801cf3948afee279d4479df4c5
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/public/clarity-logo-site.png
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:34730e7a90455ae23f565e41bca1b2c6d8f0ff5c90de719b44599f5e2d1fbfe1
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/public/clarity-logo-yellow.png
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:2d5c4faf7e9097f856d72fe5804cb2ee2f67f839dee2176d1d368206142494f5
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/public/detector-result.png
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:3944dde7248c4963996e2fe82a74a51af8837aa5a340191d239b1891720d163d
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/public/developers/index.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:96a6aa3dc51483d0b0306646f0baa279e56fe29113540d905e189ecacdd68051
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/public/example/index.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:500d6a3ead1a1d0376c5498a070ad9d76f89a2953e789a51f5f4f7dd55e1d3d8
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/public/favicon.svg
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:4c3c09fb896fb810f2971a3736242bb2a3be0fab8875b1c9ea00920cd882c61c
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/public/llms.txt
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b6230d932da740031bc450b3dcc014325354fcb3598c106a6dea4a8db83dc7e1
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/public/og-editor.png
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:96ae4efb4e8d43399d3ec346c16ee074decedd52debe7a17b40bac9775cd1dcb
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/public/og.png
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:d10460115d32c4667b02e8bb049de974870c29a7c3fa2b8bc8be063158447093
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/public/robots.txt
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:f579b8dda09b946609f72c1e67d138361006567346680907b084ffcde6ddc4ce
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/public/tutorials/index.md
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:5686405316a39a13f1a8f02b4574c27b8d9dcfecc52bd50e316154652182b5cf
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/public/video-poster.jpg
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:857978398281a5d3e4a9e5e1644e27ec18614ad36b49c2c2eaaace1f9d88b3b6
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/scripts/generate-agent-files.mjs
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:817002d2434eff982afe086c5ffb243c26cb4e8876a9251c7c89a2ae303b518e
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/assets/og-editor.svg
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:a1e8fe4c5695644512c49381ddb796f35fe075bf7719a63bdb2b07fc9044441c
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/components/Install.astro
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:26183b2adff577a25c4f730f62339155ecd3da2e32e8cb347cbb75bafc135483
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/components/VideoEssay.astro
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:13e49eaeb2d85eb676c6f4bd8913344f7a792273b6b12146457867b0d4a9aa02
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/components/editor/EditorApp.tsx
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:f4a94c495d0a3b43a419e2533abd69468f790fde8c753f1532d2912ad7245b81
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/components/ui/badge.tsx
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:03cd6ad4c78e24127706934a617f56a6ce6fcf9ea05ccb83ce02764e6f2c3f5d
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/components/ui/button.tsx
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:6e2d8003497e19b231f10fad05cb3b67a90d47e1ee9a2076bd4e0e491d320c48
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/components/ui/card.tsx
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:55e5845f6f31bcb05e539336a48ced65fce64e02af796e6da40f4aee7bc78e91
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/components/ui/progress.tsx
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:5348d25e902bd70974707e4d533c405d2f4a4c3ac4631c0549517b6b1a21f127
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/components/ui/scroll-area.tsx
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:01a8c56323b23aecb4c6603940c91df9d794d994db10efbf4cc466f6f25ad162
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/components/ui/separator.tsx
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b7063ead0116c8ad94c391f599de1fac632a17ae2153d360fdaab4310fcda795
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/components/ui/tabs.tsx
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:13c109251151b26ead193e93585ab1db204d831ba879d1582f66f8343cd1f84d
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/components/ui/tooltip.tsx
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:308f8618c7075970fc718609554e31cdf52a915ab4e47d1c0e42145198e9a454
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/data/rules.ts
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:086f4e3a63ef7dd296408ad1fed94ba0771a6d1164e81624b7d11e6cf9468a71
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/data/samples.ts
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:4cf7c87a2b240c169e17a393b9029f41204066bf82847a6b60a88a81bd82585f
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/layouts/Base.astro
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:518e1540f9978751b4604f8b3986ba720bd6e920bc4a160d215ddd90ce2e1659
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/lib/editor/clarity.js
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:74a239fb4423e4bc56c11a6cfdeb7b2fcec6542b0366eb2a09710c5f3de76895
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/lib/editor/draft.js
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:31c4a3e3cd2b9b5de003d574bef095b76670e4f54a60f504560f61eb60eab915
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/lib/editor/patterns.js
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b839e9145b2d243d4d167630df7d9d37e8693f1c55bb62e1c39f2253fdb5dcac
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/lib/editor/prompt.js
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:48a89df67b5df3946097f794dbc4f5848e5e53e0350b8e86ebdea87a70eb2e93
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/lib/utils.ts
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:7c8c3dfc0cdd370d44932828eb067ef771c8fe7996693221d5d4b90af6d54f2d
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/pages/404.astro
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:3638f28c0b28b68d48243eb9d525b75e4befc33367614194ae0e48ddbe3d0161
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/pages/app.astro
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b188b90aa1e2d0e307e45d5cb56ef11238feae267f0182593f8514e4bfeb943b
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/pages/approach.astro
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:5eb20703975b370fc35315fe31e1863baede737c9dd0ed9da71ceacb67148f57
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/pages/developers.astro
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b98ad2d6f19d7c43f62b4747a97a9084b7c3288143937c7c4fcb8b1ddac09df9
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/pages/example.astro
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:4daa9a6c337938b74c54193f4a9362a7bcb76d6ff95c7f8e8aa04d53f004e53f
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/pages/index.astro
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b05ef0078d3ca341e307e20ec16435e0c136600b8ce5e75e1d96d00681675fc9
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/pages/tutorials.astro
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:d1c2da06f1b3bad2168cf6fb16d7452857a2dacdff3784cc12a8e3fe7730bf10
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/styles/editor.css
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:66002a8a000232c97caa44de9c7e9e2311fbff76d1841eddf9e24b5b8f9f617b
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/styles/global.css
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:e9b3fbc16181b31d2f1246d6986423039ab2ce764ef897d0a4e06024f01b3ba8
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/src/types.d.ts
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:9c818b687fee37e93100ab2a4fac9325ad7698993eee6416664e872b8cffcd2e
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/tests/app/clarity.test.mjs
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:7635a0ba548b07a9a8f4b6fa9234479356ad339a9400305fca9e370b14faa6a4
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/tests/app/draft.test.mjs
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b1e28a870933c29411bb874843d44ca8987ee58c0a8fd02b959a2c60dde59714
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/tests/app/editor-ui.test.mjs
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:ae19fa398881659ddfad43c04a2b5ad079ada2310c53445c6aeafb660f406c86
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/tests/app/patterns.test.mjs
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:43a866100d6a5ba3d7d5ff7c441877d64507a4980bf08c8bea6bd3038f835c9d
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/tests/app/prompt.test.mjs
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:3713e391f2a75f8e82e17e51a52934741f8106a5e004066d4dd7e0b9f8ea7053
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/tests/site/agent-readiness.test.mjs
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:e59352f2d85e8a824aaf2a0d9c3709a54851ee05d87dcaeb412cdd6df4ddcf45
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/site/tsconfig.json
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:b0ac3b403de7dcf2965c74c28ed3af6d5b5b292dfdf6c67311b31a4d0ec43c61
+- kind: project-relative
+  target: codex
+  value: .agents/skills/clarity/skills.sh.json
+  runtime: null
+  scope: project
+  owners:
+  - addyosmani/clarity
+  active_owner: addyosmani/clarity
+  content_hash: sha256:176a2fb39270ea48307491c45c330e92792f2234a874da204ec6ea39a035dddd
 - kind: project-relative
   target: codex
   value: .agents/skills/cli-developer
