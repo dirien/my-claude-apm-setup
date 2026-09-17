@@ -86,6 +86,12 @@ dependencies:
     # sickn33/agentic-awesome-skills — huge community skill catalog; pinning only
     # typescript-expert (deep TS/JS type-level programming, perf, monorepos)
     - sickn33/agentic-awesome-skills/skills/typescript-expert#46cafc80378eabd5b04b1d32ad1e96a00476df59
+    # addyosmani/clarity — reader-facing prose: co-write, rewrite, review, lint.
+    # Its SKILL.md sits at the repo root like humanizer's, but apm resolves that
+    # shape again (checked on 0.28, 0.30 and 0.31), so it stays a pinned dep
+    # rather than a vendored copy. apm deploys the whole repo, site/ and
+    # samples/ included (~2.3 MB); there is no file-level prune option.
+    - addyosmani/clarity#e27ceeff60368cf6966b4ea00a5b9b36418ee9a0
 
   # MCP servers, self-defined (registry: false) so install never hits a registry.
   mcp:
