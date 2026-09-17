@@ -1,7 +1,7 @@
 {
   "PreToolUse": [
     {
-      "matcher": "(?i)^Bash$",
+      "matcher": "Bash",
       "hooks": [
         {
           "type": "command",
@@ -12,7 +12,7 @@
   ],
   "PostToolUse": [
     {
-      "matcher": "(?i)^(Edit|Write|MultiEdit)$",
+      "matcher": "Edit|Write|MultiEdit",
       "hooks": [
         {
           "type": "command",
