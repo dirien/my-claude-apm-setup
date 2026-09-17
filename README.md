@@ -49,7 +49,7 @@ targets:
 dependencies:
   apm:
     # '#' is the git-ref separator; '@' is reserved for the alias object-form.
-    - dirien/my-claude-apm-setup#v0.6.6
+    - dirien/my-claude-apm-setup#v0.6.7
 includes: auto
 ```
 
@@ -62,7 +62,7 @@ That single dependency materializes 34 skills into `.claude/skills/`, the three 
 
 Notes:
 
-- **Pin it.** An unpinned dep installs the latest commit and drifts; `apm install` warns about it. Pin a tag (`#v0.6.6`) or a commit (`#<sha>`).
+- **Pin it.** An unpinned dep installs the latest commit and drifts; `apm install` warns about it. Pin a tag (`#v0.6.7`) or a commit (`#<sha>`).
 - **Generated vs vendored.** `apm_modules/` is auto-added to `.gitignore`. `.claude/` is generated — commit it, or gitignore it and run `apm install --frozen` in CI. Don't hand-edit `.claude/skills/*`; it is overwritten.
 - **MCP.** `pulumi` configures automatically as a direct dep of this package. Nested a layer deeper it can be dropped unless re-declared or installed with `--trust-transitive-mcp`.
 
