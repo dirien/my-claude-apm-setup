@@ -161,6 +161,14 @@ lifecycle:
       description: "Install the pinned rtk CLI into ~/.local/bin (token-saving command proxy)"
       command: "sh ./scripts/install-rtk.sh"
       timeoutSec: 120
+    # Colored status line (dir, git branch, model, context use). Claude Code has no
+    # APM primitive for statusLine, so this copies scripts/statusline.sh to
+    # ~/.claude/apm-statusline.sh and points settings.json at it, leaving a
+    # user-configured statusLine alone. APM_STATUSLINE=0 opts out.
+    - type: command
+      description: "Install the colored Claude Code status line into ~/.claude"
+      command: "sh ./scripts/install-statusline.sh"
+      timeoutSec: 30
 
 # Convenience wrapper. `apm run sync` regenerates the agent context from .apm/instructions.
 scripts:

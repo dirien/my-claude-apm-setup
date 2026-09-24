@@ -14,6 +14,7 @@ It is self-contained. The guardrails are plain shell scripts under `scripts/`, s
 - Four LSP servers (gopls, typescript, pyright, csharp), deployed as the `apm-lsp` plugin apm 0.29.1+ emits.
 - Two guardrail hooks, as shell scripts in `scripts/`: a `PreToolUse` guard that blocks destructive Bash commands, and a `PostToolUse` hook that scans edited files for secrets and formats them.
 - [rtk](https://github.com/rtk-ai/rtk) wired end to end: a `PreToolUse` hook that compresses command output before the agent reads it, plus a `lifecycle: post-install` step that fetches the pinned binary. See [rtk](#rtk-command-output-compression).
+- A colored status line (directory, git branch, model, context use), installed by a second `lifecycle: post-install` step. See [Status line](#status-line).
 - Instruction sources under `.apm/instructions/` that generate the agent context for both editors.
 
 ## Requirements
@@ -127,6 +128,27 @@ degrades to a no-op when the binary is missing, which defeats that check — so 
 `[rtk] /!\ No hook installed` to stderr **once per 24h**. The hook works; the check is just
 fooled. That is the deliberate trade: a bare `rtk hook claude` would silence it but exit 127 on
 *every* Bash call for anyone who skipped `apm lifecycle trust`.
+
+## Status line
+
+APM has no primitive for Claude Code's `statusLine` setting, so it ships as a
+`lifecycle: post-install` step next to the rtk one. `scripts/install-statusline.sh` copies
+`scripts/statusline.sh` to `~/.claude/apm-statusline.sh` and points `statusLine` in
+`~/.claude/settings.json` at it:
+
+```text
+docs ⎇ main* │ Opus 5.5 │ 12% ctx
+```
+
+- The directory is bold blue and the model magenta.
+- The branch is green when the tree is clean, and yellow with a trailing `*` when it is dirty.
+- Context use is green, then yellow from 50%, then red from 80%.
+
+It uses `jq` when present and falls back to `sed`. The installer never overwrites a
+`statusLine` you configured yourself: it only writes the setting when it is missing or already
+points at `apm-statusline.sh`. It is idempotent, so an environment that reseeds
+`settings.json` on every start (a sandbox, say) can simply re-run it. Like rtk, it is
+trust-gated (`apm lifecycle trust`); `APM_STATUSLINE=0` skips it.
 
 ## Make targets
 
