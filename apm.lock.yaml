@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-09-17T13:43:35.712723+00:00'
+generated_at: '2026-10-09T21:49:11.484036+00:00'
 apm_version: 0.31.0
 dependencies:
 - repo_url: addyosmani/clarity
@@ -2020,7 +2020,7 @@ deployments:
   owners:
   - .
   active_owner: .
-  content_hash: sha256:38f81dc0c2003e4eb977b7c8441a6a6750799ebcde29b8e00dc2f17af83251ef
+  content_hash: sha256:47316b2250ab7f89bafd67ce5e23e47e944cddc1379e3dae9d9bbd7653291bf0
 - kind: project-relative
   target: claude
   value: .claude/skills/actionlint
@@ -9853,7 +9853,7 @@ local_deployed_file_hashes:
   .claude/agents/reviewer.md: sha256:35d8cc26a2e7dc5f42b4c587f64e2c5f60490568822317fde063b5febf99d0ef
   .claude/rules/pkg-go.md: sha256:8cc0f516e7c70f99821b553eb2a407aeb9e6f9ec253c973ae178f753eedd04a4
   .claude/rules/repo-conventions.md: sha256:42cb2d402133ce4f531dd65bc9c82c0e76812cc7043e6121f17c37513a1ffd1f
-  .claude/rules/rtk.md: sha256:38f81dc0c2003e4eb977b7c8441a6a6750799ebcde29b8e00dc2f17af83251ef
+  .claude/rules/rtk.md: sha256:47316b2250ab7f89bafd67ce5e23e47e944cddc1379e3dae9d9bbd7653291bf0
   .claude/skills/commit/SKILL.md: sha256:73a5dcd522e872570e86e2c2826c91e02e05f1962504cb61a8d996c7e65bc062
   .claude/skills/docs-pr/SKILL.md: sha256:bc8fa7a2a9709405d368d47fe9891c971d94fe3ef462b5a3e4dcc323ee06cffa
   .claude/skills/humanizer/LICENSE: sha256:4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96

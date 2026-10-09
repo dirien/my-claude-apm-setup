@@ -99,9 +99,10 @@ grep, test runners and linters, plus `terraform`, `tofu`, `pulumi`, `kubectl`, `
 
 Both halves are declared in this repo, so there is no `rtk init` step:
 
-- `.apm/hooks/rtk.json` installs the hook. The command is `rtk hook claude`, a native
-  subcommand — the legacy `rtk-rewrite.sh` script is deliberately **not** vendored (rtk deletes
-  it on sight and nags daily about it, and it needs `jq`).
+- `.apm/hooks/rtk.json` installs the hook, which runs `scripts/rtk-hook.sh`. That script hands
+  the hook input to `rtk hook claude`, a native subcommand — the legacy `rtk-rewrite.sh` script
+  is deliberately **not** vendored (rtk deletes it on sight and nags daily about it, and it
+  needs `jq`).
 - `lifecycle: post-install` in `apm.yml` runs `scripts/install-rtk.sh`, which fetches the pinned
   release into `~/.local/bin`, SHA256-verified against the release's own `checksums.txt`.
   Linux and macOS, arm64 and x86_64.
@@ -122,12 +123,24 @@ anything, and it leaves destructive commands (`rm -rf /`, `git reset --hard`) un
 `guard.sh` to block. Claude Code merges concurrent hook verdicts most-restrictive-first, so the
 guard's deny always wins.
 
+**Worktree sessions skip the rewrite.** When the hook's `cwd` is inside a Claude Code worktree
+(`.claude/worktrees/`, which `claude --worktree`, `EnterWorktree` and `isolation: worktree`
+subagents all use), `scripts/rtk-hook.sh` passes the command through unchanged. Claude Code
+isolates those sessions by refusing any command whose git use it can't verify from the command
+text, and `rtk git status` puts a launcher in front of git, so every rewritten git command was
+refused there ([rtk-ai/rtk#3864](https://github.com/rtk-ai/rtk/issues/3864)). The cost is no
+compression inside worktree sessions; everywhere else rtk rewrites as before. rtk's own
+`[hooks] exclude_commands` can't do this: it applies in every directory, and `git -C <path>`
+slips past it ([rtk-ai/rtk#3838](https://github.com/rtk-ai/rtk/issues/3838)).
+
 One cosmetic wart: rtk decides whether "a hook is installed" by looking for a settings.json
-command that shell-splits to exactly `rtk hook claude`. Our entry guards that call so it
-degrades to a no-op when the binary is missing, which defeats that check — so rtk prints
-`[rtk] /!\ No hook installed` to stderr **once per 24h**. The hook works; the check is just
-fooled. That is the deliberate trade: a bare `rtk hook claude` would silence it but exit 127 on
-*every* Bash call for anyone who skipped `apm lifecycle trust`.
+command that shell-splits to exactly `rtk hook claude`. Our entry runs it through
+`scripts/rtk-hook.sh` so it degrades to a no-op when the binary is missing and skips worktrees,
+which defeats that check — so rtk prints `[rtk] /!\ No hook installed` to stderr **once per
+24h**. The hook works; the check is just fooled. Don't act on its advice: `rtk init -g`
+registers a bare `rtk hook claude` in `settings.json`, which rewrites inside worktrees again.
+A bare entry would also exit 127 on *every* Bash call for anyone who skipped
+`apm lifecycle trust`.
 
 ## Status line
 
