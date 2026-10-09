@@ -6,4 +6,7 @@
 - Truncated results state their own recovery path. Only when a result is unusable — empty
   where output was clearly expected, contradicting its exit code, or garbled — re-run it as
   `rtk proxy <cmd>` to get the raw output.
+- Inside a Claude Code worktree (`.claude/worktrees/`) the hook leaves commands unrewritten,
+  so output there is raw. Don't wrap commands in `rtk` yourself in a worktree session: the
+  isolation check refuses git behind a launcher.
 - `rtk gain` reports what the compression saved.

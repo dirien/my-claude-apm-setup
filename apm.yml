@@ -144,7 +144,9 @@ includes: auto
 # rtk (https://github.com/rtk-ai/rtk) — a CLI proxy that compresses command output
 # before the agent reads it. Two halves, both declared here so the setup stays
 # self-contained and no consumer has to run `rtk init`:
-#   * .apm/hooks/rtk.json installs the PreToolUse hook (`rtk hook claude`, a native
+#   * .apm/hooks/rtk.json installs the PreToolUse hook. It runs scripts/rtk-hook.sh,
+#     which skips Claude Code worktrees (.claude/worktrees/, where isolation refuses
+#     `rtk git ...`; rtk-ai/rtk#3864) and otherwise calls `rtk hook claude` (a native
 #     subcommand — do NOT vendor the legacy hooks/claude/rtk-rewrite.sh, which rtk
 #     deletes on sight and nags about). The hook only rewrites; it returns no
 #     permissionDecision, so it cannot auto-approve anything and the guardrail
