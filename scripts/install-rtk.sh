@@ -7,6 +7,11 @@
 # rtk is a CLI proxy that compresses command output before the agent reads it
 # (git/ls/grep/test/lint plus terraform, tofu, pulumi, kubectl, docker, aws).
 #
+# Installs the Apache-2.0 `rtk-oss` edition by default: since 1.0 the plain `rtk`
+# build also links the BUSL-1.1 compression engine, which none of this setup uses
+# (the hook core and every command filter ship in both). RTK_EDITION=full opts
+# into the engine build.
+#
 # Idempotent (a matching version short-circuits), pinned and SHA256-verified
 # against the release's own checksums.txt. NEVER fails the install: every error
 # path warns and exits 0, because a missing rtk only costs token savings — the
@@ -15,11 +20,18 @@
 # Self-contained: sh, curl, tar, and sha256sum (Linux) or shasum (macOS).
 set -eu
 
-RTK_VERSION="${RTK_VERSION:-0.49.0}"
+RTK_VERSION="${RTK_VERSION:-1.0.1}"
+RTK_EDITION="${RTK_EDITION:-oss}"
 BIN_DIR="${RTK_BIN_DIR:-$HOME/.local/bin}"
 
 log()  { printf '[rtk] %s\n' "$*" >&2; }
 skip() { printf '[rtk] %s\n' "$*" >&2; exit 0; }
+
+case "$RTK_EDITION" in
+  oss)  prefix="rtk-oss" ;;
+  full) prefix="rtk"     ;;
+  *)    skip "unknown RTK_EDITION '$RTK_EDITION' (want oss or full); skipping rtk install" ;;
+esac
 
 # Already at the pinned version? Nothing to do.
 if command -v rtk >/dev/null 2>&1 && rtk --version 2>/dev/null | grep -qF " ${RTK_VERSION}"; then
@@ -42,10 +54,10 @@ case "$(uname -m)" in
   *)             skip "unsupported architecture $(uname -m); skipping rtk install" ;;
 esac
 case "$os-$arch" in
-  linux-aarch64)  asset="rtk-aarch64-unknown-linux-gnu.tar.gz"  ;;
-  linux-x86_64)   asset="rtk-x86_64-unknown-linux-musl.tar.gz"  ;;
-  darwin-aarch64) asset="rtk-aarch64-apple-darwin.tar.gz"       ;;
-  darwin-x86_64)  asset="rtk-x86_64-apple-darwin.tar.gz"        ;;
+  linux-aarch64)  asset="${prefix}-aarch64-unknown-linux-gnu.tar.gz"  ;;
+  linux-x86_64)   asset="${prefix}-x86_64-unknown-linux-musl.tar.gz"  ;;
+  darwin-aarch64) asset="${prefix}-aarch64-apple-darwin.tar.gz"       ;;
+  darwin-x86_64)  asset="${prefix}-x86_64-apple-darwin.tar.gz"        ;;
 esac
 
 base="https://github.com/rtk-ai/rtk/releases/download/v${RTK_VERSION}"
