@@ -14,3 +14,6 @@ sbom/
 !.claude/rules/
 
 .DS_Store
+
+# Emitted by `apm compile` when a dep ships a CLAUDE.md; it @-imports apm_modules/.
+/CLAUDE.md

@@ -118,6 +118,10 @@ That gate is the opt-out: without it you still get every hook, skill and rule �
 savings, because the hook no-ops when the binary is absent. `RTK_VERSION` and `RTK_BIN_DIR`
 override the pin and the install location.
 
+The installer fetches the Apache-2.0 `rtk-oss` edition. Since rtk 1.0 the default `rtk` build
+also links a BUSL-1.1 compression engine; the hook and every command filter ship in both, so
+nothing here needs it. `RTK_EDITION=full` installs the engine build instead.
+
 Safety: the hook only *rewrites*. It returns no `permissionDecision`, so it cannot auto-approve
 anything, and it leaves destructive commands (`rm -rf /`, `git reset --hard`) untouched for
 `guard.sh` to block. Claude Code merges concurrent hook verdicts most-restrictive-first, so the
@@ -178,7 +182,7 @@ The GitHub Actions workflow in `.github/workflows/apm.yml` runs the install, aud
 
 ## What's mine and what's borrowed
 
-The four workflow skills, the vendored `humanizer` skill (copied from `blader/humanizer@1b48564` — its skill sits at the repo root, a shape apm 0.27 stopped resolving as a dependency; 0.28 through 0.31 resolve it again, so the copy is a candidate for re-pinning), three agents, two guardrail hooks, the rtk hook and its installer, and the instruction files under `.apm/` live in this repo. rtk itself is upstream — this repo only pins and wires it. The 31 skills under `dependencies` come from `jeffallan/claude-skills`, `rshade/agent-skills`, `netresearch/agent-rules-skill`, `mattpocock/skills`, `wshobson/agents` (the `shellcheck-configuration` skill of its `shell-scripting` plugin), `pulumi/agent-skills` (the eight skills of its `pulumi/` plugin), `antonbabenko/terraform-skill` plus its recommended companion plugin `antonbabenko/agent-plugins/plugins/code-intelligence`, `sickn33/agentic-awesome-skills` (just its `typescript-expert` skill), and `addyosmani/clarity`; `apm.lock.yaml` pins each to a commit and `apm install --frozen` reproduces them.
+The four workflow skills, the vendored `humanizer` skill (copied from `blader/humanizer@225a6f3`, upstream v3.1.0 — its skill sits at the repo root, a shape apm 0.27 stopped resolving as a dependency; 0.28 through 0.33 resolve it again, so the copy is a candidate for re-pinning), three agents, two guardrail hooks, the rtk hook and its installer, and the instruction files under `.apm/` live in this repo. rtk itself is upstream — this repo only pins and wires it. The 31 skills under `dependencies` come from `jeffallan/claude-skills`, `rshade/agent-skills`, `netresearch/agent-rules-skill`, `mattpocock/skills`, `wshobson/agents` (the `shellcheck-configuration` skill of its `shell-scripting` plugin), `pulumi/agent-skills` (the eight skills of its `pulumi/` plugin), `antonbabenko/terraform-skill` plus its recommended companion plugin `antonbabenko/agent-plugins/plugins/code-intelligence`, `sickn33/agentic-awesome-skills` (just its `typescript-expert` skill), and `addyosmani/clarity`; `apm.lock.yaml` pins each to a commit and `apm install --frozen` reproduces them.
 
 ## Reading
 
