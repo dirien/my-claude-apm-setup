@@ -20,7 +20,7 @@
 # Self-contained: sh, curl, tar, and sha256sum (Linux) or shasum (macOS).
 set -eu
 
-RTK_VERSION="${RTK_VERSION:-1.0.1}"
+RTK_VERSION="${RTK_VERSION:-1.1.0}"
 RTK_EDITION="${RTK_EDITION:-oss}"
 BIN_DIR="${RTK_BIN_DIR:-$HOME/.local/bin}"
 

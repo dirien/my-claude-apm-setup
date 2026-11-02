@@ -1,6 +1,6 @@
 lockfile_version: '1'
-generated_at: '2026-10-14T22:26:48.703065+00:00'
-apm_version: 0.33.0
+generated_at: '2026-11-02T21:58:17.439566+00:00'
+apm_version: 0.35.0
 dependencies:
 - repo_url: addyosmani/clarity
   name: clarity
@@ -385,8 +385,8 @@ dependencies:
 - repo_url: antonbabenko/agent-plugins
   name: code-intelligence
   host: github.com
-  resolved_commit: 807f273fc8b7055c1d0f402d841c1f092f1cd09a
-  resolved_ref: 807f273fc8b7055c1d0f402d841c1f092f1cd09a
+  resolved_commit: d9e3bd2d941bb76832e0de63fd6fb8d02a5be941
+  resolved_ref: d9e3bd2d941bb76832e0de63fd6fb8d02a5be941
   version: unknown
   virtual_path: plugins/code-intelligence/skills/code-intelligence
   is_virtual: true
@@ -415,8 +415,8 @@ dependencies:
 - repo_url: antonbabenko/terraform-skill
   name: terraform-skill
   host: github.com
-  resolved_commit: 0a3a4a66e99001347d36a41e10260a825be3ab62
-  resolved_ref: 0a3a4a66e99001347d36a41e10260a825be3ab62
+  resolved_commit: 9c1e92d962a5407c227e5566416e962a2f057240
+  resolved_ref: 9c1e92d962a5407c227e5566416e962a2f057240
   version: unknown
   virtual_path: skills/terraform-skill
   is_virtual: true
@@ -443,7 +443,7 @@ dependencies:
   - .claude/skills/terraform-skill/references/state-management.md
   - .claude/skills/terraform-skill/references/testing-frameworks.md
   deployed_file_hashes:
-    .agents/skills/terraform-skill/SKILL.md: sha256:70c0038375d3738b4ecfca1016add39ef48a206cbed653c9a1cb336026a5e384
+    .agents/skills/terraform-skill/SKILL.md: sha256:954a7999a4b756de3684eb3bca7985c1ada59a64b01d9381a9f7d484dfc371db
     .agents/skills/terraform-skill/references/ci-cd-workflows.md: sha256:3ebb9a1d1e88c1f321381a0c179b9f9701e5dc0376bd6fac889feac4dd2de6c4
     .agents/skills/terraform-skill/references/code-intelligence-lsp.md: sha256:ee5f167d265948960f37dddb393e8473f67090e68e1f2be612db9d1c02e7434e
     .agents/skills/terraform-skill/references/code-patterns.md: sha256:791e4cb2ed1097fd0b7ddfec94da5440a2ea79bc521c36c6f2fc7e54a14eb1a1
@@ -452,7 +452,7 @@ dependencies:
     .agents/skills/terraform-skill/references/security-compliance.md: sha256:9db93c0a08001ec759b380855afd9378a9b6f452c0f875415c7509888038a2b8
     .agents/skills/terraform-skill/references/state-management.md: sha256:9912a56d21df2ddc12f9dbda6fa8f9712c16d85e7030991f3011971f999ecc64
     .agents/skills/terraform-skill/references/testing-frameworks.md: sha256:a35483a965a649603065882498587c62a2badc373a05d6e6620b19eb8dcb425f
-    .claude/skills/terraform-skill/SKILL.md: sha256:70c0038375d3738b4ecfca1016add39ef48a206cbed653c9a1cb336026a5e384
+    .claude/skills/terraform-skill/SKILL.md: sha256:954a7999a4b756de3684eb3bca7985c1ada59a64b01d9381a9f7d484dfc371db
     .claude/skills/terraform-skill/references/ci-cd-workflows.md: sha256:3ebb9a1d1e88c1f321381a0c179b9f9701e5dc0376bd6fac889feac4dd2de6c4
     .claude/skills/terraform-skill/references/code-intelligence-lsp.md: sha256:ee5f167d265948960f37dddb393e8473f67090e68e1f2be612db9d1c02e7434e
     .claude/skills/terraform-skill/references/code-patterns.md: sha256:791e4cb2ed1097fd0b7ddfec94da5440a2ea79bc521c36c6f2fc7e54a14eb1a1
@@ -461,12 +461,31 @@ dependencies:
     .claude/skills/terraform-skill/references/security-compliance.md: sha256:9db93c0a08001ec759b380855afd9378a9b6f452c0f875415c7509888038a2b8
     .claude/skills/terraform-skill/references/state-management.md: sha256:9912a56d21df2ddc12f9dbda6fa8f9712c16d85e7030991f3011971f999ecc64
     .claude/skills/terraform-skill/references/testing-frameworks.md: sha256:a35483a965a649603065882498587c62a2badc373a05d6e6620b19eb8dcb425f
-  content_hash: sha256:f00210f88a20678005a95175bb5505131ba7a5530266a36465a54df012df9737
+  content_hash: sha256:5ce64002f2ef6bdb034eaedfd7450e2f02c2142af3842bad9004872a6181da66
+- repo_url: feedhive/ai-slop-detector
+  materialization_repo_url: FeedHive/ai-slop-detector
+  name: ai-slop-detector
+  host: github.com
+  resolved_commit: 95d550706040191b0e75f1d89296a648bacb126e
+  resolved_ref: 95d550706040191b0e75f1d89296a648bacb126e
+  version: unknown
+  virtual_path: skills/ai-slop-detector
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/ai-slop-detector
+  - .agents/skills/ai-slop-detector/SKILL.md
+  - .claude/skills/ai-slop-detector
+  - .claude/skills/ai-slop-detector/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/ai-slop-detector/SKILL.md: sha256:f47a23c5dd171df2740f3c96959a773386043c066dc5b35ac9b92d9c31ade714
+    .claude/skills/ai-slop-detector/SKILL.md: sha256:f47a23c5dd171df2740f3c96959a773386043c066dc5b35ac9b92d9c31ade714
+  content_hash: sha256:7368afcdbf7b15c1994bfa0d310080487295b9ffac93442780a38f1593d2d3d7
 - repo_url: jeffallan/claude-skills
   name: architecture-designer
   host: github.com
-  resolved_commit: 1be15d8064f88fc25216442406d40add8fd23b53
-  resolved_ref: 1be15d8064f88fc25216442406d40add8fd23b53
+  resolved_commit: 078a25cc5bfd8011459be7b91d004e900c1d02d3
+  resolved_ref: 078a25cc5bfd8011459be7b91d004e900c1d02d3
   version: unknown
   virtual_path: skills/architecture-designer
   is_virtual: true
@@ -503,8 +522,8 @@ dependencies:
 - repo_url: jeffallan/claude-skills
   name: cli-developer
   host: github.com
-  resolved_commit: 1be15d8064f88fc25216442406d40add8fd23b53
-  resolved_ref: 1be15d8064f88fc25216442406d40add8fd23b53
+  resolved_commit: 078a25cc5bfd8011459be7b91d004e900c1d02d3
+  resolved_ref: 078a25cc5bfd8011459be7b91d004e900c1d02d3
   version: unknown
   virtual_path: skills/cli-developer
   is_virtual: true
@@ -541,8 +560,8 @@ dependencies:
 - repo_url: jeffallan/claude-skills
   name: code-reviewer
   host: github.com
-  resolved_commit: 1be15d8064f88fc25216442406d40add8fd23b53
-  resolved_ref: 1be15d8064f88fc25216442406d40add8fd23b53
+  resolved_commit: 078a25cc5bfd8011459be7b91d004e900c1d02d3
+  resolved_ref: 078a25cc5bfd8011459be7b91d004e900c1d02d3
   version: unknown
   virtual_path: skills/code-reviewer
   is_virtual: true
@@ -565,26 +584,26 @@ dependencies:
   - .claude/skills/code-reviewer/references/review-checklist.md
   - .claude/skills/code-reviewer/references/spec-compliance-review.md
   deployed_file_hashes:
-    .agents/skills/code-reviewer/SKILL.md: sha256:f65c4468751bb509f4ff78b791dfbc664dfe6191d36d04626c92ed8c2174293b
+    .agents/skills/code-reviewer/SKILL.md: sha256:80ccd79a840d40ac8332de9e7705ef4751fea4fbb1cfa3190d94224eacaad2b9
     .agents/skills/code-reviewer/references/common-issues.md: sha256:19de3ccd5611e82d1c94636aaf4b0a11a68a09799459285a3ab250a24c04265c
     .agents/skills/code-reviewer/references/feedback-examples.md: sha256:e87d7a255efaa04a8ee6acfa53f642974c4b2919658671418e670d0db7d038f6
     .agents/skills/code-reviewer/references/receiving-feedback.md: sha256:62f3958b0be7f3d03cde7bbf00d3f6051a6d98081be3e97d2e7cca5501749c04
     .agents/skills/code-reviewer/references/report-template.md: sha256:2f2b63c8543b510d4dceffb9336627d02aa5f6f722a805d6fa93572d7673a885
     .agents/skills/code-reviewer/references/review-checklist.md: sha256:c0e348f3896a274c407da7bf52570377dd9b7d0d3284d8f582559d890c3dfbcc
     .agents/skills/code-reviewer/references/spec-compliance-review.md: sha256:a5fcb93e7058b4c089b871ae954d8ab5cf45702e91c54242b06cf7af455f57df
-    .claude/skills/code-reviewer/SKILL.md: sha256:f65c4468751bb509f4ff78b791dfbc664dfe6191d36d04626c92ed8c2174293b
+    .claude/skills/code-reviewer/SKILL.md: sha256:80ccd79a840d40ac8332de9e7705ef4751fea4fbb1cfa3190d94224eacaad2b9
     .claude/skills/code-reviewer/references/common-issues.md: sha256:19de3ccd5611e82d1c94636aaf4b0a11a68a09799459285a3ab250a24c04265c
     .claude/skills/code-reviewer/references/feedback-examples.md: sha256:e87d7a255efaa04a8ee6acfa53f642974c4b2919658671418e670d0db7d038f6
     .claude/skills/code-reviewer/references/receiving-feedback.md: sha256:62f3958b0be7f3d03cde7bbf00d3f6051a6d98081be3e97d2e7cca5501749c04
     .claude/skills/code-reviewer/references/report-template.md: sha256:2f2b63c8543b510d4dceffb9336627d02aa5f6f722a805d6fa93572d7673a885
     .claude/skills/code-reviewer/references/review-checklist.md: sha256:c0e348f3896a274c407da7bf52570377dd9b7d0d3284d8f582559d890c3dfbcc
     .claude/skills/code-reviewer/references/spec-compliance-review.md: sha256:a5fcb93e7058b4c089b871ae954d8ab5cf45702e91c54242b06cf7af455f57df
-  content_hash: sha256:33ed0f0c025b79bbe9a4409153f03e152464ec098fd96bd069f13137a3d20984
+  content_hash: sha256:8115b0f99aaa151b19b4cc27449a2ee3a6ca5974a757b2c1535006ede9008b7b
 - repo_url: jeffallan/claude-skills
   name: devops-engineer
   host: github.com
-  resolved_commit: 1be15d8064f88fc25216442406d40add8fd23b53
-  resolved_ref: 1be15d8064f88fc25216442406d40add8fd23b53
+  resolved_commit: 078a25cc5bfd8011459be7b91d004e900c1d02d3
+  resolved_ref: 078a25cc5bfd8011459be7b91d004e900c1d02d3
   version: unknown
   virtual_path: skills/devops-engineer
   is_virtual: true
@@ -615,30 +634,30 @@ dependencies:
   deployed_file_hashes:
     .agents/skills/devops-engineer/SKILL.md: sha256:552f6b0f31bc5d6cad3c692034407f22319424d2cdb94ade99ec108f760e4285
     .agents/skills/devops-engineer/references/deployment-strategies.md: sha256:d09fd909526bac88579c993b85294c210ca76959e38a0018f4d4181f48e2302b
-    .agents/skills/devops-engineer/references/docker-patterns.md: sha256:b6ccc98c44aa64e9c9aa837c793369914516ae874961de7eec38191c8cf61861
+    .agents/skills/devops-engineer/references/docker-patterns.md: sha256:09f2deadb4ff260b09e09c25ad2037ea90357e04e2ba2f3fe4711adf61bc59b2
     .agents/skills/devops-engineer/references/github-actions.md: sha256:04d2d1c339762948dd513c268482d3ffada30068bbea92f282bf753837cb5e4b
     .agents/skills/devops-engineer/references/gitlab-ci.md: sha256:8b4e6492a96ff5b94c07dcddca3a093121845a13bc4f2699844c06f42f3043e2
     .agents/skills/devops-engineer/references/incident-response.md: sha256:8410ae3e9c7295f4fda94d7fa85438292e675a4e10dc64a61aead4df162522a4
-    .agents/skills/devops-engineer/references/kubernetes.md: sha256:7da17b4e40c05d8c5c694ae532524072b1eed9d078f336c57970d6fc5473ce0b
+    .agents/skills/devops-engineer/references/kubernetes.md: sha256:658ddf774b90f5eef6a97c117bb41dbcab3b3a551e3888ed7d1c53b7ce02cf28
     .agents/skills/devops-engineer/references/platform-engineering.md: sha256:1256d7f015cb45c8e35ad708cf9a51ef429c95945d07705fb416bc89e3bc1bfd
     .agents/skills/devops-engineer/references/release-automation.md: sha256:bf546d38622d8f9185939d5d3bafea8859f44a7c60e85957afc39347052abc45
     .agents/skills/devops-engineer/references/terraform-iac.md: sha256:0d629d4b9826cbd97c1d5a6e826d701bacd3f057d4092cda0e5bb9da692e922b
     .claude/skills/devops-engineer/SKILL.md: sha256:552f6b0f31bc5d6cad3c692034407f22319424d2cdb94ade99ec108f760e4285
     .claude/skills/devops-engineer/references/deployment-strategies.md: sha256:d09fd909526bac88579c993b85294c210ca76959e38a0018f4d4181f48e2302b
-    .claude/skills/devops-engineer/references/docker-patterns.md: sha256:b6ccc98c44aa64e9c9aa837c793369914516ae874961de7eec38191c8cf61861
+    .claude/skills/devops-engineer/references/docker-patterns.md: sha256:09f2deadb4ff260b09e09c25ad2037ea90357e04e2ba2f3fe4711adf61bc59b2
     .claude/skills/devops-engineer/references/github-actions.md: sha256:04d2d1c339762948dd513c268482d3ffada30068bbea92f282bf753837cb5e4b
     .claude/skills/devops-engineer/references/gitlab-ci.md: sha256:8b4e6492a96ff5b94c07dcddca3a093121845a13bc4f2699844c06f42f3043e2
     .claude/skills/devops-engineer/references/incident-response.md: sha256:8410ae3e9c7295f4fda94d7fa85438292e675a4e10dc64a61aead4df162522a4
-    .claude/skills/devops-engineer/references/kubernetes.md: sha256:7da17b4e40c05d8c5c694ae532524072b1eed9d078f336c57970d6fc5473ce0b
+    .claude/skills/devops-engineer/references/kubernetes.md: sha256:658ddf774b90f5eef6a97c117bb41dbcab3b3a551e3888ed7d1c53b7ce02cf28
     .claude/skills/devops-engineer/references/platform-engineering.md: sha256:1256d7f015cb45c8e35ad708cf9a51ef429c95945d07705fb416bc89e3bc1bfd
     .claude/skills/devops-engineer/references/release-automation.md: sha256:bf546d38622d8f9185939d5d3bafea8859f44a7c60e85957afc39347052abc45
     .claude/skills/devops-engineer/references/terraform-iac.md: sha256:0d629d4b9826cbd97c1d5a6e826d701bacd3f057d4092cda0e5bb9da692e922b
-  content_hash: sha256:035ed49162ecd4781655a39543508b0137d39d884037dd0c8b7b1d96507193ce
+  content_hash: sha256:16deaafef5ed6082e40112dcd07a90780a3851d19bea8c909f35489d59346b0c
 - repo_url: jeffallan/claude-skills
   name: golang-pro
   host: github.com
-  resolved_commit: 1be15d8064f88fc25216442406d40add8fd23b53
-  resolved_ref: 1be15d8064f88fc25216442406d40add8fd23b53
+  resolved_commit: 078a25cc5bfd8011459be7b91d004e900c1d02d3
+  resolved_ref: 078a25cc5bfd8011459be7b91d004e900c1d02d3
   version: unknown
   virtual_path: skills/golang-pro
   is_virtual: true
@@ -659,24 +678,24 @@ dependencies:
   - .claude/skills/golang-pro/references/project-structure.md
   - .claude/skills/golang-pro/references/testing.md
   deployed_file_hashes:
-    .agents/skills/golang-pro/SKILL.md: sha256:99a670198a271dc740df81dcc8639522af2accc6277d475bf8c29a3432f319da
-    .agents/skills/golang-pro/references/concurrency.md: sha256:3617f1286a98536c91c28aa35e5c69840be09c2bf90071d5863611508ba723b2
-    .agents/skills/golang-pro/references/generics.md: sha256:7efae27c421afcd214df1c7c10692e6277859671a5d5d5886015ce339618550e
+    .agents/skills/golang-pro/SKILL.md: sha256:056e7141e481d24656202c80ca1c86c6f971b663d594dbfef17bb6e1faabdca2
+    .agents/skills/golang-pro/references/concurrency.md: sha256:2f19694806d4db4c94ec0a2e48734426d20834dba3da7a6ec2e5a9fc628df078
+    .agents/skills/golang-pro/references/generics.md: sha256:366d9303f68fa19258a19ed4fa9bb801dd9a01c8ee562fba440013f05957d2e2
     .agents/skills/golang-pro/references/interfaces.md: sha256:0cc55637ddfc76136631293676482c3da6416f0109ff53703ba2f0e57d8c8322
     .agents/skills/golang-pro/references/project-structure.md: sha256:dcc0e9e4a19ee769ff7dcef26ae600982206354e0edea09b266b4b3b54a75e75
     .agents/skills/golang-pro/references/testing.md: sha256:bbcddfc32d216711d5da60d437021d2c17bc417f5508b18a6bc4721325b575b8
-    .claude/skills/golang-pro/SKILL.md: sha256:99a670198a271dc740df81dcc8639522af2accc6277d475bf8c29a3432f319da
-    .claude/skills/golang-pro/references/concurrency.md: sha256:3617f1286a98536c91c28aa35e5c69840be09c2bf90071d5863611508ba723b2
-    .claude/skills/golang-pro/references/generics.md: sha256:7efae27c421afcd214df1c7c10692e6277859671a5d5d5886015ce339618550e
+    .claude/skills/golang-pro/SKILL.md: sha256:056e7141e481d24656202c80ca1c86c6f971b663d594dbfef17bb6e1faabdca2
+    .claude/skills/golang-pro/references/concurrency.md: sha256:2f19694806d4db4c94ec0a2e48734426d20834dba3da7a6ec2e5a9fc628df078
+    .claude/skills/golang-pro/references/generics.md: sha256:366d9303f68fa19258a19ed4fa9bb801dd9a01c8ee562fba440013f05957d2e2
     .claude/skills/golang-pro/references/interfaces.md: sha256:0cc55637ddfc76136631293676482c3da6416f0109ff53703ba2f0e57d8c8322
     .claude/skills/golang-pro/references/project-structure.md: sha256:dcc0e9e4a19ee769ff7dcef26ae600982206354e0edea09b266b4b3b54a75e75
     .claude/skills/golang-pro/references/testing.md: sha256:bbcddfc32d216711d5da60d437021d2c17bc417f5508b18a6bc4721325b575b8
-  content_hash: sha256:15141427053f494a63844ea394ce871a68a862152ad9cd0326d40cf325bb4916
+  content_hash: sha256:3872a9913397447cf98fd35b72f0de6480daa71b1c6a23a8401f46d04b5c2ae7
 - repo_url: mattpocock/skills
   name: grill-me
   host: github.com
-  resolved_commit: 49dd158d1076134a641b33efb035946536778336
-  resolved_ref: 49dd158d1076134a641b33efb035946536778336
+  resolved_commit: 4ae2317ddb22b046e26455e4f9c9b3aaaf62212d
+  resolved_ref: 4ae2317ddb22b046e26455e4f9c9b3aaaf62212d
   version: unknown
   virtual_path: skills/productivity/grill-me
   is_virtual: true
@@ -697,8 +716,8 @@ dependencies:
 - repo_url: mattpocock/skills
   name: grilling
   host: github.com
-  resolved_commit: 49dd158d1076134a641b33efb035946536778336
-  resolved_ref: 49dd158d1076134a641b33efb035946536778336
+  resolved_commit: 4ae2317ddb22b046e26455e4f9c9b3aaaf62212d
+  resolved_ref: 4ae2317ddb22b046e26455e4f9c9b3aaaf62212d
   version: unknown
   virtual_path: skills/productivity/grilling
   is_virtual: true
@@ -711,16 +730,16 @@ dependencies:
   - .claude/skills/grilling/SKILL.md
   - .claude/skills/grilling/agents/openai.yaml
   deployed_file_hashes:
-    .agents/skills/grilling/SKILL.md: sha256:befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15
+    .agents/skills/grilling/SKILL.md: sha256:a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2
     .agents/skills/grilling/agents/openai.yaml: sha256:1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b
-    .claude/skills/grilling/SKILL.md: sha256:befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15
+    .claude/skills/grilling/SKILL.md: sha256:a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2
     .claude/skills/grilling/agents/openai.yaml: sha256:1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b
-  content_hash: sha256:90b54c72a48114f62072de27e1bef0c61d55f0959044725c593ed9fc72197755
+  content_hash: sha256:823f08ad33368a9626991e6782f7ae14b958e39ef8503f6bdb3b98a58d237a58
 - repo_url: netresearch/agent-rules-skill
   name: agent-rules
   host: github.com
-  resolved_commit: 1fb399373792e7e0a9966cdfb201ae192fe95347
-  resolved_ref: 1fb399373792e7e0a9966cdfb201ae192fe95347
+  resolved_commit: aa0ff50699a60d4a02de70be3af83182b766fe33
+  resolved_ref: aa0ff50699a60d4a02de70be3af83182b766fe33
   version: unknown
   virtual_path: skills/agent-rules
   is_virtual: true
@@ -1081,7 +1100,7 @@ dependencies:
   deployed_file_hashes:
     .agents/skills/agent-rules/AGENTS.md: sha256:69ed3f9b031510f67b7d3431b9d9dceb72e781cc5da244046f82ab67f6e1b487
     .agents/skills/agent-rules/CLAUDE.md: sha256:69ed3f9b031510f67b7d3431b9d9dceb72e781cc5da244046f82ab67f6e1b487
-    .agents/skills/agent-rules/SKILL.md: sha256:f410bec834db63d989d141bf99a8b70acdd070819bb242c0f3499251e5664207
+    .agents/skills/agent-rules/SKILL.md: sha256:00303bcca16983039caaeaca9db2b1b07645dda62528b09f3fd9fbb2cb7ca5b5
     .agents/skills/agent-rules/assets/example-workflows/validate-agents.yml: sha256:1b2f8c4d026e3177c2db9dd56e16a1b5531f8d376e2102abb09c18802e2ef746
     .agents/skills/agent-rules/assets/root-thin.md: sha256:eb2569e793a86e407175d69a5a8882d3581329998b5cee9d016782e2eb758017
     .agents/skills/agent-rules/assets/root-verbose.md: sha256:4e6811267fe5767b7a04377fe691081028befd1baebbf138ab514c6333abb96f
@@ -1256,7 +1275,7 @@ dependencies:
     .agents/skills/agent-rules/scripts/verify-content.sh: sha256:029aa53c25d5a7947388529ae3ef7e0aaf73ce391f89404783426279a8e5b9d0
     .claude/skills/agent-rules/AGENTS.md: sha256:69ed3f9b031510f67b7d3431b9d9dceb72e781cc5da244046f82ab67f6e1b487
     .claude/skills/agent-rules/CLAUDE.md: sha256:69ed3f9b031510f67b7d3431b9d9dceb72e781cc5da244046f82ab67f6e1b487
-    .claude/skills/agent-rules/SKILL.md: sha256:f410bec834db63d989d141bf99a8b70acdd070819bb242c0f3499251e5664207
+    .claude/skills/agent-rules/SKILL.md: sha256:00303bcca16983039caaeaca9db2b1b07645dda62528b09f3fd9fbb2cb7ca5b5
     .claude/skills/agent-rules/assets/example-workflows/validate-agents.yml: sha256:1b2f8c4d026e3177c2db9dd56e16a1b5531f8d376e2102abb09c18802e2ef746
     .claude/skills/agent-rules/assets/root-thin.md: sha256:eb2569e793a86e407175d69a5a8882d3581329998b5cee9d016782e2eb758017
     .claude/skills/agent-rules/assets/root-verbose.md: sha256:4e6811267fe5767b7a04377fe691081028befd1baebbf138ab514c6333abb96f
@@ -1429,12 +1448,12 @@ dependencies:
     .claude/skills/agent-rules/scripts/validate-structure.sh: sha256:ccfe7117b94f88eea867a2fd11e2bb3fa5ab8f8cc7c91bfc0f65d51f086bb3e2
     .claude/skills/agent-rules/scripts/verify-commands.sh: sha256:5fb4bf44e6a73a9471f2a02709dd5211873bed5597a0b70c5607ade2e51ca938
     .claude/skills/agent-rules/scripts/verify-content.sh: sha256:029aa53c25d5a7947388529ae3ef7e0aaf73ce391f89404783426279a8e5b9d0
-  content_hash: sha256:b9d1f2746839e8c7ab67c226034964e38009d74ac35386d640ec99023903eb42
+  content_hash: sha256:2b4ef0290559756063ea631bed187cdbeabae83c865c9395b009cc66286a565d
 - repo_url: pulumi/agent-skills
   name: package-usage
   host: github.com
-  resolved_commit: 2517e28e4bc029424e9c9ee48016394296be0f6a
-  resolved_ref: 2517e28e4bc029424e9c9ee48016394296be0f6a
+  resolved_commit: 82f222a529a499e8005a820000148cc5e28c934c
+  resolved_ref: 82f222a529a499e8005a820000148cc5e28c934c
   version: unknown
   virtual_path: pulumi/skills/package-usage
   is_virtual: true
@@ -1459,8 +1478,8 @@ dependencies:
 - repo_url: pulumi/agent-skills
   name: provider-upgrade
   host: github.com
-  resolved_commit: 2517e28e4bc029424e9c9ee48016394296be0f6a
-  resolved_ref: 2517e28e4bc029424e9c9ee48016394296be0f6a
+  resolved_commit: 82f222a529a499e8005a820000148cc5e28c934c
+  resolved_ref: 82f222a529a499e8005a820000148cc5e28c934c
   version: unknown
   virtual_path: pulumi/skills/provider-upgrade
   is_virtual: true
@@ -1493,8 +1512,8 @@ dependencies:
 - repo_url: pulumi/agent-skills
   name: pulumi-automation-api
   host: github.com
-  resolved_commit: 2517e28e4bc029424e9c9ee48016394296be0f6a
-  resolved_ref: 2517e28e4bc029424e9c9ee48016394296be0f6a
+  resolved_commit: 82f222a529a499e8005a820000148cc5e28c934c
+  resolved_ref: 82f222a529a499e8005a820000148cc5e28c934c
   version: unknown
   virtual_path: pulumi/skills/pulumi-automation-api
   is_virtual: true
@@ -1519,8 +1538,8 @@ dependencies:
 - repo_url: pulumi/agent-skills
   name: pulumi-best-practices
   host: github.com
-  resolved_commit: 2517e28e4bc029424e9c9ee48016394296be0f6a
-  resolved_ref: 2517e28e4bc029424e9c9ee48016394296be0f6a
+  resolved_commit: 82f222a529a499e8005a820000148cc5e28c934c
+  resolved_ref: 82f222a529a499e8005a820000148cc5e28c934c
   version: unknown
   virtual_path: pulumi/skills/pulumi-best-practices
   is_virtual: true
@@ -1545,8 +1564,8 @@ dependencies:
 - repo_url: pulumi/agent-skills
   name: pulumi-component
   host: github.com
-  resolved_commit: 2517e28e4bc029424e9c9ee48016394296be0f6a
-  resolved_ref: 2517e28e4bc029424e9c9ee48016394296be0f6a
+  resolved_commit: 82f222a529a499e8005a820000148cc5e28c934c
+  resolved_ref: 82f222a529a499e8005a820000148cc5e28c934c
   version: unknown
   virtual_path: pulumi/skills/pulumi-component
   is_virtual: true
@@ -1571,8 +1590,8 @@ dependencies:
 - repo_url: pulumi/agent-skills
   name: pulumi-debug-failed-operation
   host: github.com
-  resolved_commit: 2517e28e4bc029424e9c9ee48016394296be0f6a
-  resolved_ref: 2517e28e4bc029424e9c9ee48016394296be0f6a
+  resolved_commit: 82f222a529a499e8005a820000148cc5e28c934c
+  resolved_ref: 82f222a529a499e8005a820000148cc5e28c934c
   version: unknown
   virtual_path: pulumi/skills/pulumi-debug-failed-operation
   is_virtual: true
@@ -1597,8 +1616,8 @@ dependencies:
 - repo_url: pulumi/agent-skills
   name: pulumi-esc
   host: github.com
-  resolved_commit: 2517e28e4bc029424e9c9ee48016394296be0f6a
-  resolved_ref: 2517e28e4bc029424e9c9ee48016394296be0f6a
+  resolved_commit: 82f222a529a499e8005a820000148cc5e28c934c
+  resolved_ref: 82f222a529a499e8005a820000148cc5e28c934c
   version: unknown
   virtual_path: pulumi/skills/pulumi-esc
   is_virtual: true
@@ -1623,8 +1642,8 @@ dependencies:
 - repo_url: pulumi/agent-skills
   name: pulumi-overview
   host: github.com
-  resolved_commit: 2517e28e4bc029424e9c9ee48016394296be0f6a
-  resolved_ref: 2517e28e4bc029424e9c9ee48016394296be0f6a
+  resolved_commit: 82f222a529a499e8005a820000148cc5e28c934c
+  resolved_ref: 82f222a529a499e8005a820000148cc5e28c934c
   version: unknown
   virtual_path: pulumi/skills/pulumi-overview
   is_virtual: true
@@ -1645,8 +1664,8 @@ dependencies:
 - repo_url: rshade/agent-skills
   name: actionlint
   host: github.com
-  resolved_commit: a24f44a048452d157c4dd5913e8f80020b5ffe0a
-  resolved_ref: a24f44a048452d157c4dd5913e8f80020b5ffe0a
+  resolved_commit: 3518bc1217d076042f8bb7fb6202597080d00325
+  resolved_ref: 3518bc1217d076042f8bb7fb6202597080d00325
   version: unknown
   virtual_path: skills/actionlint
   is_virtual: true
@@ -1679,8 +1698,8 @@ dependencies:
 - repo_url: rshade/agent-skills
   name: agent-ready-go
   host: github.com
-  resolved_commit: a24f44a048452d157c4dd5913e8f80020b5ffe0a
-  resolved_ref: a24f44a048452d157c4dd5913e8f80020b5ffe0a
+  resolved_commit: 3518bc1217d076042f8bb7fb6202597080d00325
+  resolved_ref: 3518bc1217d076042f8bb7fb6202597080d00325
   version: unknown
   virtual_path: skills/agent-ready-go
   is_virtual: true
@@ -1729,8 +1748,8 @@ dependencies:
 - repo_url: rshade/agent-skills
   name: commitlint
   host: github.com
-  resolved_commit: a24f44a048452d157c4dd5913e8f80020b5ffe0a
-  resolved_ref: a24f44a048452d157c4dd5913e8f80020b5ffe0a
+  resolved_commit: 3518bc1217d076042f8bb7fb6202597080d00325
+  resolved_ref: 3518bc1217d076042f8bb7fb6202597080d00325
   version: unknown
   virtual_path: skills/commitlint
   is_virtual: true
@@ -1755,8 +1774,8 @@ dependencies:
 - repo_url: rshade/agent-skills
   name: go-fix
   host: github.com
-  resolved_commit: a24f44a048452d157c4dd5913e8f80020b5ffe0a
-  resolved_ref: a24f44a048452d157c4dd5913e8f80020b5ffe0a
+  resolved_commit: 3518bc1217d076042f8bb7fb6202597080d00325
+  resolved_ref: 3518bc1217d076042f8bb7fb6202597080d00325
   version: unknown
   virtual_path: skills/go-fix
   is_virtual: true
@@ -1801,8 +1820,8 @@ dependencies:
 - repo_url: rshade/agent-skills
   name: go-nolint-audit
   host: github.com
-  resolved_commit: a24f44a048452d157c4dd5913e8f80020b5ffe0a
-  resolved_ref: a24f44a048452d157c4dd5913e8f80020b5ffe0a
+  resolved_commit: 3518bc1217d076042f8bb7fb6202597080d00325
+  resolved_ref: 3518bc1217d076042f8bb7fb6202597080d00325
   version: unknown
   virtual_path: skills/go-nolint-audit
   is_virtual: true
@@ -1835,8 +1854,8 @@ dependencies:
 - repo_url: rshade/agent-skills
   name: lint-fix
   host: github.com
-  resolved_commit: a24f44a048452d157c4dd5913e8f80020b5ffe0a
-  resolved_ref: a24f44a048452d157c4dd5913e8f80020b5ffe0a
+  resolved_commit: 3518bc1217d076042f8bb7fb6202597080d00325
+  resolved_ref: 3518bc1217d076042f8bb7fb6202597080d00325
   version: unknown
   virtual_path: skills/lint-fix
   is_virtual: true
@@ -1861,8 +1880,8 @@ dependencies:
 - repo_url: rshade/agent-skills
   name: markdownlint
   host: github.com
-  resolved_commit: a24f44a048452d157c4dd5913e8f80020b5ffe0a
-  resolved_ref: a24f44a048452d157c4dd5913e8f80020b5ffe0a
+  resolved_commit: 3518bc1217d076042f8bb7fb6202597080d00325
+  resolved_ref: 3518bc1217d076042f8bb7fb6202597080d00325
   version: unknown
   virtual_path: skills/markdownlint
   is_virtual: true
@@ -1895,8 +1914,8 @@ dependencies:
 - repo_url: rshade/agent-skills
   name: security-audit
   host: github.com
-  resolved_commit: a24f44a048452d157c4dd5913e8f80020b5ffe0a
-  resolved_ref: a24f44a048452d157c4dd5913e8f80020b5ffe0a
+  resolved_commit: 3518bc1217d076042f8bb7fb6202597080d00325
+  resolved_ref: 3518bc1217d076042f8bb7fb6202597080d00325
   version: unknown
   virtual_path: skills/security-audit
   is_virtual: true
@@ -1933,8 +1952,8 @@ dependencies:
 - repo_url: rshade/agent-skills
   name: shellcheck
   host: github.com
-  resolved_commit: a24f44a048452d157c4dd5913e8f80020b5ffe0a
-  resolved_ref: a24f44a048452d157c4dd5913e8f80020b5ffe0a
+  resolved_commit: 3518bc1217d076042f8bb7fb6202597080d00325
+  resolved_ref: 3518bc1217d076042f8bb7fb6202597080d00325
   version: unknown
   virtual_path: skills/shellcheck
   is_virtual: true
@@ -1967,8 +1986,8 @@ dependencies:
 - repo_url: rshade/agent-skills
   name: tech-debt
   host: github.com
-  resolved_commit: a24f44a048452d157c4dd5913e8f80020b5ffe0a
-  resolved_ref: a24f44a048452d157c4dd5913e8f80020b5ffe0a
+  resolved_commit: 3518bc1217d076042f8bb7fb6202597080d00325
+  resolved_ref: 3518bc1217d076042f8bb7fb6202597080d00325
   version: unknown
   virtual_path: skills/tech-debt
   is_virtual: true
@@ -1993,8 +2012,8 @@ dependencies:
 - repo_url: sickn33/agentic-awesome-skills
   name: typescript-expert
   host: github.com
-  resolved_commit: a3072641b750a1fb2f6ce695a5f984ea3d4c3ec1
-  resolved_ref: a3072641b750a1fb2f6ce695a5f984ea3d4c3ec1
+  resolved_commit: b4bd5a153dd1e0a66789b6c971f731cdcf492a46
+  resolved_ref: b4bd5a153dd1e0a66789b6c971f731cdcf492a46
   version: unknown
   virtual_path: skills/typescript-expert
   is_virtual: true
@@ -2013,22 +2032,22 @@ dependencies:
   - .claude/skills/typescript-expert/references/utility-types.ts
   - .claude/skills/typescript-expert/scripts/ts_diagnostic.py
   deployed_file_hashes:
-    .agents/skills/typescript-expert/SKILL.md: sha256:ad136635b240a9cb478ddc4c032ece9041b7a6104198711d6d1ce93755e3f68f
+    .agents/skills/typescript-expert/SKILL.md: sha256:aae155b6b7fb86e45c6e4175d44daadc66815dd2558ef7a07971ad546dbd2b95
     .agents/skills/typescript-expert/references/tsconfig-strict.json: sha256:baa3936ec045998a5b751166cc118ce9e9c7877f583562e75849f0a1d8bc59ac
     .agents/skills/typescript-expert/references/typescript-cheatsheet.md: sha256:48e2298805f0f0f1081a2a3637470dac17714f838b6ae594a036a1c5364b6c5a
-    .agents/skills/typescript-expert/references/utility-types.ts: sha256:72c9a65db30be18fa08a7e3fe9335aba271f871e91085ab586d5da49f7a6ca7e
-    .agents/skills/typescript-expert/scripts/ts_diagnostic.py: sha256:7728db3585ddb116fb96ca87309403638bb88763458dac6f16106cd80b61a2df
-    .claude/skills/typescript-expert/SKILL.md: sha256:ad136635b240a9cb478ddc4c032ece9041b7a6104198711d6d1ce93755e3f68f
+    .agents/skills/typescript-expert/references/utility-types.ts: sha256:a96def4d1ac0e12ca093d13a2153cb198e017102d4604ba02f65773acee2a7cb
+    .agents/skills/typescript-expert/scripts/ts_diagnostic.py: sha256:5dcd386432dee5c5db2e912ae196a924452e3756c249b704064e8edd786e6258
+    .claude/skills/typescript-expert/SKILL.md: sha256:aae155b6b7fb86e45c6e4175d44daadc66815dd2558ef7a07971ad546dbd2b95
     .claude/skills/typescript-expert/references/tsconfig-strict.json: sha256:baa3936ec045998a5b751166cc118ce9e9c7877f583562e75849f0a1d8bc59ac
     .claude/skills/typescript-expert/references/typescript-cheatsheet.md: sha256:48e2298805f0f0f1081a2a3637470dac17714f838b6ae594a036a1c5364b6c5a
-    .claude/skills/typescript-expert/references/utility-types.ts: sha256:72c9a65db30be18fa08a7e3fe9335aba271f871e91085ab586d5da49f7a6ca7e
-    .claude/skills/typescript-expert/scripts/ts_diagnostic.py: sha256:7728db3585ddb116fb96ca87309403638bb88763458dac6f16106cd80b61a2df
-  content_hash: sha256:5de5c69acdab25ae3a5ffb6b1f409befd0a5486d3f5fdeb93c2c33bb34fb4e11
+    .claude/skills/typescript-expert/references/utility-types.ts: sha256:a96def4d1ac0e12ca093d13a2153cb198e017102d4604ba02f65773acee2a7cb
+    .claude/skills/typescript-expert/scripts/ts_diagnostic.py: sha256:5dcd386432dee5c5db2e912ae196a924452e3756c249b704064e8edd786e6258
+  content_hash: sha256:e284d89fb900c89d364340f0980b05a9d4c310b301bf866a2110e28d5eac58fb
 - repo_url: wshobson/agents
   name: shellcheck-configuration
   host: github.com
-  resolved_commit: 46891e7e60da0e52baf1050b7b6391b64e84c6d9
-  resolved_ref: 46891e7e60da0e52baf1050b7b6391b64e84c6d9
+  resolved_commit: 7e2fb559cf4b824b27f1fec49fe88f7511066d26
+  resolved_ref: 7e2fb559cf4b824b27f1fec49fe88f7511066d26
   version: unknown
   virtual_path: plugins/shell-scripting/skills/shellcheck-configuration
   is_virtual: true
@@ -2280,7 +2299,7 @@ deployments:
   owners:
   - netresearch/agent-rules-skill/skills/agent-rules
   active_owner: netresearch/agent-rules-skill/skills/agent-rules
-  content_hash: sha256:f410bec834db63d989d141bf99a8b70acdd070819bb242c0f3499251e5664207
+  content_hash: sha256:00303bcca16983039caaeaca9db2b1b07645dda62528b09f3fd9fbb2cb7ca5b5
 - kind: project-relative
   target: claude
   value: .claude/skills/agent-rules/assets/example-workflows/validate-agents.yml
@@ -3831,6 +3850,24 @@ deployments:
   content_hash: sha256:029aa53c25d5a7947388529ae3ef7e0aaf73ce391f89404783426279a8e5b9d0
 - kind: project-relative
   target: claude
+  value: .claude/skills/ai-slop-detector
+  runtime: null
+  scope: project
+  owners:
+  - feedhive/ai-slop-detector/skills/ai-slop-detector
+  active_owner: feedhive/ai-slop-detector/skills/ai-slop-detector
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/ai-slop-detector/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - feedhive/ai-slop-detector/skills/ai-slop-detector
+  active_owner: feedhive/ai-slop-detector/skills/ai-slop-detector
+  content_hash: sha256:f47a23c5dd171df2740f3c96959a773386043c066dc5b35ac9b92d9c31ade714
+- kind: project-relative
+  target: claude
   value: .claude/skills/architecture-designer
   runtime: null
   scope: project
@@ -4854,7 +4891,7 @@ deployments:
   owners:
   - jeffallan/claude-skills/skills/code-reviewer
   active_owner: jeffallan/claude-skills/skills/code-reviewer
-  content_hash: sha256:f65c4468751bb509f4ff78b791dfbc664dfe6191d36d04626c92ed8c2174293b
+  content_hash: sha256:80ccd79a840d40ac8332de9e7705ef4751fea4fbb1cfa3190d94224eacaad2b9
 - kind: project-relative
   target: claude
   value: .claude/skills/code-reviewer/references/common-issues.md
@@ -4998,7 +5035,7 @@ deployments:
   owners:
   - jeffallan/claude-skills/skills/devops-engineer
   active_owner: jeffallan/claude-skills/skills/devops-engineer
-  content_hash: sha256:b6ccc98c44aa64e9c9aa837c793369914516ae874961de7eec38191c8cf61861
+  content_hash: sha256:09f2deadb4ff260b09e09c25ad2037ea90357e04e2ba2f3fe4711adf61bc59b2
 - kind: project-relative
   target: claude
   value: .claude/skills/devops-engineer/references/github-actions.md
@@ -5034,7 +5071,7 @@ deployments:
   owners:
   - jeffallan/claude-skills/skills/devops-engineer
   active_owner: jeffallan/claude-skills/skills/devops-engineer
-  content_hash: sha256:7da17b4e40c05d8c5c694ae532524072b1eed9d078f336c57970d6fc5473ce0b
+  content_hash: sha256:658ddf774b90f5eef6a97c117bb41dbcab3b3a551e3888ed7d1c53b7ce02cf28
 - kind: project-relative
   target: claude
   value: .claude/skills/devops-engineer/references/platform-engineering.md
@@ -5232,7 +5269,7 @@ deployments:
   owners:
   - jeffallan/claude-skills/skills/golang-pro
   active_owner: jeffallan/claude-skills/skills/golang-pro
-  content_hash: sha256:99a670198a271dc740df81dcc8639522af2accc6277d475bf8c29a3432f319da
+  content_hash: sha256:056e7141e481d24656202c80ca1c86c6f971b663d594dbfef17bb6e1faabdca2
 - kind: project-relative
   target: claude
   value: .claude/skills/golang-pro/references/concurrency.md
@@ -5241,7 +5278,7 @@ deployments:
   owners:
   - jeffallan/claude-skills/skills/golang-pro
   active_owner: jeffallan/claude-skills/skills/golang-pro
-  content_hash: sha256:3617f1286a98536c91c28aa35e5c69840be09c2bf90071d5863611508ba723b2
+  content_hash: sha256:2f19694806d4db4c94ec0a2e48734426d20834dba3da7a6ec2e5a9fc628df078
 - kind: project-relative
   target: claude
   value: .claude/skills/golang-pro/references/generics.md
@@ -5250,7 +5287,7 @@ deployments:
   owners:
   - jeffallan/claude-skills/skills/golang-pro
   active_owner: jeffallan/claude-skills/skills/golang-pro
-  content_hash: sha256:7efae27c421afcd214df1c7c10692e6277859671a5d5d5886015ce339618550e
+  content_hash: sha256:366d9303f68fa19258a19ed4fa9bb801dd9a01c8ee562fba440013f05957d2e2
 - kind: project-relative
   target: claude
   value: .claude/skills/golang-pro/references/interfaces.md
@@ -5322,7 +5359,7 @@ deployments:
   owners:
   - mattpocock/skills/skills/productivity/grilling
   active_owner: mattpocock/skills/skills/productivity/grilling
-  content_hash: sha256:befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15
+  content_hash: sha256:a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2
 - kind: project-relative
   target: claude
   value: .claude/skills/grilling/agents/openai.yaml
@@ -5979,7 +6016,7 @@ deployments:
   owners:
   - antonbabenko/terraform-skill/skills/terraform-skill
   active_owner: antonbabenko/terraform-skill/skills/terraform-skill
-  content_hash: sha256:70c0038375d3738b4ecfca1016add39ef48a206cbed653c9a1cb336026a5e384
+  content_hash: sha256:954a7999a4b756de3684eb3bca7985c1ada59a64b01d9381a9f7d484dfc371db
 - kind: project-relative
   target: claude
   value: .claude/skills/terraform-skill/references/ci-cd-workflows.md
@@ -6069,7 +6106,7 @@ deployments:
   owners:
   - sickn33/agentic-awesome-skills/skills/typescript-expert
   active_owner: sickn33/agentic-awesome-skills/skills/typescript-expert
-  content_hash: sha256:ad136635b240a9cb478ddc4c032ece9041b7a6104198711d6d1ce93755e3f68f
+  content_hash: sha256:aae155b6b7fb86e45c6e4175d44daadc66815dd2558ef7a07971ad546dbd2b95
 - kind: project-relative
   target: claude
   value: .claude/skills/typescript-expert/references/tsconfig-strict.json
@@ -6096,7 +6133,7 @@ deployments:
   owners:
   - sickn33/agentic-awesome-skills/skills/typescript-expert
   active_owner: sickn33/agentic-awesome-skills/skills/typescript-expert
-  content_hash: sha256:72c9a65db30be18fa08a7e3fe9335aba271f871e91085ab586d5da49f7a6ca7e
+  content_hash: sha256:a96def4d1ac0e12ca093d13a2153cb198e017102d4604ba02f65773acee2a7cb
 - kind: project-relative
   target: claude
   value: .claude/skills/typescript-expert/scripts/ts_diagnostic.py
@@ -6105,7 +6142,7 @@ deployments:
   owners:
   - sickn33/agentic-awesome-skills/skills/typescript-expert
   active_owner: sickn33/agentic-awesome-skills/skills/typescript-expert
-  content_hash: sha256:7728db3585ddb116fb96ca87309403638bb88763458dac6f16106cd80b61a2df
+  content_hash: sha256:5dcd386432dee5c5db2e912ae196a924452e3756c249b704064e8edd786e6258
 - kind: project-relative
   target: codex
   value: .agents/skills/actionlint
@@ -6285,7 +6322,7 @@ deployments:
   owners:
   - netresearch/agent-rules-skill/skills/agent-rules
   active_owner: netresearch/agent-rules-skill/skills/agent-rules
-  content_hash: sha256:f410bec834db63d989d141bf99a8b70acdd070819bb242c0f3499251e5664207
+  content_hash: sha256:00303bcca16983039caaeaca9db2b1b07645dda62528b09f3fd9fbb2cb7ca5b5
 - kind: project-relative
   target: codex
   value: .agents/skills/agent-rules/assets/example-workflows/validate-agents.yml
@@ -7836,6 +7873,24 @@ deployments:
   content_hash: sha256:029aa53c25d5a7947388529ae3ef7e0aaf73ce391f89404783426279a8e5b9d0
 - kind: project-relative
   target: codex
+  value: .agents/skills/ai-slop-detector
+  runtime: null
+  scope: project
+  owners:
+  - feedhive/ai-slop-detector/skills/ai-slop-detector
+  active_owner: feedhive/ai-slop-detector/skills/ai-slop-detector
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/ai-slop-detector/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - feedhive/ai-slop-detector/skills/ai-slop-detector
+  active_owner: feedhive/ai-slop-detector/skills/ai-slop-detector
+  content_hash: sha256:f47a23c5dd171df2740f3c96959a773386043c066dc5b35ac9b92d9c31ade714
+- kind: project-relative
+  target: codex
   value: .agents/skills/architecture-designer
   runtime: null
   scope: project
@@ -8859,7 +8914,7 @@ deployments:
   owners:
   - jeffallan/claude-skills/skills/code-reviewer
   active_owner: jeffallan/claude-skills/skills/code-reviewer
-  content_hash: sha256:f65c4468751bb509f4ff78b791dfbc664dfe6191d36d04626c92ed8c2174293b
+  content_hash: sha256:80ccd79a840d40ac8332de9e7705ef4751fea4fbb1cfa3190d94224eacaad2b9
 - kind: project-relative
   target: codex
   value: .agents/skills/code-reviewer/references/common-issues.md
@@ -8914,6 +8969,24 @@ deployments:
   - jeffallan/claude-skills/skills/code-reviewer
   active_owner: jeffallan/claude-skills/skills/code-reviewer
   content_hash: sha256:a5fcb93e7058b4c089b871ae954d8ab5cf45702e91c54242b06cf7af455f57df
+- kind: project-relative
+  target: codex
+  value: .agents/skills/commit
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/commit/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:73a5dcd522e872570e86e2c2826c91e02e05f1962504cb61a8d996c7e65bc062
 - kind: project-relative
   target: codex
   value: .agents/skills/commitlint
@@ -8985,7 +9058,7 @@ deployments:
   owners:
   - jeffallan/claude-skills/skills/devops-engineer
   active_owner: jeffallan/claude-skills/skills/devops-engineer
-  content_hash: sha256:b6ccc98c44aa64e9c9aa837c793369914516ae874961de7eec38191c8cf61861
+  content_hash: sha256:09f2deadb4ff260b09e09c25ad2037ea90357e04e2ba2f3fe4711adf61bc59b2
 - kind: project-relative
   target: codex
   value: .agents/skills/devops-engineer/references/github-actions.md
@@ -9021,7 +9094,7 @@ deployments:
   owners:
   - jeffallan/claude-skills/skills/devops-engineer
   active_owner: jeffallan/claude-skills/skills/devops-engineer
-  content_hash: sha256:7da17b4e40c05d8c5c694ae532524072b1eed9d078f336c57970d6fc5473ce0b
+  content_hash: sha256:658ddf774b90f5eef6a97c117bb41dbcab3b3a551e3888ed7d1c53b7ce02cf28
 - kind: project-relative
   target: codex
   value: .agents/skills/devops-engineer/references/platform-engineering.md
@@ -9049,6 +9122,24 @@ deployments:
   - jeffallan/claude-skills/skills/devops-engineer
   active_owner: jeffallan/claude-skills/skills/devops-engineer
   content_hash: sha256:0d629d4b9826cbd97c1d5a6e826d701bacd3f057d4092cda0e5bb9da692e922b
+- kind: project-relative
+  target: codex
+  value: .agents/skills/docs-pr
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/docs-pr/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:bc8fa7a2a9709405d368d47fe9891c971d94fe3ef462b5a3e4dcc323ee06cffa
 - kind: project-relative
   target: codex
   value: .agents/skills/go-fix
@@ -9201,7 +9292,7 @@ deployments:
   owners:
   - jeffallan/claude-skills/skills/golang-pro
   active_owner: jeffallan/claude-skills/skills/golang-pro
-  content_hash: sha256:99a670198a271dc740df81dcc8639522af2accc6277d475bf8c29a3432f319da
+  content_hash: sha256:056e7141e481d24656202c80ca1c86c6f971b663d594dbfef17bb6e1faabdca2
 - kind: project-relative
   target: codex
   value: .agents/skills/golang-pro/references/concurrency.md
@@ -9210,7 +9301,7 @@ deployments:
   owners:
   - jeffallan/claude-skills/skills/golang-pro
   active_owner: jeffallan/claude-skills/skills/golang-pro
-  content_hash: sha256:3617f1286a98536c91c28aa35e5c69840be09c2bf90071d5863611508ba723b2
+  content_hash: sha256:2f19694806d4db4c94ec0a2e48734426d20834dba3da7a6ec2e5a9fc628df078
 - kind: project-relative
   target: codex
   value: .agents/skills/golang-pro/references/generics.md
@@ -9219,7 +9310,7 @@ deployments:
   owners:
   - jeffallan/claude-skills/skills/golang-pro
   active_owner: jeffallan/claude-skills/skills/golang-pro
-  content_hash: sha256:7efae27c421afcd214df1c7c10692e6277859671a5d5d5886015ce339618550e
+  content_hash: sha256:366d9303f68fa19258a19ed4fa9bb801dd9a01c8ee562fba440013f05957d2e2
 - kind: project-relative
   target: codex
   value: .agents/skills/golang-pro/references/interfaces.md
@@ -9291,7 +9382,7 @@ deployments:
   owners:
   - mattpocock/skills/skills/productivity/grilling
   active_owner: mattpocock/skills/skills/productivity/grilling
-  content_hash: sha256:befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15
+  content_hash: sha256:a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2
 - kind: project-relative
   target: codex
   value: .agents/skills/grilling/agents/openai.yaml
@@ -9301,6 +9392,33 @@ deployments:
   - mattpocock/skills/skills/productivity/grilling
   active_owner: mattpocock/skills/skills/productivity/grilling
   content_hash: sha256:1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b
+- kind: project-relative
+  target: codex
+  value: .agents/skills/humanizer
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/humanizer/LICENSE
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96
+- kind: project-relative
+  target: codex
+  value: .agents/skills/humanizer/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:8e88239fb00b6ab3b8488a09572251e9084946a6c5cae1331d5dd6ecc1775540
 - kind: project-relative
   target: codex
   value: .agents/skills/lint-fix
@@ -9427,6 +9545,24 @@ deployments:
   - pulumi/agent-skills/pulumi/skills/package-usage
   active_owner: pulumi/agent-skills/pulumi/skills/package-usage
   content_hash: sha256:0909f8c77788a0550039761b004dba708c0d5f1fd64f2d4434bb1119da5b733d
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pr
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/pr/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:3df806c42af088805e9d6497cc32a6d873472211263aa81275f0b85210e2fa61
 - kind: project-relative
   target: codex
   value: .agents/skills/provider-upgrade
@@ -9690,6 +9826,24 @@ deployments:
   content_hash: sha256:eb7058582acbe0cc874468704d977d9832afc5a914581fa6b859a6c2552cb95e
 - kind: project-relative
   target: codex
+  value: .agents/skills/review
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/review/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:74a028d980567388a6f44b22df81f485a2883302cf70c26182d515b1d144585f
+- kind: project-relative
+  target: codex
   value: .agents/skills/security-audit
   runtime: null
   scope: project
@@ -9885,7 +10039,7 @@ deployments:
   owners:
   - antonbabenko/terraform-skill/skills/terraform-skill
   active_owner: antonbabenko/terraform-skill/skills/terraform-skill
-  content_hash: sha256:70c0038375d3738b4ecfca1016add39ef48a206cbed653c9a1cb336026a5e384
+  content_hash: sha256:954a7999a4b756de3684eb3bca7985c1ada59a64b01d9381a9f7d484dfc371db
 - kind: project-relative
   target: codex
   value: .agents/skills/terraform-skill/references/ci-cd-workflows.md
@@ -9975,7 +10129,7 @@ deployments:
   owners:
   - sickn33/agentic-awesome-skills/skills/typescript-expert
   active_owner: sickn33/agentic-awesome-skills/skills/typescript-expert
-  content_hash: sha256:ad136635b240a9cb478ddc4c032ece9041b7a6104198711d6d1ce93755e3f68f
+  content_hash: sha256:aae155b6b7fb86e45c6e4175d44daadc66815dd2558ef7a07971ad546dbd2b95
 - kind: project-relative
   target: codex
   value: .agents/skills/typescript-expert/references/tsconfig-strict.json
@@ -10002,7 +10156,7 @@ deployments:
   owners:
   - sickn33/agentic-awesome-skills/skills/typescript-expert
   active_owner: sickn33/agentic-awesome-skills/skills/typescript-expert
-  content_hash: sha256:72c9a65db30be18fa08a7e3fe9335aba271f871e91085ab586d5da49f7a6ca7e
+  content_hash: sha256:a96def4d1ac0e12ca093d13a2153cb198e017102d4604ba02f65773acee2a7cb
 - kind: project-relative
   target: codex
   value: .agents/skills/typescript-expert/scripts/ts_diagnostic.py
@@ -10011,7 +10165,7 @@ deployments:
   owners:
   - sickn33/agentic-awesome-skills/skills/typescript-expert
   active_owner: sickn33/agentic-awesome-skills/skills/typescript-expert
-  content_hash: sha256:7728db3585ddb116fb96ca87309403638bb88763458dac6f16106cd80b61a2df
+  content_hash: sha256:5dcd386432dee5c5db2e912ae196a924452e3756c249b704064e8edd786e6258
 - kind: project-relative
   target: codex
   value: .codex/agents/executor.toml
@@ -10020,7 +10174,7 @@ deployments:
   owners:
   - .
   active_owner: .
-  content_hash: sha256:084565c6f4e64eb42c4600e8b5ba46d51468783aa1393c107b95921e8e2d6616
+  content_hash: sha256:023d0995f10b897eb2e9716b56fd3e0850d067db2852769126692b1a074769f3
 - kind: project-relative
   target: codex
   value: .codex/agents/librarian.toml
@@ -10029,7 +10183,7 @@ deployments:
   owners:
   - .
   active_owner: .
-  content_hash: sha256:cf17579b8c7812dd7dd8bbf836c5cde69d117bc65d058f9c74ef4a325c6021e4
+  content_hash: sha256:e434a0bcf5c418cfc923878229de1be1008ae7255520bf54e57cc48f13fa866d
 - kind: project-relative
   target: codex
   value: .codex/agents/reviewer.toml
@@ -10038,106 +10192,7 @@ deployments:
   owners:
   - .
   active_owner: .
-  content_hash: sha256:b80ac9e3c85509030d2a8f84c22eb7811ce635ab3dfeb99e30d38a2927f7c285
-- kind: project-relative
-  target: legacy
-  value: .agents/skills/commit
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: null
-- kind: project-relative
-  target: legacy
-  value: .agents/skills/commit/SKILL.md
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: sha256:73a5dcd522e872570e86e2c2826c91e02e05f1962504cb61a8d996c7e65bc062
-- kind: project-relative
-  target: legacy
-  value: .agents/skills/docs-pr
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: null
-- kind: project-relative
-  target: legacy
-  value: .agents/skills/docs-pr/SKILL.md
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: sha256:bc8fa7a2a9709405d368d47fe9891c971d94fe3ef462b5a3e4dcc323ee06cffa
-- kind: project-relative
-  target: legacy
-  value: .agents/skills/humanizer
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: null
-- kind: project-relative
-  target: legacy
-  value: .agents/skills/humanizer/LICENSE
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: sha256:4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96
-- kind: project-relative
-  target: legacy
-  value: .agents/skills/humanizer/SKILL.md
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: sha256:8e88239fb00b6ab3b8488a09572251e9084946a6c5cae1331d5dd6ecc1775540
-- kind: project-relative
-  target: legacy
-  value: .agents/skills/pr
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: null
-- kind: project-relative
-  target: legacy
-  value: .agents/skills/pr/SKILL.md
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: sha256:3df806c42af088805e9d6497cc32a6d873472211263aa81275f0b85210e2fa61
-- kind: project-relative
-  target: legacy
-  value: .agents/skills/review
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: null
-- kind: project-relative
-  target: legacy
-  value: .agents/skills/review/SKILL.md
-  runtime: null
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: sha256:74a028d980567388a6f44b22df81f485a2883302cf70c26182d515b1d144585f
+  content_hash: sha256:0927e67211a944ccab03232f06050807d6a86d90c9711b2e7fabc59c1d05a505
 - kind: uri
   target: lsp
   value: csharp
@@ -10182,7 +10237,7 @@ deployments:
   owners:
   - .
   active_owner: .
-  content_hash: null
+  content_hash: sha256:07b25c72cc4377d0ddcb670e08fe68a84104d96a4e472156fde64196c6471cf0
 - kind: uri
   target: mcp
   value: pulumi
@@ -10191,7 +10246,7 @@ deployments:
   owners:
   - .
   active_owner: .
-  content_hash: null
+  content_hash: sha256:893bd3f7ddd788a49f50f384af091fe0fc66cef9a0cd2a3bc727f1db97e800c3
 mcp_servers:
 - pulumi
 mcp_configs:
@@ -10300,6 +10355,6 @@ local_deployed_file_hashes:
   .claude/skills/humanizer/SKILL.md: sha256:8e88239fb00b6ab3b8488a09572251e9084946a6c5cae1331d5dd6ecc1775540
   .claude/skills/pr/SKILL.md: sha256:3df806c42af088805e9d6497cc32a6d873472211263aa81275f0b85210e2fa61
   .claude/skills/review/SKILL.md: sha256:74a028d980567388a6f44b22df81f485a2883302cf70c26182d515b1d144585f
-  .codex/agents/executor.toml: sha256:084565c6f4e64eb42c4600e8b5ba46d51468783aa1393c107b95921e8e2d6616
-  .codex/agents/librarian.toml: sha256:cf17579b8c7812dd7dd8bbf836c5cde69d117bc65d058f9c74ef4a325c6021e4
-  .codex/agents/reviewer.toml: sha256:b80ac9e3c85509030d2a8f84c22eb7811ce635ab3dfeb99e30d38a2927f7c285
+  .codex/agents/executor.toml: sha256:023d0995f10b897eb2e9716b56fd3e0850d067db2852769126692b1a074769f3
+  .codex/agents/librarian.toml: sha256:e434a0bcf5c418cfc923878229de1be1008ae7255520bf54e57cc48f13fa866d
+  .codex/agents/reviewer.toml: sha256:0927e67211a944ccab03232f06050807d6a86d90c9711b2e7fabc59c1d05a505
