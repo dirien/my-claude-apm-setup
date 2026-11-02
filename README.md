@@ -8,7 +8,7 @@ It is self-contained. The guardrails are plain shell scripts under `scripts/`, s
 
 ## What's in here
 
-- 31 skills pulled from git and pinned to a commit (Go, CLI, DevOps, linting, repo hygiene, code review, security, plan grilling, prose humanizing and clarity, the official Pulumi skills, Terraform/OpenTofu, LSP-first code intelligence, TypeScript).
+- 32 skills pulled from git and pinned to a commit (Go, CLI, DevOps, linting, repo hygiene, code review, security, plan grilling, prose humanizing, clarity and AI-slop checks, the official Pulumi skills, Terraform/OpenTofu, LSP-first code intelligence, TypeScript).
 - Four local skills (`commit`, `docs-pr`, `pr`, `review`) and three subagents (`executor`, `librarian`, `reviewer`) under `.apm/`.
 - One MCP server: Pulumi's hosted server.
 - Four LSP servers (gopls, typescript, pyright, csharp), deployed as the `apm-lsp` plugin apm 0.29.1+ emits.
@@ -59,7 +59,7 @@ apm install            # writes apm.lock.yaml + materializes .claude/
 apm install --frozen   # reproducible install from the lock (use this in CI)
 ```
 
-That single dependency materializes 34 skills into `.claude/skills/`, the three subagents into `.claude/agents/`, the instructions into `.claude/rules/`, the guardrail hooks into `.claude/apm-hooks.json` + `.claude/settings.json`, the MCP server into `.mcp.json`, and the LSP servers into the `apm-lsp` plugin under `.claude/skills/`.
+That single dependency materializes 35 skills into `.claude/skills/`, the three subagents into `.claude/agents/`, the instructions into `.claude/rules/`, the guardrail hooks into `.claude/apm-hooks.json` + `.claude/settings.json`, the MCP server into `.mcp.json`, and the LSP servers into the `apm-lsp` plugin under `.claude/skills/`.
 
 Notes:
 
@@ -182,7 +182,7 @@ The GitHub Actions workflow in `.github/workflows/apm.yml` runs the install, aud
 
 ## What's mine and what's borrowed
 
-The four workflow skills, the vendored `humanizer` skill (copied from `blader/humanizer@225a6f3`, upstream v3.1.0 — its skill sits at the repo root, a shape apm 0.27 stopped resolving as a dependency; 0.28 through 0.33 resolve it again, so the copy is a candidate for re-pinning), three agents, two guardrail hooks, the rtk hook and its installer, and the instruction files under `.apm/` live in this repo. rtk itself is upstream — this repo only pins and wires it. The 31 skills under `dependencies` come from `jeffallan/claude-skills`, `rshade/agent-skills`, `netresearch/agent-rules-skill`, `mattpocock/skills`, `wshobson/agents` (the `shellcheck-configuration` skill of its `shell-scripting` plugin), `pulumi/agent-skills` (the eight skills of its `pulumi/` plugin), `antonbabenko/terraform-skill` plus its recommended companion plugin `antonbabenko/agent-plugins/plugins/code-intelligence`, `sickn33/agentic-awesome-skills` (just its `typescript-expert` skill), and `addyosmani/clarity`; `apm.lock.yaml` pins each to a commit and `apm install --frozen` reproduces them.
+The four workflow skills, the vendored `humanizer` skill (copied from `blader/humanizer@225a6f3`, upstream v3.1.0 — its skill sits at the repo root, a shape apm 0.27 stopped resolving as a dependency; 0.28 through 0.35 resolve it again, so the copy is a candidate for re-pinning), three agents, two guardrail hooks, the rtk hook and its installer, and the instruction files under `.apm/` live in this repo. rtk itself is upstream — this repo only pins and wires it. The 32 skills under `dependencies` come from `jeffallan/claude-skills`, `rshade/agent-skills`, `netresearch/agent-rules-skill`, `mattpocock/skills`, `wshobson/agents` (the `shellcheck-configuration` skill of its `shell-scripting` plugin), `pulumi/agent-skills` (the eight skills of its `pulumi/` plugin), `antonbabenko/terraform-skill` plus its recommended companion plugin `antonbabenko/agent-plugins/plugins/code-intelligence`, `sickn33/agentic-awesome-skills` (just its `typescript-expert` skill), `addyosmani/clarity`, and `FeedHive/ai-slop-detector`; `apm.lock.yaml` pins each to a commit and `apm install --frozen` reproduces them.
 
 ## Reading
 
