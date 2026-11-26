@@ -20,7 +20,7 @@
 # Self-contained: sh, curl, tar, and sha256sum (Linux) or shasum (macOS).
 set -eu
 
-RTK_VERSION="${RTK_VERSION:-1.1.0}"
+RTK_VERSION="${RTK_VERSION:-1.2.1}"
 RTK_EDITION="${RTK_EDITION:-oss}"
 BIN_DIR="${RTK_BIN_DIR:-$HOME/.local/bin}"
 
@@ -41,8 +41,9 @@ if [ -x "$BIN_DIR/rtk" ] && "$BIN_DIR/rtk" --version 2>/dev/null | grep -qF " ${
   skip "rtk ${RTK_VERSION} already installed ($BIN_DIR/rtk)"
 fi
 
-# Release-artifact target triple. rtk ships gnu for linux-arm64 and musl for
-# linux-x86_64; anything else is unsupported and simply skipped.
+# Release-artifact target triple. Linux gets the static musl build on both
+# architectures (rtk 1.2 added it for arm64; it runs on glibc and musl alike);
+# anything else is unsupported and simply skipped.
 case "$(uname -s)" in
   Linux)  os=linux  ;;
   Darwin) os=darwin ;;
@@ -54,7 +55,7 @@ case "$(uname -m)" in
   *)             skip "unsupported architecture $(uname -m); skipping rtk install" ;;
 esac
 case "$os-$arch" in
-  linux-aarch64)  asset="${prefix}-aarch64-unknown-linux-gnu.tar.gz"  ;;
+  linux-aarch64)  asset="${prefix}-aarch64-unknown-linux-musl.tar.gz" ;;
   linux-x86_64)   asset="${prefix}-x86_64-unknown-linux-musl.tar.gz"  ;;
   darwin-aarch64) asset="${prefix}-aarch64-apple-darwin.tar.gz"       ;;
   darwin-x86_64)  asset="${prefix}-x86_64-apple-darwin.tar.gz"        ;;

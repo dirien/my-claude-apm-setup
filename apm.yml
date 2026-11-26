@@ -40,10 +40,11 @@ dependencies:
   # Skills resolved from git, pinned to a commit so the manifest is self-describing
   # (apm.lock.yaml pins the same SHAs; `apm install --frozen` reproduces them).
   apm:
-    # jeffallan/claude-skills — language & role
-    - jeffallan/claude-skills/skills/golang-pro#078a25cc5bfd8011459be7b91d004e900c1d02d3
-    - jeffallan/claude-skills/skills/cli-developer#078a25cc5bfd8011459be7b91d004e900c1d02d3
-    - jeffallan/claude-skills/skills/devops-engineer#078a25cc5bfd8011459be7b91d004e900c1d02d3
+    # jeffallan/claude-skills — language & role (skills live under plugin/skills/
+    # since its v0.5.0 restructure)
+    - jeffallan/claude-skills/plugin/skills/golang-pro#d98d06edb54c25cfb94017c0ef830342a34a43ba
+    - jeffallan/claude-skills/plugin/skills/cli-developer#d98d06edb54c25cfb94017c0ef830342a34a43ba
+    - jeffallan/claude-skills/plugin/skills/devops-engineer#d98d06edb54c25cfb94017c0ef830342a34a43ba
     # rshade/agent-skills — Go tooling & repo hygiene
     - rshade/agent-skills/skills/agent-ready-go#3518bc1217d076042f8bb7fb6202597080d00325
     - rshade/agent-skills/skills/go-fix#3518bc1217d076042f8bb7fb6202597080d00325
@@ -55,40 +56,40 @@ dependencies:
     - rshade/agent-skills/skills/go-nolint-audit#3518bc1217d076042f8bb7fb6202597080d00325
     - rshade/agent-skills/skills/tech-debt#3518bc1217d076042f8bb7fb6202597080d00325
     - rshade/agent-skills/skills/security-audit#3518bc1217d076042f8bb7fb6202597080d00325
-    - jeffallan/claude-skills/skills/code-reviewer#078a25cc5bfd8011459be7b91d004e900c1d02d3
-    - jeffallan/claude-skills/skills/architecture-designer#078a25cc5bfd8011459be7b91d004e900c1d02d3
+    - jeffallan/claude-skills/plugin/skills/code-reviewer#d98d06edb54c25cfb94017c0ef830342a34a43ba
+    - jeffallan/claude-skills/plugin/skills/architecture-designer#d98d06edb54c25cfb94017c0ef830342a34a43ba
     # netresearch/agent-rules-skill — keep AGENTS.md / .claude/rules in sync
-    - netresearch/agent-rules-skill/skills/agent-rules#aa0ff50699a60d4a02de70be3af83182b766fe33
+    - netresearch/agent-rules-skill/skills/agent-rules#dee12f1dcc828d82c2427bb041f212081f065a43
     # mattpocock/skills — plan stress-testing (grilling is model-invoked, grill-me is the /grill-me entry point)
-    - mattpocock/skills/skills/productivity/grilling#4ae2317ddb22b046e26455e4f9c9b3aaaf62212d
-    - mattpocock/skills/skills/productivity/grill-me#4ae2317ddb22b046e26455e4f9c9b3aaaf62212d
+    - mattpocock/skills/skills/productivity/grilling#6f7f7831a625f040a8e06a0e7954826b87ce775a
+    - mattpocock/skills/skills/productivity/grill-me#6f7f7831a625f040a8e06a0e7954826b87ce775a
     # pulumi/agent-skills — the official Pulumi skills (only the pulumi/ plugin, not
     # delegation/migration/package-maintenance)
-    - pulumi/agent-skills/pulumi/skills/package-usage#82f222a529a499e8005a820000148cc5e28c934c
-    - pulumi/agent-skills/pulumi/skills/provider-upgrade#82f222a529a499e8005a820000148cc5e28c934c
-    - pulumi/agent-skills/pulumi/skills/pulumi-automation-api#82f222a529a499e8005a820000148cc5e28c934c
-    - pulumi/agent-skills/pulumi/skills/pulumi-best-practices#82f222a529a499e8005a820000148cc5e28c934c
-    - pulumi/agent-skills/pulumi/skills/pulumi-component#82f222a529a499e8005a820000148cc5e28c934c
-    - pulumi/agent-skills/pulumi/skills/pulumi-debug-failed-operation#82f222a529a499e8005a820000148cc5e28c934c
-    - pulumi/agent-skills/pulumi/skills/pulumi-esc#82f222a529a499e8005a820000148cc5e28c934c
-    - pulumi/agent-skills/pulumi/skills/pulumi-overview#82f222a529a499e8005a820000148cc5e28c934c
+    - pulumi/agent-skills/pulumi/skills/package-usage#60a692fb61cd61aeb39c3488de54f065eecea591
+    - pulumi/agent-skills/pulumi/skills/provider-upgrade#60a692fb61cd61aeb39c3488de54f065eecea591
+    - pulumi/agent-skills/pulumi/skills/pulumi-automation-api#60a692fb61cd61aeb39c3488de54f065eecea591
+    - pulumi/agent-skills/pulumi/skills/pulumi-best-practices#60a692fb61cd61aeb39c3488de54f065eecea591
+    - pulumi/agent-skills/pulumi/skills/pulumi-component#60a692fb61cd61aeb39c3488de54f065eecea591
+    - pulumi/agent-skills/pulumi/skills/pulumi-debug-failed-operation#60a692fb61cd61aeb39c3488de54f065eecea591
+    - pulumi/agent-skills/pulumi/skills/pulumi-esc#60a692fb61cd61aeb39c3488de54f065eecea591
+    - pulumi/agent-skills/pulumi/skills/pulumi-overview#60a692fb61cd61aeb39c3488de54f065eecea591
     # antonbabenko/terraform-skill — Terraform/OpenTofu authoring, review and debugging
-    - antonbabenko/terraform-skill/skills/terraform-skill#9c1e92d962a5407c227e5566416e962a2f057240
+    - antonbabenko/terraform-skill/skills/terraform-skill#f5a195992d84c8fb075b0176d666967cd07d2081
     # antonbabenko/agent-plugins — code-intelligence, terraform-skill's recommended
     # companion (LSP-first code navigation guidance). Pinned straight at the
     # skill folder: the plugin root has no apm.yml/SKILL.md of its own (just a
     # commands/ dir apm doesn't install), and newer apm CLIs reject a bare
     # plugin-root path instead of auto-descending into skills/<name> like 0.28 did.
-    - antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence#d9e3bd2d941bb76832e0de63fd6fb8d02a5be941
+    - antonbabenko/agent-plugins/plugins/code-intelligence/skills/code-intelligence#56af4185464c995b9abfc6b9a486933abae30cfd
     # wshobson/agents — ShellCheck configuration & static-analysis workflow
     # (the shell-scripting plugin's one skill we use)
-    - wshobson/agents/plugins/shell-scripting/skills/shellcheck-configuration#7e2fb559cf4b824b27f1fec49fe88f7511066d26
+    - wshobson/agents/plugins/shell-scripting/skills/shellcheck-configuration#c96b5f6552dba32e4492307493ee613581430715
     # sickn33/agentic-awesome-skills — huge community skill catalog; pinning only
     # typescript-expert (deep TS/JS type-level programming, perf, monorepos)
-    - sickn33/agentic-awesome-skills/skills/typescript-expert#b4bd5a153dd1e0a66789b6c971f731cdcf492a46
+    - sickn33/agentic-awesome-skills/skills/typescript-expert#166f581cfdc37d94cf56efe4454fb06a5759776c
     # addyosmani/clarity — reader-facing prose: co-write, rewrite, review, lint.
     # Its SKILL.md sits at the repo root like humanizer's, but apm resolves that
-    # shape again (checked on 0.28 through 0.35), so it stays a pinned dep
+    # shape again (checked on 0.28 through 0.39), so it stays a pinned dep
     # rather than a vendored copy. apm deploys the whole repo, site/ and
     # samples/ included (~2.3 MB); there is no file-level prune option.
     - addyosmani/clarity#e27ceeff60368cf6966b4ea00a5b9b36418ee9a0
