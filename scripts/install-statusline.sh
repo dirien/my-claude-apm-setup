@@ -6,8 +6,11 @@
 # Copies scripts/statusline.sh to ~/.claude/apm-statusline.sh (refreshed on every
 # run) and points `statusLine` in ~/.claude/settings.json at it. A statusLine you
 # configured yourself is left alone: the setting is only written when it is
-# missing or already points at this script. Every other key in settings.json is
-# preserved.
+# missing, already points at this script, or is the Docker Sandboxes (sbx)
+# workload's own `/usr/local/bin/sbx-claude-hook claude-status`, which the sbx
+# claude agent writes on every sandbox (re)create. apm-statusline.sh forwards
+# its input to that hook, so the Docker desktop app keeps its session view.
+# Every other key in settings.json, hooks included, is preserved.
 #
 # Idempotent and safe to re-run, e.g. from a sandbox startup step after the
 # agent config has been reseeded. NEVER fails the install: every error path
@@ -45,7 +48,8 @@ except Exception as e:
 
 current = settings.get("statusLine")
 cmd = current.get("command", "") if isinstance(current, dict) else str(current or "")
-if current and "apm-statusline.sh" not in cmd:
+replaceable = "apm-statusline.sh" in cmd or cmd.strip().lstrip("\"'").startswith("/usr/local/bin/sbx-claude-hook")
+if current and not replaceable:
     print(f"[statusline] custom statusLine already set in {path}; leaving it alone", file=sys.stderr)
     sys.exit(0)
 

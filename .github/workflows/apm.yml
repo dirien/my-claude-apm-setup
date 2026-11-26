@@ -15,9 +15,11 @@ jobs:
     steps:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
 
+      # Pinned: apm.lock.yaml is lockfile v4, and apm behaviour shifts between
+      # releases. Bump together with the lockfile (regenerate it on the new apm).
       - name: Install APM
         run: |
-          curl -sSL https://aka.ms/apm-unix | sh
+          curl -sSL https://aka.ms/apm-unix | sh -s -- @v0.39.0
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
       - name: Reproduce pinned dependencies (npm-ci equivalent)

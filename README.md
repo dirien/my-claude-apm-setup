@@ -19,7 +19,7 @@ It is self-contained. The guardrails are plain shell scripts under `scripts/`, s
 
 ## Requirements
 
-- [APM](https://microsoft.github.io/apm/) 0.22 or newer: `curl -sSL https://aka.ms/apm-unix | sh` or `brew install microsoft/apm/apm`
+- [APM](https://microsoft.github.io/apm/) 0.37 or newer (`apm.lock.yaml` is lockfile v4, which older apm refuses; CI pins 0.39.0): `curl -sSL https://aka.ms/apm-unix | sh` or `brew install microsoft/apm/apm`
 - `sh`, `python3`, and `grep` for the guardrail hooks (already on any dev box)
 - The LSP binaries you want (`gopls`, `typescript-language-server`, `pyright`, `csharp-ls`) — APM writes the config but does not install them
 - Optional formatters the post-edit hook uses when present: `gofmt`, `prettier`, `ruff`
@@ -65,7 +65,7 @@ Notes:
 
 - **Pin it.** An unpinned dep installs the latest commit and drifts; `apm install` warns about it. Pin a tag (`#v0.6.12`) or a commit (`#<sha>`).
 - **Generated vs vendored.** `apm_modules/` is auto-added to `.gitignore`. `.claude/` is generated — commit it, or gitignore it and run `apm install --frozen` in CI. Don't hand-edit `.claude/skills/*`; it is overwritten.
-- **MCP.** `pulumi` configures automatically as a direct dep of this package. Nested a layer deeper it can be dropped unless re-declared or installed with `--trust-transitive-mcp`.
+- **MCP.** `pulumi` configures automatically as a direct dep of this package. Nested a layer deeper it can be dropped unless re-declared or approved with `apm approve <pkg>` (apm 0.37 replaced `--trust-transitive-mcp` with it).
 
 ## How the agent context works
 
@@ -164,7 +164,13 @@ docs ⎇ main* │ Opus 5.5 │ 12% ctx
 It uses `jq` when present and falls back to `sed`. The installer never overwrites a
 `statusLine` you configured yourself: it only writes the setting when it is missing or already
 points at `apm-statusline.sh`. It is idempotent, so an environment that reseeds
-`settings.json` on every start (a sandbox, say) can simply re-run it. Like rtk, it is
+`settings.json` on every start (a sandbox, say) can simply re-run it.
+
+In a [Docker Sandboxes](https://docs.docker.com/ai/sandboxes/) `claude` sandbox (sbx 0.51+),
+the workload sets its own `statusLine`, `/usr/local/bin/sbx-claude-hook claude-status`, which
+feeds the Docker desktop app and draws nothing. The installer treats that one as replaceable,
+and `apm-statusline.sh` forwards its input to the hook whenever the hook exists, so the
+desktop app's session view keeps working next to the terminal status line. Like rtk, it is
 trust-gated (`apm lifecycle trust`); `APM_STATUSLINE=0` skips it.
 
 ## Make targets
@@ -178,11 +184,11 @@ make sbom        # CycloneDX + SPDX SBOM of the agent dependencies, offline and 
 make bundle      # offline release zip so others skip cloning the skill repos
 ```
 
-The GitHub Actions workflow in `.github/workflows/apm.yml` runs the install, audit, validate, and SBOM steps on every push.
+The GitHub Actions workflow in `.github/workflows/apm.yml` runs the install, audit, validate, and SBOM steps on every push, on a pinned apm (0.39.0) so the lockfile and the CLI that reads it move together.
 
 ## What's mine and what's borrowed
 
-The four workflow skills, the vendored `humanizer` skill (copied from `blader/humanizer@225a6f3`, upstream v3.1.0 — its skill sits at the repo root, a shape apm 0.27 stopped resolving as a dependency; 0.28 through 0.35 resolve it again, so the copy is a candidate for re-pinning), three agents, two guardrail hooks, the rtk hook and its installer, and the instruction files under `.apm/` live in this repo. rtk itself is upstream — this repo only pins and wires it. The 32 skills under `dependencies` come from `jeffallan/claude-skills`, `rshade/agent-skills`, `netresearch/agent-rules-skill`, `mattpocock/skills`, `wshobson/agents` (the `shellcheck-configuration` skill of its `shell-scripting` plugin), `pulumi/agent-skills` (the eight skills of its `pulumi/` plugin), `antonbabenko/terraform-skill` plus its recommended companion plugin `antonbabenko/agent-plugins/plugins/code-intelligence`, `sickn33/agentic-awesome-skills` (just its `typescript-expert` skill), `addyosmani/clarity`, and `FeedHive/ai-slop-detector`; `apm.lock.yaml` pins each to a commit and `apm install --frozen` reproduces them.
+The four workflow skills, the vendored `humanizer` skill (copied from `blader/humanizer@a32f244`, upstream v4.0.0 — its skill sits at the repo root, a shape apm 0.27 stopped resolving as a dependency; 0.28 through 0.39 resolve it again, so the copy is a candidate for re-pinning), three agents, two guardrail hooks, the rtk hook and its installer, and the instruction files under `.apm/` live in this repo. rtk itself is upstream — this repo only pins and wires it. The 32 skills under `dependencies` come from `jeffallan/claude-skills`, `rshade/agent-skills`, `netresearch/agent-rules-skill`, `mattpocock/skills`, `wshobson/agents` (the `shellcheck-configuration` skill of its `shell-scripting` plugin), `pulumi/agent-skills` (the eight skills of its `pulumi/` plugin), `antonbabenko/terraform-skill` plus its recommended companion plugin `antonbabenko/agent-plugins/plugins/code-intelligence`, `sickn33/agentic-awesome-skills` (just its `typescript-expert` skill), `addyosmani/clarity`, and `FeedHive/ai-slop-detector`; `apm.lock.yaml` pins each to a commit and `apm install --frozen` reproduces them.
 
 ## Reading
 
