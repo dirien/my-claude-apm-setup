@@ -164,7 +164,13 @@ docs ⎇ main* │ Opus 5.5 │ 12% ctx
 It uses `jq` when present and falls back to `sed`. The installer never overwrites a
 `statusLine` you configured yourself: it only writes the setting when it is missing or already
 points at `apm-statusline.sh`. It is idempotent, so an environment that reseeds
-`settings.json` on every start (a sandbox, say) can simply re-run it. Like rtk, it is
+`settings.json` on every start (a sandbox, say) can simply re-run it.
+
+In a [Docker Sandboxes](https://docs.docker.com/ai/sandboxes/) `claude` sandbox (sbx 0.51+),
+the workload sets its own `statusLine`, `/usr/local/bin/sbx-claude-hook claude-status`, which
+feeds the Docker desktop app and draws nothing. The installer treats that one as replaceable,
+and `apm-statusline.sh` forwards its input to the hook whenever the hook exists, so the
+desktop app's session view keeps working next to the terminal status line. Like rtk, it is
 trust-gated (`apm lifecycle trust`); `APM_STATUSLINE=0` skips it.
 
 ## Make targets

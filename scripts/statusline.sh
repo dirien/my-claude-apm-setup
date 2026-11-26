@@ -4,8 +4,18 @@
 # Colored with ANSI escapes; the branch turns yellow with a trailing * when the
 # tree is dirty, and context use goes green -> yellow (50%) -> red (80%).
 # Dependency-light: uses jq when available, falls back to sed otherwise.
+#
+# In a Docker Sandboxes (sbx) claude sandbox, the workload's own status line
+# command, sbx-claude-hook claude-status, feeds session data to the Docker
+# desktop app and prints nothing. The installer replaces it with this script, so
+# the same input is forwarded to it here to keep that desktop view working.
 
 input=$(cat)
+
+sbx_hook="${APM_SBX_CLAUDE_HOOK:-/usr/local/bin/sbx-claude-hook}"
+if [ -x "$sbx_hook" ]; then
+  printf '%s' "$input" | "$sbx_hook" claude-status >/dev/null 2>&1 || true
+fi
 
 if command -v jq >/dev/null 2>&1; then
   cwd=$(printf '%s' "$input" | jq -r '.workspace.current_dir // .cwd // empty')
